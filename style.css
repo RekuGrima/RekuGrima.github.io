@@ -1,11 +1,11 @@
 /********************************/
 /*            Main              */
 /********************************/
-@font-face {  font-family: afterLight;  src: url('font/Alterlight-Regular.otf');}
-@font-face {  font-family: balth;  src: url('font/BALTH__.ttf');}
-@font-face {  font-family: dejavu;  src: url('font/DejaVuSans.ttf');}
-@font-face {  font-family: dejavu;  src: url('font/DejaVuSans-bold.ttf');  font-weight: bold;}
-@font-face {  font-family: elicit;  src: url('font/ElicitScript-LightCasual.otf');}
+@font-face {  font-family: afterLight;  src: url('font/alterlight.otf');}
+@font-face {  font-family: balth;  src: url('font/balth.ttf');}
+@font-face {  font-family: dejavu;  src: url('font/dejavusans.ttf');}
+@font-face {  font-family: dejavu;  src: url('font/dejavusans-bold.ttf');  font-weight: bold;}
+@font-face {  font-family: elicit;  src: url('font/elicitscript.otf');}
 
 * {
   box-sizing: border-box;
