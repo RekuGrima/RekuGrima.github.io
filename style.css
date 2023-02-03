@@ -37,6 +37,10 @@ body {
   font-family: "balth", "arial";
   overflow: hidden;
   text-align: center;
+  border-bottom: none;
+  border-radius: 15px;
+  margin-bottom:-10px;
+  background-color: maroon;
 }
 
 /* Style the topnav links */
@@ -46,11 +50,7 @@ body {
   color: beige;
   padding: 14px;
   text-decoration: none;
-  background-color: maroon;
   border: outset 5px maroon;
-  border-bottom: none;
-  border-radius: 15px;
-  margin-bottom:-10px;
 }
 
 /* Change color on hover */
