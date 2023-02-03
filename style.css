@@ -1,11 +1,11 @@
 /********************************/
 /*            Main              */
 /********************************/
-@font-face {  font-family: afterLight;  src: url('font/alterlight.otf');}
-@font-face {  font-family: balth;  src: url('font/balth.ttf');}
-@font-face {  font-family: dejavu;  src: url('font/dejavusans.ttf');}
-@font-face {  font-family: dejavu;  src: url('font/dejavusans-bold.ttf');  font-weight: bold;}
-@font-face {  font-family: elicit;  src: url('font/elicitscript.otf');}
+@font-face {  font-family: "afterLight";  src: url('font/alterlight.otf');}
+@font-face {  font-family: "balth";  src: url('font/balth.ttf');}
+@font-face {  font-family: "dejavu";  src: url('font/dejavusans.ttf');}
+@font-face {  font-family: "dejavu";  src: url('font/dejavusans-bold.ttf');  font-weight: bold;}
+@font-face {  font-family: "elicit";  src: url('font/elicitscript.otf');}
 
 * {  box-sizing: border-box;}
 
@@ -13,19 +13,19 @@ body {
   background-image: url('images/paper.jpg');
   background-repeat: repeat;
   background-color:tan;
-  font-family: dejavu, sans;
+  font-family: "dejavu", "sans";
   font-size: 2vw;
 }
 /* Style the header */
 .header {  
-  font-family: balth, veranda;
+  font-family: "balth", "veranda";
   padding: 20px;
   text-align: center;
   background: transparent;
   font-size: 2.5vw;
 }
 .subheader {  
-  font-family: balth, veranda;
+  font-family: "balth", "veranda";
   text-align: center;
   margin-bottom:-10px;
   margin-top:-10px;
