@@ -10,9 +10,6 @@
 * {  box-sizing: border-box;}
 
 body {
-  background-image: url('images/paper.jpg');
-  background-repeat: repeat;
-  background-color:tan;
   font-family: "dejavu", "sans-serif";
   font-size: 2vw;
 }
