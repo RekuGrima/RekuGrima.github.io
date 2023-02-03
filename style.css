@@ -82,7 +82,6 @@ body {
 /* cards */
 .column.card {
   width: 33%;
-  border: outset 7px maroon;
   border-radius:5px;
   min-height:500px;
   max-height:500px;
