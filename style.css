@@ -64,25 +64,20 @@ body {
 .column {
   float: left;
   height:fit-content;
+  min-height: 900px;
   background-image: url('images/paper.jpg');
+  height:auto;
+  border: outset 7px maroon;
+  overflow:auto;
 }
 /* Left and right column */
 .column .side {
   width: 25%;
-  min-height: 900px;
-  height:fit-content;
-  border: outset 7px maroon;
-  background: transparent;
-  overflow:auto;
 }
 
 /* Middle column */
 .column.middle {
   width: 75%;
-  min-height: 900px;
-  height:auto;
-  border: outset 7px maroon;
-  overflow:auto;
 }
 /* cards */
 .column.card {
