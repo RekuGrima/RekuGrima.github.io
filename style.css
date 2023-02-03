@@ -14,7 +14,8 @@ body {
   background-repeat: repeat;
   background-color:tan;
   font-family: dejavu, sans;
-  font-size: 2vw;}
+  font-size: 2vw;
+}
 /* Style the header */
 .header {  
   font-family: balth, veranda;
@@ -28,14 +29,16 @@ body {
   text-align: center;
   margin-bottom:-10px;
   margin-top:-10px;
-  font-size: 5vw;}
+  font-size: 5vw;
+}
 
 /* Style the top navigation bar */
 .topnav {
   font-family: balth, arial;
   overflow: hidden;
   text-align:center;
-  background: transparent;}
+  background: transparent;
+}
 
 /* Style the topnav links */
 .topnav a {
@@ -49,23 +52,25 @@ body {
   border: outset 5px maroon;
   border-bottom: none;
   border-radius: 15px;
-  margin-bottom:-10px;}
+  margin-bottom:-10px;
+}
 
 /* Change color on hover */
 .topnav a:hover {
   background-color: maroon;
   border: inset 5px maroon;
   border-bottom: none;
-  border-radius: 15px;}
+  border-radius: 15px;
+}
 
 /* Create three unequal columns that floats next to each other */
 .column {
   float: left;
   height:fit-content;
   background-image: url('images/paper.jpg');
-
+}
 /* Left and right column */
-.column.side {
+.column .side {
   width: 25%;
   min-height: 900px;
   height:fit-content;
@@ -80,7 +85,6 @@ body {
   min-height: 900px;
   height:auto;
   border: outset 7px maroon;
-  background: transparent;
   overflow:auto;
 }
 /* cards */
