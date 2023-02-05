@@ -1,33 +1,95 @@
 <!DOCTYPE html>
-<html lang="en-US">
-	<head>
-		<meta charset="UTF-8">
-		<link rel="stylesheet" href="style.css">
-		<link rel="icon" type="image/x-icon" href="images/favicon.ico">
-		<title>5e Dungeons and Dragons</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	</head>
-	<body style="padding:50px;">
-	
-		<div class="header">
-			<img src="images/book.png" style="max-height:250px; float:left;" alt="open book">
-			<img src="images/book.png" style="max-height:250px; float:right;" alt="open book">
-			<h1>Dungeons & Dragons</h1>
-			<p>Content collected for use with the D&D 5e TTRPG</p>
-		</div>
+<html lang="en">
+<head>
+  <title>Reku</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    .bg-1 {
+		background-color: darkgreen;
+		color:beige;
+	}
+	a {
+	  font-family:balth;
+	  text-decoration: none;
+	  font-size:1.3vw;
+	}
+	ul {
+		float: left;
+	}
+  </style>
+</head>
+<body>
 
-		<div class="topnav" style="text-align:center;">
-			<a href="sidemenu.htm" target="lmenu">Home</a>
-			<a href="races.htm" target="lmenu">Race</a>
-			<a href="classes.htm" target="lmenu">Class</a>
-			<a href="sidemenutemplate.htm" target="lmenu">Feats</a>
-			<a href="sidemenutemplate.htm" target="lmenu">Spells</a>
-			<a href="sidemenutemplate.htm" target="lmenu">Items</a>
-		</div>
+<nav class="navbar navbar-inverse bg-1 navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button bg-1" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="index.htm">Reku Grima's Tomes</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav bg-1">
+        <li><a href="index.htm">Home</a></li>
+		<!-- Race menu start-->
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Races <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="races/aasimar/aasimar.htm" target="content">Aasimar</a></li>
+			<li><a href="races/bugbear/bugbear.htm" target="content">Bugbear</a></li>
+			<li><a href="races/changeling/changeling.htm" target="content">Changeling</a></li>
+			<li><a href="races/dragonborn/dragonborn.htm" target="content">Dragonborn</a></li>
+			<li><a href="races/dwarves/dwarf.htm" target="content">Dwarf</a></li>
+			<li><a href="races/elf.htm" target="content">Elf</a></li>
+			<li><a href="races/gnome/gnome.htm" target="content">Gnome</a></li>
+			<li><a href="races/goblin/goblin.htm" target="content">Goblin</a></li>
+			<li><a href="races/half-elf/half-elf.htm" target="content">Half-Elf</a></li>
+			<li><a href="races/halfling/halfling.htm" target="content">Halfling</a></li>
+			<li><a href="races/half-orc/half-orc.htm" target="content">Half-Orc</a></li>
+			<li><a href="races/hobgoblin/hobgoblin.htm" target="content">Hobgoblin</a></li>
+			<li><a href="races/human/human.htm" target="content">Human</a></li>
+			<li><a href="races/kalashtar/kalashtar.htm" target="content">Kalashtar</a></li>
+			<li><a href="races/orc/orc.htm" target="content">Orc</a></li>
+			<li><a href="races/shifter/shifter.htm" target="content">Shifter</a></li>
+			<li><a href="races/tiefling/tiefling.htm" target="content">Tiefling</a></li>
+			<li><a href="races/warforged/warforged.htm" target="content">Warforged</a></li>
+          </ul>	  
+		</li>
+		<!-- Race menu end-->
+		<!-- Class menu start-->
+		<li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Classes <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#" target="content">Barbarian</a></li>
+			<li><a href="#" target="content">Bard</a></li>
+			<li><a href="#" target="content">Blood Hunter</a></li>
+			<li><a href="#" target="content">Cleric</a></li>
+			<li><a href="#" target="content">Druid</a></li>
+			<li><a href="#" target="content">Fighter</a></li>
+			<li><a href="#" target="content">Monk</a></li>
+			<li><a href="#" target="content">Paladin</a></li>
+			<li><a href="#" target="content">Ranger</a></li>
+			<li><a href="#" target="content">Rogue</a></li>
+			<li><a href="#" target="content">Sorcerer</a></li>
+			<li><a href="#" target="content">Warlock</a></li>
+			<li><a href="#" target="content">Wizard</a></li>
+          </ul>	  
+		</li>
+		<!-- Class menu end-->
+		<li></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  
+<iframe class="container" name="content" src="content.htm" style="height:720vw; width:100%; border:none; margin-top:5vw;"></iframe>
 
-		<div class="row">
-			<iframe class="column side" name="lmenu" src="sidemenu.htm"></iframe>
-			<iframe class="column middle" name="content" src="content.htm"></iframe>
-		</div>
-	</body>
+</body>
 </html>
