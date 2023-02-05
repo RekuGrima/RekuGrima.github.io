@@ -45,26 +45,7 @@ a:hover { color: beige;	text-decoration:none;}
   width: 50%;
   height: 50%;
 }
-.tooltip {
-  position: relative;
-  display: inline-block;
-  border-bottom: 1px dotted black;
-}
 
-.tooltip .tooltiptext {
-  visibility: hidden;
-  background-color: black;
-  width:300px;
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 5px 0;
-  position: absolute;
-  z-index: 1;
-  bottom: 150%;
-  left: 50%;
-  margin-left: -60px;
-}
 iframe {
   position: absolute;
   top: 0;
@@ -74,18 +55,7 @@ iframe {
   width: 100%;
   height: 100%;
 }
-.tooltip .tooltiptext::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: black transparent transparent transparent;
-}
 
-.tooltip:hover .tooltiptext {  visibility: visible;}
 table.vis,tr.vis {	float:center;	margin-left: auto;	margin-right: auto;	border:groove 3px;	padding:.5%}
 td.vis {	padding:10px;	border:none;}
 th.vis {
@@ -111,17 +81,25 @@ img.portrait {
 	box-shadow: 5px 5px 5px grey;
 	border-radius:5px;
 }
+img.flippt {
+	 background-image: url('../images/bg 3.png');
+}
 /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
 .flip-card {
-  background-color: transparent;
-  width: 300px;
-  height: 200px;
+  background-image: url('bg 3.png');
+  background-position:cover;
+  background-color: tan;
+  width: 25%;
+  height: fit-content;
   border: 1px solid #f1f1f1;
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
 }
 
 /* This container is needed to position the front and back side */
 .flip-card-inner {
+  background-image: url('bg 3.png');
+  background-position:cover;
+  background-color: tan;
   position: relative;
   width: 100%;
   height: 100%;
@@ -137,6 +115,9 @@ img.portrait {
 
 /* Position the front and back side */
 .flip-card-front, .flip-card-back {
+  background-image: url('bg 3.png');
+  background-position:cover;
+  background-color: tan;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -146,13 +127,28 @@ img.portrait {
 
 /* Style the front side (fallback if image is missing) */
 .flip-card-front {
-  background-color: #bbb;
+  background-image: url('bg 3.png');
+  background-position:cover;
+  background-color: tan;
   color: black;
 }
 
 /* Style the back side */
 .flip-card-back {
-  background-color: dodgerblue;
-  color: white;
+  background-image: url('bg 3.png');
+  background-position:cover;
+  background-color: tan;
+  color: black;
   transform: rotateY(180deg);
 }
+.panel{
+	background-image: url('images/page.png');
+	background-position:center;
+	border: solid .3vw;
+	box-shadow: 5px 5px 3px grey;
+	margin:.3vw;
+}
+.panel-success {  width:24.3%; }
+.panel-header{  text-align: center;	}
+.panel-body {	font-size: 1vw;  }
+.panel-group {    width: 100%;  }
