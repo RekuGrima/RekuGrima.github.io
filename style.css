@@ -86,7 +86,143 @@ img.portrait {
 	box-shadow: 5px 5px 3px grey;
 	margin:.3vw;
 }
-.panel-success {  width:24.3%; }
-.panel-header{  text-align: center;	}
-.panel-body {	font-size: 1vw;  }
+.panel-success {  width:24.3%; font-size: 1.5vw; text-align: center;}
+.panel-info {  width:24.3%; font-size: 1.5vw; text-align: center;}
+.panel-body {	font-size: 1vw; min-height:15vw; text-align: left;}
+.panel-body.sub {	font-size: 1vw; min-height:1vw; text-align: left;}
 .panel-group {    width: 100%;  }
+.panel-heading.book {
+	min-height:5.5vw;
+}
+.phb {
+	background-image: url('images/banners/bannerphb.png');
+	background-size: 8vw auto;
+	background-repeat: no-repeat; 
+	background-position: bottom left;
+}
+.dmg {
+	background-image: url('images/banners/bannerdmg.png');
+	background-size: 8vw auto;
+	background-repeat: no-repeat; 
+	background-position: bottom left;
+}
+.mm {
+	background-image: url('images/banners/bannermm.png');
+	background-size: 8vw auto;
+	background-repeat: no-repeat; 
+	background-position: bottom left;
+}
+.ftod {
+	background-image: url('images/banners/bannerftod.png');
+	background-size: 8vw auto;
+	background-repeat: no-repeat; 
+	background-position: bottom left;
+}
+.egtw {
+	background-image: url('images/banners/banneregtw.png');
+	background-size: 8vw auto;
+	background-repeat: no-repeat; 
+	background-position: bottom left;
+}
+.erftlw {
+	background-image: url('images/banners/bannerERftLW.png');
+	background-size: 8vw auto;
+	background-repeat: no-repeat; 
+	background-position: bottom left;
+}
+.ggtr {
+	background-image: url('images/banners/bannerggtr.png');
+	background-size: 8vw auto;
+	background-repeat: no-repeat; 
+	background-position: bottom left;
+}
+.mcv1 {
+	background-image: url('images/banners/bannermcv1.png');
+	background-size: 8vw auto;
+	background-repeat: no-repeat; 
+	background-position: bottom left;
+}
+.mcv2 {
+	background-image: url('images/banners/bannermcv2.png');
+	background-size: 8vw auto;
+	background-repeat: no-repeat; 
+	background-position: bottom left;
+}
+.mffv1 {
+	background-image: url('images/banners/bannermffv1.png');
+	background-size: 8vw auto;
+	background-repeat: no-repeat; 
+	background-position: bottom left;
+}
+.moot {
+	background-image: url('images/banners/bannermoot.png');
+	background-size: 8vw auto;
+	background-repeat: no-repeat; 
+	background-position: bottom left;
+}
+.mtof {
+	background-image: url('images/banners/bannermtof.png');
+	background-size: 8vw auto;
+	background-repeat: no-repeat; 
+	background-position: bottom left;
+}
+.sais {
+	background-image: url('images/banners/bannersais.png');
+	background-size: 8vw auto;
+	background-repeat: no-repeat; 
+	background-position: bottom left;
+}
+.scag {
+	background-image: url('images/banners/bannerscag.png');
+	background-size: 8vw auto;
+	background-repeat: no-repeat; 
+	background-position: bottom left;
+}
+.scoc {
+	background-image: url('images/banners/bannerscoc.png');
+	background-size: 8vw auto;
+	background-repeat: no-repeat; 
+	background-position: bottom left;
+}
+.tort {
+	background-image: url('images/banners/bannertort.png');
+	background-size: 8vw auto;
+	background-repeat: no-repeat; 
+	background-position: bottom left;
+}
+.vecna {
+	background-image: url('images/banners/bannervecna.png');
+	background-size: 8vw auto;
+	background-repeat: no-repeat; 
+	background-position: bottom left;
+}
+.vgtm {
+	background-image: url('images/banners/bannervgtm.png');
+	background-size: 8vw auto;
+	background-repeat: no-repeat; 
+	background-position: bottom left;
+}
+.vrgtr {
+	background-image: url('images/banners/bannervrgtr.png');
+	background-size: 8vw auto;
+	background-repeat: no-repeat; 
+	background-position: bottom left;
+}
+.wgte {
+	background-image: url('images/banners/bannerwgte.png');
+	background-size: 8vw auto;
+	background-repeat: no-repeat; 
+	background-position: bottom left;
+}
+.tcoe {
+	background-image: url('images/banners/bannertcoe.png');
+	background-size: 8vw auto;
+	background-repeat: no-repeat; 
+	background-position: bottom left;
+}
+.oga {
+	background-image: url('images/banners/banneroga.png');
+	background-size: 8vw auto;
+	background-repeat: no-repeat; 
+	background-position: bottom left;
+}
