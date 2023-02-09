@@ -15,7 +15,7 @@ body {
 }
 /* Style the header */
 
-img.stamp {	height: 60px;	width: 60px;}
+img.stamp {	height: 4vw;	width: 4vw;}
 
 /* Style the quotes to be more obviously quotations*/
 blockquote,q {
@@ -166,6 +166,12 @@ img.portrait {
 }
 .mtof {
 	background-image: url('images/banners/bannermtof.png');
+	background-size: 8vw auto;
+	background-repeat: no-repeat; 
+	background-position: bottom left;
+}
+.motm {
+	background-image: url('images/banners/bannermotm.png');
 	background-size: 8vw auto;
 	background-repeat: no-repeat; 
 	background-position: bottom left;
