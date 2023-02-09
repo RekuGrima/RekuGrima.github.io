@@ -80,19 +80,23 @@ img.portrait {
 	border-radius:5px;
 }
 .panel{
-	background-image: url('images/page.png');
-	background-position:center;
+	background: transparent;
 	border: solid .3vw;
 	box-shadow: 5px 5px 3px grey;
 	margin:.3vw;
 }
 .panel-success {  width:24.3%; font-size: 1.5vw; text-align: center;}
 .panel-info {  width:24.3%; font-size: 1.5vw; text-align: center;}
+.panel-warning {  width:24.3%; font-size: 1.5vw; text-align: center;}
 .panel-body {	font-size: 1vw; min-height:15vw; text-align: left;}
 .panel-body.sub {	font-size: 1vw; min-height:1vw; text-align: left;}
 .panel-group {    width: 100%;  }
 .panel-heading.book {
 	min-height:5.5vw;
+}
+.panel-footer {
+	background:transparent;
+	height:3vw;
 }
 .phb {
 	background-image: url('images/banners/bannerphb.png');
