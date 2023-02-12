@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8"><!-- define the character set-->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="../style.css"><!--link the stylesheet-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Character Creation</title><!--set the title-->
+		<style>
+			ul{	font-family: balth;	}
+			.panel-heading{ font-size: 2.5vw; }
+			.panel-body{ font-size: 2vw; }
+			.container { float:left; }
+			table{
+				border-collapse: collapse;
+				width: 100%;
+				border: solid .1vw;
+			}
+			tr, td, th{
+				border-bottom: solid .1vw;
+				padding: 1vw;
+			}
+			tr:nth-child(even) {background-color: #f2f2f2;}
+			tr.a:hover {
+				background-color: lightgreen;
+			}
+		</style>
+	</head>
+	<body style="width:100%; background:transparent;">
+	<div class="container" style="width: 75%;">
+	<div class="panel-group">
+ 
+	<div class="panel panel-primary">
+      <div class="panel-heading">1. Choose a Race</div>
+	  <div class="panel-body">
+	  <p>Every character belongs to a race, one of the many intelligent humanoid species in the D&D world. The most common player character races are dwarves, elves, halflings, and humans. Some races also have subraces, such as mountain dwarf or wood elf, as well as the less widespread races of dragonborn, gnomes, half-elves, half-orcs, and tieflings.</p>
+	
+	  <p>The race you choose contributes to your character’s identity in an important way, by establishing a general appearance and the natural talents gained from culture and ancestry. Your character’s race grants particular racial traits, such as special senses, proficiency with certain weapons or tools, proficiency in one or more skills, or the ability to use minor spells. These traits sometimes dovetail with the capabilities of certain classes (see step 2). For example, the racial traits of lightfoot halflings make them exceptional rogues, and high elves tend to be powerful wizards. Sometimes playing against type can be fun, too. Halfling paladins and mountain dwarf wizards, for example, can be unusual but memorable characters.</p>
+	  <p>Your race also increases one or more of your ability scores, which you determine in step 3. Note these increases and remember to apply them later.</p>
+	  <p>Record the traits granted by your race on your character sheet. Be sure to note your starting languages and your base speed as well.</p>
+	  
+	  <div class="panel panel-default">
+      <div class="panel-heading" style="font-size: 1.5vw;">Life Span</div>
+	  <div class="panel-body" style="font-size: 1vw;">The typical life span of a player character in the D&D multiverse is about a century, assuming the character doesn’t meet a violent end on an adventure. Members of some races, such as dwarves and elves, can live for centuries. If typical members of a race in this book can live longer than a century, that fact is mentioned in the race’s description.</div>
+	</div>
+	<div class="panel panel-default" style=" float:left;">
+      <div class="panel-heading" style="font-size: 1.5vw;">Height and Weight</div>
+	  <div class="panel-body" style="font-size: 1vw;">Player characters, regardless of race, typically fall into the same ranges of height and weight that humans have in our world. If you’d like to determine your character’s height or weight randomly, consult the Random Height and Weight table.
+	  <table style="width:100%; overflow-x:auto;">
+		<tr style="background-color: lightgreen;"><th>Race</th><th>Base<br>Height</th><th>Height<br>Modifier</th><th>Base<br>Weight</th><th>Weight<br>Modifier</th></tr>
+		<tr class="a"><td>Dragonborn</td><td>5’6"</td><td>+2d8</td><td>175 lb.</td><td>× (2d6) lb.</td></tr>
+		<tr class="a"><td>Dwarf, hill</td><td>3’8"</td><td>+2d4</td><td>115 lb.</td><td>× (2d6) lb.</td></tr>
+		<tr class="a"><td>Dwarf, mountain</td><td>4’</td><td>+2d4</td><td>130 lb.</td><td>× (2d6) lb.</td></tr>
+		<tr class="a"><td>Elf, high</td><td>4’6"</td><td>+2d10</td><td>90 lb.</td><td>× (1d4) lb.</td></tr>
+		<tr class="a"><td>Elf, wood</td><td>4’6"</td><td>+2d10</td><td>100 lb.</td><td>× (1d4) lb.</td></tr>
+		<tr class="a"><td>Elf, drow</td><td>4’5"</td><td>+2d6</td><td>75 lb.</td><td>× (1d6) lb.</td></tr>
+		<tr class="a"><td>Gnome</td><td>2’11"</td><td>+2d4</td><td>35 lb.</td><td>× 1 lb.</td></tr>
+		<tr class="a"><td>Halfling</td><td>2’7"</td><td>+2d4</td><td>35 lb.</td><td>× 1 lb.</td></tr>
+		<tr class="a"><td>Half-elf</td><td>4’9"</td><td>+2d8</td><td>110 lb.</td><td>× (2d4) lb.</td></tr>
+		<tr class="a"><td>Half-orc</td><td>4’10"</td><td>+2d10</td><td>140 lb.</td><td>× (2d6) lb.</td></tr>
+		<tr class="a"><td>Human</td><td>4’8"</td><td>+2d10</td><td>110 lb.</td><td>× (2d4) lb.</td></tr>
+		<tr class="a"><td>Tiefling</td><td>4’9"</td><td>+2d8</td><td>110 lb.</td><td>× (2d4) lb.</td></tr>
+	  </table></div></div>
+	  </div></div>
+	</div>
+	<div class="panel panel-primary">
+      <div class="panel-heading">2. Choose a Class</div>
+	  <div class="panel-body"><p>Every adventurer is a member of a class. Class broadly describes a character’s vocation, what special talents he or she possesses, and the tactics he or she is most likely to employ when exploring a dungeon, fighting monsters, or engaging in a tense negotiation.</p>
+	  <p>Your character receives a number of benefits from your choice of class. Many of these benefits are class features — capabilities (including spellcasting) that set your character apart from members of other classes. You also gain a number of proficiencies: armor, weapons, skills, saving throws, and sometimes tools. Your proficiencies define many of the things your character can do particularly well, from using certain weapons to telling a convincing lie.</p>
+	  <p>On your character sheet, record all the features that your class gives you at 1st level.</p>
+		<div class="panel panel-default" style="float: left; width: 33%;">
+			<div class="panel-heading" style="font-size: 1.5vw;">Level</div>
+			<div class="panel-body" style="font-size: 1vw;"><p>Typically, a character starts at 1st level and advances in level by adventuring and gaining experience points (XP). A 1st-level character is inexperienced in the adventuring world, although he or she might have been a soldier or a pirate and done dangerous things before.</p>
+			<p>Starting off at 1st level marks your character’s entry into the adventuring life. If you’re already familiar with the game, or if you are joining an existing D&D campaign, your DM might decide to have you begin at a higher level, on the assumption that your character has already survived a few harrowing adventures.</p>
+			<p>Record your level on your character sheet. If you’re starting at a higher level, record the additional elements your class gives you for your levels past 1st. Also record your experience points. A 1st-level character has 0 XP. A higher-level character typically begins with the minimum amount of XP required to reach that level.</div></div>
+		<div class="panel panel-default" style="float: left; width: 30%;">
+			<div class="panel-heading" style="font-size: 1.5vw;">Hit Points and Hit Dice</div>
+			<div class="panel-body" style="font-size: 1vw;"><p>Your character’s hit points define how tough your character is in combat and other dangerous situations. Your hit points are determined by your Hit Dice (short for Hit Point Dice).</p>
+			<p>At 1st level, your character has 1 Hit Die, and the die type is determined by your class. You start with hit points equal to the highest roll of that die, as indicated in your class description. (You also add your Constitution modifier, which you’ll determine in step 3.) This is also your hit point maximum.</p>
+			<p>Record your character’s hit points on your character sheet. Also record the type of Hit Die your character uses and the number of Hit Dice you have. <em>After you rest</em>, you can spend Hit Dice to regain hit points.</div></div>
+		<div class="panel panel-default" style="float: left; width: 36%;">
+			<div class="panel-heading" style="font-size: 1.5vw;">Proficiency Bonus</div>
+			<div class="panel-body" style="font-size: 1vw;"><p>The table that appears in your class description shows your proficiency bonus, which is +2 for a 1st-level character. Your proficiency bonus applies:
+			<ul>
+				<li>Attack rolls using weapons you’re proficient with</li>
+				<li>Attack rolls with spells you cast</li>
+				<li>Ability checks using skills you’re proficient in</li>
+				<li>Ability checks using tools you’re proficient with</li>
+				<li>Saving throws you’re proficient in</li>
+				<li>Saving throw DCs for spells you cast (explained in each spellcasting class)</li></ul>
+			Your class determines your weapon proficiencies, your saving throw proficiencies, and some of your skill and tool proficiencies. Your background gives you additional skill and tool proficiencies, and some races give you more proficiencies. Be sure to note all of these proficiencies, as well as your proficiency bonus, on your character sheet.</p>
+			<p>Your proficiency bonus can’t be added to a single die roll or other number more than once. Occasionally, your proficiency bonus might be modified (doubled or halved, for example) before you apply it. If a circumstance suggests that your proficiency bonus applies more than once to the same roll or that it should be multiplied more than once, you nevertheless add it only once, multiply it only once, and halve it only once.
+			</div></div>
+	</div></div>
+	
+	<div class="panel panel-primary">
+      <div class="panel-heading">3. Determine Ability Scores</div>
+	  <div class="panel-body">Much of what your character does in the game depends on his or her six abilities: Strength, Dexterity, Constitution, Intelligence, Wisdom, and Charisma. Each ability has a score, which is a number you record on your character sheet.<br>The six abilities and their use in the game are described in chapter 7. The Ability Score Summary table provides a quick reference for what qualities are measured by each ability, what races increases which abilities, and what classes consider each ability particularly important.<br>You generate your character’s six ability scores randomly. Roll four 6-sided dice and record the total of the highest three dice on a piece of scratch paper. Do this five more times, so that you have six numbers. If you want to save time or don’t like the idea of randomly determining ability scores, you can use the following scores instead: 15, 14, 13, 12, 10, 8.<br>Now take your six numbers and write each number beside one of your character’s six abilities to assign scores to Strength, Dexterity, Constitution, Intelligence, Wisdom, and Charisma. Afterward, make any changes to your ability scores as a result of your race choice.<br>After assigning your ability scores, determine your ability modifiers using the Ability Scores and Modifiers table. To determine an ability modifier without consulting the table, subtract 10 from the ability score and then divide the result by 2 (round down). Write the modifier next to each of your scores.</div>
+	</div>
+	
+	</div></div>
+	<div class="container" style="width: 24%;">
+	<div class="panel-group">
+	<div class="panel panel-default">
+      <div class="panel-heading" style="font-size:1.2vw;">Rule Tip: <br>AC Calculations Don't Stack</div>
+	  <div class="panel-body" style="font-size:.9vw;">When the game gives you more than one way to calculate your Armor Class, you can use only one of them. You choose the one to use. For example, if you have the loxodon’s Natural Armor trait and the monk’s Unarmored Defense feature, you don’t mix them together. Instead, you choose which one determines your AC.</div></div>
+	  <div class="panel panel-default">
+      <div class="panel-heading" style="font-size: 1.5vw;">Ability Score Increases by Race</div>
+	  <div class="panel-body" style="font-size: 1vw;">When determining your character’s ability scores, choose one:
+	  <ol>
+	  <li>the suggested stat increases provided on the by the race and subrace</li>
+	  <li>you can increase one score by 2 and increase a different score by 1</li>
+	  <li>increase three different scores by 1.</li>
+	  </ol>
+	  Follow this rule regardless of the method you use to determine the scores, such as rolling or point buy. You can follow those suggestions or ignore them, but you can’t raise any of your scores above 20. If you choose not to use the suggested stats ignore them entirely on the race and subrace. </div>
+	</div>
+	<div class="panel panel-default">
+      <div class="panel-heading" style="font-size:1.2vw;">Languages</div>
+	  <div class="panel-body" style="font-size:.9vw;">Standard Lnguages: Common, Dwarvish, Elvish, Giant, Gnomish, Goblin, Halfling, Orc</div>
+	  <div class="panel-body" style="font-size:.9vw;">Exotic Languages: Abyssal, Celestial, Draconic, Deep Speech, Infernal, Primordial, Sylvan, Undercommon.</div>
+	  </div>
+	  <div class="panel panel-default">
+      <div class="panel-heading" style="font-size: 1.5vw;">Creature Type</div>
+	  <div class="panel-body" style="font-size: 1vw;">Every creature in D&D, including each player character, has a special tag in the rules that identifies the type of creature they are. Most player characters are of the Humanoid type. A race in this chapter tells you what your character’s creature type is.<br>Here’s a list of the game’s creature types in alphabetical order: Aberration, Beast, Celestial, Construct, Dragon, Elemental, Fey, Fiend, Giant, Humanoid, Monstrosity, Ooze, Plant, Undead. These types don’t have rules themselves, but some rules in the game affect creatures of certain types in different ways. For example, the cure wounds spell doesn’t work on a Construct or an Undead.</div></div>
+	</div></div>
+	<script>
+		  $(document).ready(function(){
+		    $('[data-toggle="tooltip"]').tooltip();
+		  });
+		</script>
+	</body>
+</html>
