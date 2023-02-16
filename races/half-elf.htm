@@ -19,7 +19,7 @@
       <div class="panel-heading" style="background-color:green;">Half-Elf Traits</div>
 		<div class="panel-body" style="font-size:2vw;">
 		<div class="panel panel-default" style="float:right; width:49%;">
-		<div class="panel-heading">Lineage</div>
+		<div class="panel-heading">MotM Optional</div>
 			<div class="panel-body sub" style="font-size:1vw;">ASI: When determining your character’s ability scores, increase one score by 2 and increase a different score by 1, or increase three different scores by 1.</td></tr>
 			<br>Your character can speak, read, and write Common and one other language that you and your DM agree is appropriate for the character. </div></div>
 		<ul  style="float:left; list-style-type:none;width:150px;">
@@ -50,9 +50,9 @@
       <div class="panel-body" style="background-image: url('../images/races/mdetection.png');background-size: 10vw 10vw;background-repeat: no-repeat; background-position:right;">
 	  <img src="../images/stats/wis2.png" class="stamp">
 	  <img src="../images/stats/option1.png" class="stamp"><p></p>
-	  <p><span data-toggle="tooltip" data-placement="top" title="When you make an Intelligence (Investigation) or a Wisdom (Insight) check, you can roll a d4 and add the number rolled to the ability check.">Deductive Intuition.</span></p>
-	  <p><span data-toggle="tooltip" data-placement="top" title="You can cast the detect magic and detect poison and disease spells with this trait. Starting at 3rd level, you can also cast the see invisibility spell with it. Once you cast any of these spells with this trait, you can’t cast that spell with it again until you finish a long rest. Wisdom is your spellcasting ability for these spells, and you don’t require material components for them.">Magical Detection.</p></span>
-	  <p><span data-toggle="tooltip" data-placement="top" title="If you have the Spellcasting or the Pact Magic class feature, the spells on the spells table are added to the spell list of your spellcasting class.">Spells of the Mark: </span><span data-toggle="tooltip" data-placement="top" title="1st	detect evil and good, detect poison and disease; 2nd	detect thoughts, find traps; 3rd clairvoyance, nondetection; 4th	arcane eye, divination; 5th	legend lore">spells</span></p>
+	  <p><a href="#" class="pop" title=" " data-toggle="popover" data-content="When you make an Intelligence (Investigation) or a Wisdom (Insight) check, you can roll a d4 and add the number rolled to the ability check.">Deductive Intuition.</a></p>
+	  <p><a href="#" class="pop" title=" " data-toggle="popover" data-content="You can cast the detect magic and detect poison and disease spells with this trait. Starting at 3rd level, you can also cast the see invisibility spell with it. Once you cast any of these spells with this trait, you can’t cast that spell with it again until you finish a long rest. Wisdom is your spellcasting ability for these spells, and you don’t require material components for them.">Magical Detection.</p></a>
+	  <p><a href="#" class="pop" title="If you have the Spellcasting or the Pact Magic class feature, these spells are added to the spell list of your spellcasting class." data-toggle="popover" data-content="1st	detect evil and good, detect poison and disease; 2nd	detect thoughts, find traps; 3rd clairvoyance, nondetection; 4th	arcane eye, divination; 5th	legend lore">Spells of the Mark</a></p>
     </div><div class="panel-footer erftlw"></div></div>
     <!-- End of subrace card -->
 	<!-- Start of subrace card-->
@@ -61,10 +61,10 @@
       <div class="panel-body" style="background-image: url('../images/races/mstorm.png');background-size: 10vw 10vw;background-repeat: no-repeat; background-position:right;">
 	  <img src="../images/stats/cha2.png" class="stamp">
 	  <img src="../images/stats/dex1.png" class="stamp"><p></p>
-	  <p><span data-toggle="tooltip" data-placement="top" title="When you make a Dexterity (Acrobatics) check or any ability check involving navigator’s tools, you can roll a d4 and add the number rolled to the ability check.">Windwright’s Intuition.</span></p>
-	  <p><span data-toggle="tooltip" data-placement="top" title="You have resistance to lightning damage.">Storm’s Boon.</p></span>
-	  <p><span data-toggle="tooltip" data-placement="top" title="You know the gust cantrip. Starting at 3rd level, you can cast the gust of wind spell once with this trait, and you regain the ability to cast it when you finish a long rest. Charisma is your spellcasting ability for these spells.">Headwinds.</p></span>
-	  <p><span data-toggle="tooltip" data-placement="top" title="If you have the Spellcasting or the Pact Magic class feature, the spells on the spells table are added to the spell list of your spellcasting class.">Spells of the Mark: </span><span data-toggle="tooltip" data-placement="top" title="1st	feather fall, fog cloud; 2nd	gust of wind, levitate; 3rd	sleet storm, wind wall; 4th	conjure minor elementals, control water; 5th	conjure elemental">spells</span></p>
+	  <p><a href="#" class="pop" title=" " data-toggle="popover" data-content="When you make a Dexterity (Acrobatics) check or any ability check involving navigator’s tools, you can roll a d4 and add the number rolled to the ability check.">Windwright’s Intuition.</span></p>
+	  <p><span data-toggle="tooltip" data-placement="top" title="You have resistance to lightning damage.">Storm’s Boon.</p></a>
+	  <p><a href="#" class="pop" title=" " data-toggle="popover" data-content="You know the gust cantrip. Starting at 3rd level, you can cast the gust of wind spell once with this trait, and you regain the ability to cast it when you finish a long rest. Charisma is your spellcasting ability for these spells.">Headwinds.</p></a>
+	  <p><a href="#" class="pop" title="If you have the Spellcasting or the Pact Magic class feature, these spells are added to the spell list of your spellcasting class." data-toggle="popover" data-content="1st	feather fall, fog cloud; 2nd	gust of wind, levitate; 3rd	sleet storm, wind wall; 4th	conjure minor elementals, control water; 5th	conjure elemental">Spells of the Mark</a></p>
     </div><div class="panel-footer erftlw"></div></div>
     <!-- End of subrace card -->
 	<!-- Start of subrace card-->
@@ -97,6 +97,9 @@
 		<script>
 		  $(document).ready(function(){
 		    $('[data-toggle="tooltip"]').tooltip();
+		  });
+		  $(document).ready(function(){
+			$('[data-toggle="popover"]').popover({title: " ", content: " ", html: true, placement: "top"});   
 		  });
 		</script>
 	</body>

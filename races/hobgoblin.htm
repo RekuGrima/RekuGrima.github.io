@@ -53,9 +53,9 @@
 		<li>Darkvision: No change</li>
 		<li>Fey Ancestry. You have advantage on saving throws you make to avoid or end the charmed condition on yourself.</li>
 		<li>Fey Gift. You can use this trait to take the Help action as a bonus action, and you can do so a number of times equal to your proficiency bonus. You regain all expended uses when you finish a long rest. <br>Starting at 3rd level, choose one of these options each time you take the Help action with this trait:
-		<span data-toggle="tooltip" data-placement="top" title="You and the creature you help each gain a number of temporary hit points equal to 1d6 plus your proficiency bonus.">Hospitality, </span>
-		<span data-toggle="tooltip" data-placement="top" title="You and the creature you help each increase your walking speeds by 10 feet until the start of your next turn.">Passage, </span>
-		<span data-toggle="tooltip" data-placement="top" title="Until the start of your next turn, the first time the creature you help hits a target with an attack roll, that target has disadvantage on the next attack roll it makes within the next minute.">Spite. </span></li>
+		<a href="#" class="pop" title=" " data-toggle="popover" data-content="You and the creature you help each gain a number of temporary hit points equal to 1d6 plus your proficiency bonus.">Hospitality, </a>
+		<a href="#" class="pop" title=" " data-toggle="popover" data-content="You and the creature you help each increase your walking speeds by 10 feet until the start of your next turn.">Passage, </a>
+		<a href="#" class="pop" title=" " data-toggle="popover" data-content="Until the start of your next turn, the first time the creature you help hits a target with an attack roll, that target has disadvantage on the next attack roll it makes within the next minute.">Spite. </a></li>
 		<li>Fortune from the Many. If you miss with an attack roll or fail an ability check or a saving throw, you can draw on your bonds of reciprocity to gain a bonus to the roll equal to the number of allies you can see within 30 feet of you (maximum bonus of +3). You can use this trait a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest.</li></ul>
 	</div><div class="panel-footer motm"></div></div>
 	</div></div>
@@ -64,6 +64,9 @@
 		<script>
 		  $(document).ready(function(){
 		    $('[data-toggle="tooltip"]').tooltip();
+		  });
+		  $(document).ready(function(){
+			$('[data-toggle="popover"]').popover({title: " ", content: " ", html: true, placement: "top"});   
 		  });
 		</script>
 	</body>

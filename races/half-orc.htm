@@ -20,7 +20,7 @@
       <div class="panel-heading" style="background-color:green;">Half-Orc Traits</div>
 		<div class="panel-body" style="font-size:2vw;">
 		<div class="panel panel-default" style="float:right; width:49%;">
-		<div class="panel-heading">Lineage</div>
+		<div class="panel-heading">MotM Optional</div>
 			<div class="panel-body sub" style="font-size:1vw;">ASI: When determining your character’s ability scores, increase one score by 2 and increase a different score by 1, or increase three different scores by 1.</td></tr>
 			<br>Your character can speak, read, and write Common and one other language that you and your DM agree is appropriate for the character. </div></div>
 		<ul  style="float:left; list-style-type:none;width:150px;">
@@ -41,7 +41,7 @@
 	<div class="panel-group">
     <div class="panel panel-default" style="float:center;">
       <div class="panel-heading">Subraces</div>
-      <div class="panel-body">Most subrace traits are in addition to the trait listed in the base race section. Those that are named the same or are straight up better versions over write existing traits (example:Superior Darkvision replaces Darkvision. Those that don't follow those conventions will be denoted with an astrik and will replace an existing trait entirely.
+      <div class="panel-body sub">Most subrace traits are in addition to the trait listed in the base race section. Those that are named the same or are straight up better versions over write existing traits (example:Superior Darkvision replaces Darkvision. Those that don't follow those conventions will be denoted with an astrik and will replace an existing trait entirely.
 	</div></div></div>
 	<div class="panel-group">
 	<!-- Start of subrace card-->
@@ -51,10 +51,10 @@
 	  <img src="../images/stats/wis2.png" class="stamp">
 	  <img src="../images/stats/con1.png" class="stamp">
 	  <img src="../images/stats/dv60.png" class="stamp"></p>
-	  <p><span data-toggle="tooltip" data-placement="top" title="When you make a Wisdom (Perception) or Wisdom (Survival) check, you can roll a d4 and add the number rolled to the ability check.">Hunter’s Intuition. </span></p>
-	  <p><span data-toggle="tooltip" data-placement="top" title="You can cast the hunter’s mark spell with this trait. Starting at 3rd level, you can also cast the locate object spell with it. Once you cast either spell with this trait, you can’t cast that spell with it again until you finish a long rest. Wisdom is your spellcasting ability for these spells.">Finder’s Magic. </span></p>
-	  <p><span data-toggle="tooltip" data-placement="top" title="You can speak, read, and write Common and Goblin.">Languages. </span></p>
-	  <p><span data-toggle="tooltip" data-placement="top" title="If you have the Spellcasting or the Pact Magic class feature, the spells on the spells table are added to the spell list of your spellcasting class.">Spells of the Mark. <span data-toggle="tooltip" data-placement="top" title="1st	faerie fire, longstrider; 2nd	locate animals or plants, locate object; 3rd	clairvoyance, speak with plants; 4th	divination, locate creature; 5th	commune with nature">spells</span></span></p>
+	  <p><a href="#" class="pop" title=" " data-toggle="popover" data-content="When you make a Wisdom (Perception) or Wisdom (Survival) check, you can roll a d4 and add the number rolled to the ability check.">Hunter’s Intuition. </a></p>
+	  <p><a href="#" class="pop" title=" " data-toggle="popover" data-content="You can cast the hunter’s mark spell with this trait. Starting at 3rd level, you can also cast the locate object spell with it. Once you cast either spell with this trait, you can’t cast that spell with it again until you finish a long rest. Wisdom is your spellcasting ability for these spells.">Finder’s Magic. </a></p>
+	  <p><a href="#" class="pop" title=" " data-toggle="popover" data-content="You can speak, read, and write Common and Goblin.">Languages. </a></p>
+	  <p><a href="#" class="pop" title="If you have the Spellcasting or the Pact Magic class feature, these spells are added to the spell list of your spellcasting class." data-toggle="popover" data-content="1st: faerie fire, longstrider<br>2nd: locate animals or plants, locate object<br>3rd: clairvoyance, speak with plants<br>4th: divination, locate creature<br>5th: commune with nature">Spells of the Mark</a></p>
     </div><div class="panel-footer erftlw"></div></div>
     <!-- End of subrace card -->
 	<!-- Start of subrace card-->
@@ -98,6 +98,9 @@
 		<script>
 		  $(document).ready(function(){
 		    $('[data-toggle="tooltip"]').tooltip();
+		  });
+		  $(document).ready(function(){
+			$('[data-toggle="popover"]').popover({title: " ", content: " ", html: true, placement: "top"});   
 		  });
 		</script>
 	</body>

@@ -10,7 +10,6 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Tiefling</title><!--set the title-->
 		<style>
-			ul{	font-family: balth;	}
 		</style>
 	</head>
 	<body>
@@ -49,7 +48,7 @@
       <div class="panel-body scag">
 	  <img src="../images/stats/dex2.png" class="stamp">
 	  <img src="../images/stats/int1.png" class="stamp">
-	  <p>Choose on of the following:<br><span data-toggle="tooltip" data-placement="top" title="You know the vicious mockery cantrip. When you reach 3rd level, you can cast the charm person spell as a 2nd-level spell once with this trait. When you reach 5th level, you can cast the enthrall spell once with this trait. You must finish a long rest to cast these spells once again with this trait. Charisma is your spellcasting ability for them.">Devil’s Tongue, </span><span data-toggle="tooltip" data-placement="top" title="Once you reach 3rd level, you can cast the burning hands spell once per day as a 2nd-level spell.">Hellfire, </span><span data-toggle="tooltip" data-placement="top" title="You have bat-like wings sprouting from your shoulder blades. You have a flying speed of 30 feet while you aren’t wearing heavy armor.">Winged.</span></p>
+	  <p>Choose on of the following:<br><a href="#" class="pop" title=" " data-toggle="popover" data-content="You know the vicious mockery cantrip. When you reach 3rd level, you can cast the charm person spell as a 2nd-level spell once with this trait. When you reach 5th level, you can cast the enthrall spell once with this trait. You must finish a long rest to cast these spells once again with this trait. Charisma is your spellcasting ability for them.">Devil’s Tongue, </a><a href="#" class="pop" title=" " data-toggle="popover" data-content="Once you reach 3rd level, you can cast the burning hands spell once per day as a 2nd-level spell.">Hellfire, </a><a href="#" class="pop" title=" " data-toggle="popover" data-content="You have bat-like wings sprouting from your shoulder blades. You have a flying speed of 30 feet while you aren’t wearing heavy armor.">Winged.</a></p>
     </div></div>
     <!-- End of subrace card -->
 	</div></div>
@@ -60,6 +59,9 @@
 		<script>
 		  $(document).ready(function(){
 		    $('[data-toggle="tooltip"]').tooltip();
+		  });
+		  $(document).ready(function(){
+			$('[data-toggle="popover"]').popover();   
 		  });
 		</script>
 	</body>

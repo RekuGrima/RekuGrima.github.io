@@ -8,31 +8,8 @@ body {
   background-image: url('images/paper.jpg');
   background-origin: content-box;
 }
-/* Style the header */
-
-img.stamp {	height: 4vw;	width: 4vw;}
-li{
-	font-family: sans-serif;
-}
-/* Style the quotes to be more obviously quotations*/
-blockquote,q {
-	font-family: "elicit", "script";
-	font-style: bold;
-	background-image: url('images/page.png');
-	margin:20px;
-	padding:15px;
-	background-position:center;
-	box-shadow: 15px 15px 5px grey;
-}
-.citation { font-style: italic;	font-size: 1vw;}
-a { text-decoration:none;	color:black;}
-a:hover { color: beige;	text-decoration:none;}
-/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
-@media screen and (max-device-width: 400px) {
-  .navbar,.navbar-brand,a {
-	  font-size: 5vw;
-  }
-}
+p::first-letter { font-family: fantasy;}
+iframe { height:400vh; width:100%; border:none; margin-top:5vw; }
 .center {
   display: block;
   margin-left: auto;
@@ -42,17 +19,55 @@ a:hover { color: beige;	text-decoration:none;}
   width: 50%;
   height: 50%;
 }
-iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  border:none;
+
+/* Style the links*/
+a { text-decoration:none;	color:black;}
+a:link { color: black;	text-decoration:none;}
+a:link { color: black;	text-decoration:none;}
+a:hover { color: black;	text-decoration:none;}
+
+
+/* Style the tabs*/
+.nav-tabs{
+  font-family: sans-serif;
+  font-size: 1vw;
+}
+ul.nav-tabs li{
+  border: solid 5px;
+  border-image: url('images/box empty.png') 35 round;
+  padding: -10px;
+}
+.tab-pane{
+	border: solid 5px;
+    border-image: url('images/box empty.png') 35 round;
+	padding: 1.5vw;
 }
 
+/* Style the images*/
+img.stamp {	height: auto;	width: 4vw;}
+img.portrait {
+	height:35vw;
+	float:right;
+	padding: 3vw;
+	margin: 1vw;
+	border: solid black .5vw transparent;
+    border-image: url('images/box empty.png') 35 round;
+	background-image: url('images/bg 3.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position:center;
+	box-shadow: 5px 5px 5px grey;
+	border-radius:5px;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-device-width: 400px) {
+  .navbar,.navbar-brand,a {
+	  font-size: 5vw;
+  }
+}
+
+/* Style tables*/
 table.vis,tr.vis {	float:center;	margin-left: auto;	margin-right: auto;	border:groove 3px;	padding:.5%}
 td.vis {	padding:10px;	border:none;}
 th.vis {
@@ -61,24 +76,25 @@ th.vis {
 	margin:-1px;
 	padding: 10px;	
 }
-tr.vis { border-bottom:groove 3px;}
-tr.vis:hover {	background-color: rgba(0, 153, 204, .5);}
-img.portrait {
-	height:35vw;
-	float:right;
-	padding: 3vw;
-	margin: 1vw;
-	border: solid black .5vw;
-	background-image: url('images/bg 3.png');
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position:center;
-	box-shadow: 5px 5px 5px grey;
-	border-radius:5px;
+tr.vis:hover {	background-color: darksalmon; opacity: .9;}
+
+/* Style popovers*/
+.pop {
+	color:maroon;
+	font-weight: bold;
+	text-decoration: underline;
 }
+.pop:hover{
+	color:green;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+/* Style Panel*/
 .panel{
 	background: transparent;
-	border: solid .3vw;
+	border: solid .3vw transparent;
+    border-image: url('images/box empty.png') 35 round;
 	box-shadow: 5px 5px 3px grey;
 	margin:.3vw;
 }
@@ -96,141 +112,28 @@ img.portrait {
 	background:transparent;
 	height:3vw;
 }
-.phb {
-	background-image: url('images/banners/bannerphb.png');
-	background-size: 8vw auto;
-	background-repeat: no-repeat; 
-	background-position: bottom left;
-}
-.dmg {
-	background-image: url('images/banners/bannerdmg.png');
-	background-size: 8vw auto;
-	background-repeat: no-repeat; 
-	background-position: bottom left;
-}
-.mm {
-	background-image: url('images/banners/bannermm.png');
-	background-size: 8vw auto;
-	background-repeat: no-repeat; 
-	background-position: bottom left;
-}
-.ftod {
-	background-image: url('images/banners/bannerftod.png');
-	background-size: 8vw auto;
-	background-repeat: no-repeat; 
-	background-position: bottom left;
-}
-.egtw {
-	background-image: url('images/banners/banneregtw.png');
-	background-size: 8vw auto;
-	background-repeat: no-repeat; 
-	background-position: bottom left;
-}
-.erftlw {
-	background-image: url('images/banners/bannerERftLW.png');
-	background-size: 8vw auto;
-	background-repeat: no-repeat; 
-	background-position: bottom left;
-}
-.ggtr {
-	background-image: url('images/banners/bannerggtr.png');
-	background-size: 8vw auto;
-	background-repeat: no-repeat; 
-	background-position: bottom left;
-}
-.mcv1 {
-	background-image: url('images/banners/bannermcv1.png');
-	background-size: 8vw auto;
-	background-repeat: no-repeat; 
-	background-position: bottom left;
-}
-.mcv2 {
-	background-image: url('images/banners/bannermcv2.png');
-	background-size: 8vw auto;
-	background-repeat: no-repeat; 
-	background-position: bottom left;
-}
-.mffv1 {
-	background-image: url('images/banners/bannermffv1.png');
-	background-size: 8vw auto;
-	background-repeat: no-repeat; 
-	background-position: bottom left;
-}
-.moot {
-	background-image: url('images/banners/bannermoot.png');
-	background-size: 8vw auto;
-	background-repeat: no-repeat; 
-	background-position: bottom left;
-}
-.mtof {
-	background-image: url('images/banners/bannermtof.png');
-	background-size: 8vw auto;
-	background-repeat: no-repeat; 
-	background-position: bottom left;
-}
-.motm {
-	background-image: url('images/banners/bannermotm.png');
-	background-size: 8vw auto;
-	background-repeat: no-repeat; 
-	background-position: bottom left;
-}
-.sais {
-	background-image: url('images/banners/bannersais.png');
-	background-size: 8vw auto;
-	background-repeat: no-repeat; 
-	background-position: bottom left;
-}
-.scag {
-	background-image: url('images/banners/bannerscag.png');
-	background-size: 8vw auto;
-	background-repeat: no-repeat; 
-	background-position: bottom left;
-}
-.scoc {
-	background-image: url('images/banners/bannerscoc.png');
-	background-size: 8vw auto;
-	background-repeat: no-repeat; 
-	background-position: bottom left;
-}
-.tort {
-	background-image: url('images/banners/bannertort.png');
-	background-size: 8vw auto;
-	background-repeat: no-repeat; 
-	background-position: bottom left;
-}
-.vecna {
-	background-image: url('images/banners/bannervecna.png');
-	background-size: 8vw auto;
-	background-repeat: no-repeat; 
-	background-position: bottom left;
-}
-.vgtm {
-	background-image: url('images/banners/bannervgtm.png');
-	background-size: 8vw auto;
-	background-repeat: no-repeat; 
-	background-position: bottom left;
-}
-.vrgtr {
-	background-image: url('images/banners/bannervrgtr.png');
-	background-size: 8vw auto;
-	background-repeat: no-repeat; 
-	background-position: bottom left;
-}
-.wgte {
-	background-image: url('images/banners/bannerwgte.png');
-	background-size: 8vw auto;
-	background-repeat: no-repeat; 
-	background-position: bottom left;
-}
-.tcoe {
-	background-image: url('images/banners/bannertcoe.png');
-	background-size: 8vw auto;
-	background-repeat: no-repeat; 
-	background-position: bottom left;
-}
-.oga {
-	background-image: url('images/banners/banneroga.png');
-	background-size: 8vw auto;
-	background-repeat: no-repeat; 
-	background-position: bottom left;
-}
+
+/* Add banners to the background*/
+.phb {	background: url('images/banners/bannerphb.png') no-repeat bottom left;	background-size: 8vw auto;}
+.dmg {	background: url('images/banners/bannerdmg.png') no-repeat bottom left;	background-size: 8vw auto;}
+.mm {	background: url('images/banners/bannermm.png') no-repeat bottom left;	background-size: 8vw auto;}
+.ftod {	background: url('images/banners/bannerftod.png') no-repeat bottom left;	background-size: 8vw auto;}
+.egtw {	background: url('images/banners/banneregtw.png') no-repeat bottom left;	background-size: 8vw auto;}
+.erftlw {background: url('images/banners/bannerERftLW.png') no-repeat bottom left;	background-size: 8vw auto;}
+.ggtr {	background: url('images/banners/bannerggtr.png') no-repeat bottom left;	background-size: 8vw auto;}
+.mcv1 {	background: url('images/banners/bannermcv1.png') no-repeat bottom left;	background-size: 8vw auto;}
+.mcv2 {	background: url('images/banners/bannermcv2.png') no-repeat bottom left;	background-size: 8vw auto;}
+.mffv1 {	background: url('images/banners/bannermffv1.png') no-repeat bottom left;	background-size: 8vw auto;}
+.moot {	background: url('images/banners/bannermoot.png') no-repeat bottom left;	background-size: 8vw auto;}
+.mtof {	background: url('images/banners/bannermtof.png') no-repeat bottom left;	background-size: 8vw auto;}
+.motm {	background: url('images/banners/bannermotm.png') no-repeat bottom left;	background-size: 8vw auto;}
+.sais {	background: url('images/banners/bannersais.png') no-repeat bottom left;	background-size: 8vw auto;}
+.scag {	background: url('images/banners/bannerscag.png') no-repeat bottom left;	background-size: 8vw auto;}
+.scoc {	background: url('images/banners/bannerscoc.png') no-repeat bottom left;	background-size: 8vw auto;}
+.tort {	background: url('images/banners/bannertort.png') no-repeat bottom left;	background-size: 8vw auto;}
+.vecna {	background: url('images/banners/bannervecna.png') no-repeat bottom left;	background-size: 8vw auto;}
+.vgtm {	background: url('images/banners/bannervgtm.png') no-repeat bottom left;	background-size: 8vw auto;}
+.vrgtr {	background: url('images/banners/bannervrgtr.png') no-repeat bottom left;	background-size: 8vw auto;}
+.wgte {	background: url('images/banners/bannerwgte.png') no-repeat bottom left;	background-size: 8vw auto;}
+.tcoe {	background: url('images/banners/bannertcoe.png') no-repeat bottom left;	background-size: 8vw auto;}
+.oga {	background: url('images/banners/banneroga.png') no-repeat bottom left;	background-size: 8vw auto;}
