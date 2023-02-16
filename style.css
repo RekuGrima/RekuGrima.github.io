@@ -11,13 +11,18 @@ body {
 p::first-letter { font-family: fantasy;}
 iframe { height:400vh; width:100%; border:none; margin-top:5vw; }
 .center {
-  display: block;
   margin-left: auto;
   margin-right: auto;
   margin-top: auto;
-  margin-bottom: auto;
-  width: 50%;
-  height: 50%;
+  margin-bottom: auto;}
+
+h1.cls{
+  text-align:center;
+  font-family: papyrus;
+  font-weight:bold;
+  }
+button{
+	background-color: mediumseagreen;
 }
 
 /* Style the links*/
@@ -68,7 +73,9 @@ img.portrait {
 }
 
 /* Style tables*/
-table.vis,tr.vis {	float:center;	margin-left: auto;	margin-right: auto;	border:groove 3px;	padding:.5%}
+table { border-collapse: collapse;}
+
+table.vis,tr.vis {	float:center;	margin-left: auto;	margin-right: auto;	border:solid 1px;	padding:.5%}
 td.vis {	padding:10px;	border:none;}
 th.vis {
 	background-color:maroon;
@@ -77,6 +84,13 @@ th.vis {
 	padding: 10px;	
 }
 tr.vis:hover {	background-color: darksalmon; opacity: .9;}
+
+table.cls {	float:center;	width: 95%; margin-left: auto;	margin-right: auto;	border:solid 1px;	padding:.5%;}
+table.cls tr:nth-child(even) {background-color: rgb(222, 184, 135,.5);}
+table.cls tr:nth-child(odd) {background-color: rgba(255, 228, 196,.5);}
+table.cls td {	padding:5px;}
+table.cls th {	background-color:white;	padding: 5px;	}
+table.cls tr:hover {	background-color: thistle;}
 
 /* Style popovers*/
 .pop {

@@ -99,7 +99,7 @@
 		<li class="dropdown">
           <a class="dropdown-toggle" data-toggle="dropdown" href="#" style="color:white;">2. Classes <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li class="subm"><a href="#" target="content">Barbarian</a></li>
+            <li class="subm"><a href="classes/barbarian.htm" target="content">Barbarian</a></li>
 			<li class="subm"><a href="#" target="content">Bard</a></li>
 			<li class="subm"><a href="#" target="content">Blood Hunter</a></li>
 			<li class="subm"><a href="#" target="content">Cleric</a></li>
@@ -116,7 +116,7 @@
 		</li>
 		<!-- Class menu end-->
 		<!-- Other menu start-->
-		<li class="dropdown" style="float:right;">
+		<li class="dropdown" style="float:left;">
           <a class="dropdown-toggle" data-toggle="dropdown" href="#" style="color:white;">Other <span class="caret"></span></a>
           <ul class="dropdown-menu">
 		    <li class="subm"><a href="darkgifts.htm" target="content">Dark Gifts</a></li>
@@ -125,6 +125,8 @@
           </ul>	  
 		</li>
 		<!-- Other menu end-->
+		<li style="float:right;transform: translate(50%, 25%);"><span id="roll20"></span></li>
+		<li style="float:right;"><button onclick="document.getElementById('roll20').innerHTML = Math.floor(Math.random() * 20)+1">D20</button></li>
       </ul>
     </div>
   </div>

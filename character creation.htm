@@ -92,11 +92,11 @@
     </div>
     <div id="menu2" class="tab-pane fade">
       <p>Much of what your character does in the game depends on his or her six abilities: Strength, Dexterity, Constitution, Intelligence, Wisdom, and Charisma. Each ability has a score, which is a number you record on your character sheet.</p>
-	  <p>The six abilities and their use in the game are described in chapter 7. The Ability Score Summary table provides a quick reference for what qualities are measured by each ability, what races increases which abilities, and what classes consider each ability particularly important.</p>
-	  <p>You generate your character’s six ability scores randomly. Roll four 6-sided dice and record the total of the highest three dice on a piece of scratch paper. Do this five more times, so that you have six numbers. If you want to save time or don’t like the idea of randomly determining ability scores, you can use the following scores instead: 15, 14, 13, 12, 10, 8.</p>
+	  <p>You generate your character’s six ability scores randomly. Roll four 6-sided dice and record the total of the highest three dice on a piece of scratch paper. Do this five more times, so that you have six numbers.</p>
 	  <p>Now take your six numbers and write each number beside one of your character’s six abilities to assign scores to Strength, Dexterity, Constitution, Intelligence, Wisdom, and Charisma. Afterward, make any changes to your ability scores as a result of your race choice.</p>
 	  <p>After assigning your ability scores, determine your ability modifiers using the Ability Scores and Modifiers table. To determine an ability modifier without consulting the table, subtract 10 from the ability score and then divide the result by 2 (round down). Write the modifier next to each of your scores.</p>
 		  <p>Ability Scores and Modifiers</p>
+		   <button type="button" onclick="stat()">roll</button> <span id="statout">__</span><br>
 		   <b>Ability Score:</b><input type="number" id="ability" name="ability" min="1" max="30" value="10">
 		   <button type="button" onclick="mod()">calculate</button> Modifier:<b id="modifier">__</b>
 	  <div class="panel-group" id="accordion">
@@ -123,7 +123,7 @@
       </div>
 	  <div class="panel panel-default">
       <div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse5">Variant: Standard Array</a></h4></div>
-        <div id="collapse5" class="panel-collapse collapse"><div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div></div>
+        <div id="collapse5" class="panel-collapse collapse"><div class="panel-body">Your DM may choose to use a standard array for character creation in those cases assign these numbers to your stats in whatever order you like using each number once: 15, 14, 13, 12, 10, 8 </div></div>
       </div></div>
 	  
     </div>
@@ -196,6 +196,17 @@
 			var y = Math.floor(x/2)-5;
 			//output the desired number
 			document.getElementById("modifier").innerHTML = y;
+			}
+		  function stat() {
+		    // get the ability score
+		    var w = Math.floor(Math.random() * 6)+1;
+			var x = Math.floor(Math.random() * 6)+1;
+			var y = Math.floor(Math.random() * 6)+1;
+			var z = Math.floor(Math.random() * 6)+1;
+			let text = w+" "+x+" "+y+" "+z;
+			var tot = (w+x+y+z)-Math.min(w,x,y,z);
+			//output the desired number
+			document.getElementById("statout").innerHTML = text+":<b>"+tot+"</b>";
 			}
 	</script>
 	</body>
