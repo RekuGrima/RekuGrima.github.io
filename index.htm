@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="style.css">
-		<link rel="icon" type="image/x-icon" href="../images/favicon.ico"><!-- set the favicon-->
+  <link rel="icon" type="image/x-icon" href="../images/favicon.ico"><!-- set the favicon-->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <style>
@@ -45,10 +45,10 @@
 		<li><a href="character creation.htm" style="color:white;" target="content">Character Creation</a></li>
 		<!-- Class menu end-->
 		<!-- Race menu start-->
-        <li class="dropdown" style="font-size:5vw;">
+        <li class="dropdown" style="font-size:2em;">
           <a class="dropdown-toggle" data-toggle="dropdown" href="#" style="color:white;">1. Races <span class="caret"></span></a>
-          <ul class="dropdown-menu" style="width:48.5vw;">
-            <li class="subm"><a href="races/aarakocra.htm" target="content">Aarakocra</a></li>
+          <ul class="dropdown-menu subm" style="width:50vw;">
+            <li><a href="races/aarakocra.htm" class="subm" target="content">Aarakocra</a></li>
             <li class="subm"><a href="races/aasimar.htm" target="content">Aasimar</a></li>
 			<li class="subm"><a href="races/bugbear.htm" target="content">Bugbear</a></li>
             <li class="subm"><a href="races/centaur.htm"target="content">Centaur</a></li>
@@ -89,9 +89,9 @@
             <li class="subm"><a href="races/vedalken.htm"target="content">Vedalken</a></li>
 			<li class="subm"><a href="races/warforged.htm" target="content">Warforged</a></li>
             <li class="subm"><a href="races/yuan-ti.htm"target="content">Yuan-ti</a></li>
-			<li class="subm" style="margin-left:2vw;"><a href="races/dhampir.htm" target="content">Lineage: Dhampir</a></li>
-			<li class="subm" style="margin-left:2vw;"><a href="races/hexblood.htm" target="content">Lineage: Hexblood</a></li>
-			<li class="subm" style="margin-left:2vw;"><a href="races/reborn.htm" target="content">Lineage: Reborn</a></li>
+			<li class="subm"><a href="races/dhampir.htm" target="content">Lineage: Dhampir</a></li>
+			<li class="subm"><a href="races/hexblood.htm" target="content">Lineage: Hexblood</a></li>
+			<li class="subm"><a href="races/reborn.htm" target="content">Lineage: Reborn</a></li>
           </ul>	  
 		</li>
 		<!-- Race menu end-->
@@ -100,18 +100,18 @@
           <a class="dropdown-toggle" data-toggle="dropdown" href="#" style="color:white;">2. Classes <span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li class="subm"><a href="classes/barbarian.htm" target="content">Barbarian</a></li>
-			<li class="subm"><a href="#" target="content">Bard</a></li>
-			<li class="subm"><a href="#" target="content">Blood Hunter</a></li>
-			<li class="subm"><a href="#" target="content">Cleric</a></li>
-			<li class="subm"><a href="#" target="content">Druid</a></li>
-			<li class="subm"><a href="#" target="content">Fighter</a></li>
-			<li class="subm"><a href="#" target="content">Monk</a></li>
-			<li class="subm"><a href="#" target="content">Paladin</a></li>
-			<li class="subm"><a href="#" target="content">Ranger</a></li>
-			<li class="subm"><a href="#" target="content">Rogue</a></li>
-			<li class="subm"><a href="#" target="content">Sorcerer</a></li>
-			<li class="subm"><a href="#" target="content">Warlock</a></li>
-			<li class="subm"><a href="#" target="content">Wizard</a></li>
+			<li class="subm"><a href="classes/bard.htm" target="content">Bard</a></li>
+			<li class="subm disabled"><a href="#" target="content">Blood Hunter</a></li>
+			<li class="subm disabled"><a href="#" target="content">Cleric</a></li>
+			<li class="subm disabled"><a href="#" target="content">Druid</a></li>
+			<li class="subm disabled"><a href="#" target="content">Fighter</a></li>
+			<li class="subm disabled"><a href="#" target="content">Monk</a></li>
+			<li class="subm disabled"><a href="#" target="content">Paladin</a></li>
+			<li class="subm disabled"><a href="#" target="content">Ranger</a></li>
+			<li class="subm disabled"><a href="#" target="content">Rogue</a></li>
+			<li class="subm disabled"><a href="#" target="content">Sorcerer</a></li>
+			<li class="subm disabled"><a href="#" target="content">Warlock</a></li>
+			<li class="subm disabled"><a href="#" target="content">Wizard</a></li>
           </ul>	  
 		</li>
 		<!-- Class menu end-->
@@ -125,8 +125,8 @@
           </ul>	  
 		</li>
 		<!-- Other menu end-->
-		<li style="float:right;transform: translate(50%, 25%);"><span id="roll20"></span></li>
-		<li style="float:right;"><button onclick="document.getElementById('roll20').innerHTML = Math.floor(Math.random() * 20)+1">D20</button></li>
+		<li style="float:right; transform: translate(50%, 50%);"><span class="well well-sm roll" id="rollout"></span></li>
+		<li style="float:right; transform: translate(0%, 15%);"><button onclick="roll(20)">D20</button></li>
       </ul>
     </div>
   </div>
@@ -134,6 +134,19 @@
 
   
 <iframe name="content" src="content.htm" style=""></iframe>
-
+<script>
+		  $(document).ready(function(){
+		    $('[data-toggle="tooltip"]').tooltip();
+		  });
+		  $(document).ready(function(){
+			$('[data-toggle="popover"]').popover();   
+		  });
+		  function roll(x=20) {
+		    // get the ability score
+		    var w = Math.floor(Math.random() * x)+1;
+			//output the desired number
+			document.getElementById("rollout").innerHTML = w;
+			}
+		</script>
 </body>
 </html>

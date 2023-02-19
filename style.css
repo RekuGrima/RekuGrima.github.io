@@ -4,7 +4,7 @@
 
 body {
   font-family: sans-serif;
-  font-size: 2vw;
+  font-size: 2em;
   background-image: url('images/paper.jpg');
   background-origin: content-box;
 }
@@ -23,8 +23,20 @@ h1.cls{
   }
 button{
 	background-color: mediumseagreen;
+	border: outset 5px mediumseagreen;
+	border-radius: 5px;
 }
-
+button:active {
+	border: inset 5px mediumseagreen;
+}
+.roll{
+	border:groove 2px transparent;
+	border-bottom:groove 2px;
+	text-align:right;
+	background: transparent;
+	height: 2vh;
+	width: 4vw;
+}
 /* Style the links*/
 a { text-decoration:none;	color:black;}
 a:link { color: black;	text-decoration:none;}
@@ -35,7 +47,7 @@ a:hover { color: black;	text-decoration:none;}
 /* Style the tabs*/
 .nav-tabs{
   font-family: sans-serif;
-  font-size: 1vw;
+  font-size: 1em;
 }
 ul.nav-tabs li{
   border: solid 5px;
@@ -47,7 +59,12 @@ ul.nav-tabs li{
     border-image: url('images/box empty.png') 35 round;
 	padding: 1.5vw;
 }
-
+li.active {
+	background-color: thistle;
+}
+ul.subm li{
+	font-size: 2em;
+}
 /* Style the images*/
 img.stamp {	height: auto;	width: 4vw;}
 img.portrait {
@@ -86,7 +103,7 @@ th.vis {
 tr.vis:hover {	background-color: darksalmon; opacity: .9;}
 
 table.cls {	float:center;	width: 95%; margin-left: auto;	margin-right: auto;	border:solid 1px;	padding:.5%;}
-table.cls tr:nth-child(even) {background-color: rgb(222, 184, 135,.5);}
+table.cls tr:nth-child(even) {background-color: rgba(222, 184, 135,.5);}
 table.cls tr:nth-child(odd) {background-color: rgba(255, 228, 196,.5);}
 table.cls td {	padding:5px;}
 table.cls th {	background-color:white;	padding: 5px;	}
@@ -112,19 +129,16 @@ table.cls tr:hover {	background-color: thistle;}
 	box-shadow: 5px 5px 3px grey;
 	margin:.3vw;
 }
-.panel-success {  width:24.3%; font-size: 1.5vw; text-align: center;}
-.panel-info {  width:24.3%; font-size: 1.5vw; text-align: center;}
-.panel-warning {  width:24.3%; font-size: 1.5vw; text-align: center;}
-.panel-body {	font-size: 1vw; min-height:15vw; text-align: left;}
-.panel-body.sub {	font-size: 1vw; min-height:1vw; text-align: left;}
+.panel-success {  width:24.3%; font-size: 1.5em; text-align: center;}
+.panel-info {  width:24.3%; font-size: 1.5em; text-align: center;}
+.panel-warning {  width:24.3%; font-size: 1.5em; text-align: center;}
+.panel-body {	font-size: 1em; min-height:15vw; text-align: left;}
+.panel-body.sub {	font-size: 1em; min-height:1vw; text-align: left;}
 .panel-group {    width: 100%;  }
+.panel-footer { text-align: right; background-color: rgba(222, 184, 135,.2); height:3vw; margin:0vw; margin-top:.5vw;}
 .panel-heading.book {
 	font-family: fantasy;
 	min-height:5.5vw;
-}
-.panel-footer {
-	background:transparent;
-	height:3vw;
 }
 
 /* Add banners to the background*/
