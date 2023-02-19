@@ -29,23 +29,49 @@
 		</style>
 	</head>
 	<body>
-	<div class="container" style="width: 75%;">
-		<ul class="nav nav-tabs">
-		<li><a data-toggle="tab" href="#home">1. Choose a Race</a></li>
-		<li><a data-toggle="tab" href="#menu1">2. Choose a Class</a></li>
-		<li><a data-toggle="tab" href="#menu2">3. Determine Your Ability Scores</a></li>
-		<li><a data-toggle="tab" href="#menu3">4. Describe Your Character</a></li>
-		<li><a data-toggle="tab" href="#menu4">5. Choose Equipment</a></li>
+	<div class="container center" style="width: 100%;">
+		<ul class="nav nav-tabs justified">
+		<li><a data-toggle="tab" href="#1">1. Pick a Race</a></li>
+		<li><a data-toggle="tab" href="#2">2. Pick a Class</a></li>
+		<li><a data-toggle="tab" href="#3">3. Determine Your Ability Scores</a></li>
+		<li><a data-toggle="tab" href="#4">4. Describe Your Character</a></li>
+		<li><a data-toggle="tab" href="#5">5. Pick Equipment</a></li>
 		</ul>
 
   <div class="tab-content">
-    <div id="home" class="tab-pane fade in active">
+    <div id="1" class="tab-pane fade in active"><!-- Race -->
       <p>Every character belongs to a race, one of the many intelligent humanoid species in the D&D world. The most common player character races are dwarves, elves, halflings, and humans. Some races also have subraces, such as mountain dwarf or wood elf, as well as the less widespread races of dragonborn, gnomes, half-elves, half-orcs, and tieflings.</p>
 	  <p>The race you choose contributes to your character’s identity in an important way, by establishing a general appearance and the natural talents gained from culture and ancestry. Your character’s race grants particular racial traits, such as special senses, proficiency with certain weapons or tools, proficiency in one or more skills, or the ability to use minor spells. These traits sometimes dovetail with the capabilities of certain classes (see step 2). For example, the racial traits of lightfoot halflings make them exceptional rogues, and high elves tend to be powerful wizards. Sometimes playing against type can be fun, too. Halfling paladins and mountain dwarf wizards, for example, can be unusual but memorable characters.</p>
 	  <p>Your race also increases one or more of your ability scores, which you determine in step 3. Note these increases and remember to apply them later.</p>
+	  <div class="panel-group"><div class="panel panel-default"><!--collapse start -->
+	  
+		<div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" href="#asi">Optional ASI</a></h4> </div>
+		<div id="asi" class="panel-collapse collapse">
+      <div class="panel-body sub">When determining the affect your character’s race has on your ability scores, choose one:
+	  <ol>
+	  <li>the suggested stat increases provided on the by the race and subrace</li>
+	  <li>you can increase one score by 2 and increase a different score by 1</li>
+	  <li>increase three different scores by 1.</li>
+	  </ol>
+	  Follow this rule regardless of the method you use to determine the scores, such as rolling or point buy. You can follow those suggestions or ignore them, but you can’t raise any of your scores above 20. If you choose not to use the suggested stats ignore them entirely on the race and subrace. </div>
+      <div class="panel-footer">Source: Monsters of the Multiverse</div></div></div>
+	  
+	  <div class="panel panel-default">
+      <div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" href="#lang">Language List</a></h4> </div>
+	  <div id="lang" class="panel-collapse collapse"><div class="panel-body sub">Standard Languages: Common, Dwarvish, Elvish, Giant, Gnomish, Goblin, Halfling, Orc<br>Exotic Languages: Abyssal, Celestial, Draconic, Deep Speech, Infernal, Primordial, Sylvan, Undercommon.</div>
+	  <div class="panel-footer">Source: Player's Handbook</div></div></div>
+	  
+	  <div class="panel panel-default">
+      <div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" href="#ctype">Creature Type</a></h4> </div>
+	  <div id="ctype" class="panel-collapse collapse"><div class="panel-body sub">Every creature in D&D, including each player character, has a special tag in the rules that identifies the type of creature they are. Most player characters are of the Humanoid type. A race in this chapter tells you what your character’s creature type is.<br>Here’s a list of the game’s creature types in alphabetical order: Aberration, Beast, Celestial, Construct, Dragon, Elemental, Fey, Fiend, Giant, Humanoid, Monstrosity, Ooze, Plant, Undead. <br>These types don’t have rules themselves, but some rules in the game affect creatures of certain types in different ways. For example, the cure wounds spell doesn’t work on a Construct or an Undead.</div>
+	  <div class="panel-footer">Source: Player's Handbook</div></div></div>
+	  
+	  </div><!-- collapse end -->
 	  <p>Record the traits granted by your race on your character sheet. Be sure to note your starting languages and your base speed as well.</p>
     </div>
-    <div id="menu1" class="tab-pane fade">
+	
+	
+    <div id="2" class="tab-pane fade"> <!-- Class -->
       <p>Every adventurer is a member of a class. Class broadly describes a character’s vocation, what special talents he or she possesses, and the tactics he or she is most likely to employ when exploring a dungeon, fighting monsters, or engaging in a tense negotiation. The character classes are described in chapter 3, "Classes."</p>
 	  <p>Your character receives a number of benefits from your choice of class. Many of these benefits are class features — capabilities (including spellcasting) that set your character apart from members of other classes. You also gain a number of proficiencies: armor, weapons, skills, saving throws, and sometimes tools. Your proficiencies define many of the things your character can do particularly well, from using certain weapons to telling a convincing lie.</p>
 	  <p>On your character sheet, record all the features that your class gives you at 1st level.</p>
@@ -90,7 +116,8 @@
   </div>
 </div>
     </div>
-    <div id="menu2" class="tab-pane fade">
+	
+    <div id="3" class="tab-pane fade"><!-- Ability Scores -->
       <p>Much of what your character does in the game depends on his or her six abilities: Strength, Dexterity, Constitution, Intelligence, Wisdom, and Charisma. Each ability has a score, which is a number you record on your character sheet.</p>
 	  <p>You generate your character’s six ability scores randomly. Roll four 6-sided dice and record the total of the highest three dice on a piece of scratch paper. Do this five more times, so that you have six numbers.</p>
 	  <p>Now take your six numbers and write each number beside one of your character’s six abilities to assign scores to Strength, Dexterity, Constitution, Intelligence, Wisdom, and Charisma. Afterward, make any changes to your ability scores as a result of your race choice.</p>
@@ -127,7 +154,7 @@
       </div></div>
 	  
     </div>
-    <div id="menu3" class="tab-pane fade">
+    <div id="4" class="tab-pane fade"><!-- Background -->
       <p>Once you know the basic game aspects of your character, it’s time to flesh him or her out as a person. Your character needs a name. Spend a few minutes thinking about what he or she looks like and how he or she behaves in general terms.</p>
 	  <p>Using the information in the chapter 4 "Personality and Background," you can flesh out your character’s physical appearance and personality traits. Choose your character’s alignment (the moral compass that guides his or her decisions) and ideals. Chapter 4 also helps you identify the things your character holds most dear, called bonds, and the flaws that could one day undermine him or her.</p>
 	  <p>Your character’s background describes where he or she came from, his or her original occupation, and the character’s place in the D&D world. Your DM might be willing to work with you to craft a background that’s a more precise fit for your character concept.</p>
@@ -141,7 +168,8 @@
 	  <li>A character with high Wisdom has good judgment, empathy, and a general awareness of what’s going on. A character with low Wisdom might be absent-minded, foolhardy, or oblivious.</li>
 	  <li>A character with high Charisma exudes confidence, which is usually mixed with a graceful or intimidating presence. A character with a low Charisma might come across as abrasive, inarticulate, or timid.</li></ul>
     </div>
-    <div id="menu4" class="tab-pane fade">
+	
+    <div id="5" class="tab-pane fade"><!-- Equipment -->
       <p>Your class and background determine your character’s starting equipment, including weapons, armor, and other adventuring gear. Record this equipment on your character sheet.</p>
 	  <p>Instead of taking the gear given to you by your class and background, you can purchase your starting equipment. You have a number of gold pieces (gp) to spend based on your class. Extensive lists of equipment, with prices, also appear in that chapter. If you wish, you can also have one trinket at no cost.</p>
 	  <p>Your Strength score limits the amount of gear you can carry. Try not to purchase equipment with a total weight (in pounds) exceeding your Strength score times 15. Chapter 7 has more information on carrying capacity.</p>
@@ -150,6 +178,13 @@
 	  <p>Without armor or a shield, your character’s AC equals 10 + his or her Dexterity modifier. If your character wears armor, carries a shield, or both, calculate your AC using the rules in chapter 5. Record your AC on your character sheet.</p>
 	  <p>Your character needs to be proficient with armor and shields to wear and use them effectively, and your armor and shield proficiencies are determined by your class. There are drawbacks to wearing armor or carrying a shield if you lack the required proficiency, as explained in chapter 5.</p>
 	  <p>Some spells and class features give you a different way to calculate your AC. If you have multiple features that give you different ways to calculate your AC, you choose which one to use.</p>
+	  <div class="panel-group">
+		<div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" href="#acrule">Rule Tip: AC Calculations Don't Stack </a></h4></div>
+		<div id="acrule" class="panel-collapse collapse">
+			<div class="panel-body">When the game gives you more than one way to calculate your Armor Class, you can use only one of them. You choose the one to use. For example, if you have the loxodon’s Natural Armor trait and the monk’s Unarmored Defense feature, you don’t mix them together. Instead, you choose which one determines your AC.</div>
+			<div class="panel-footer" hidden>Panel Footer</div>
+		</div></div>
+	  </div>
 	  <h2><p>Weapons</p></h2>
 	  <p>For each weapon your character wields, calculate the modifier you use when you attack with the weapon and the damage you deal when you hit.</p>
 	  <p>When you make an attack with a weapon, you roll a d20 and add your proficiency bonus (but only if you are proficient with the weapon) and the appropriate ability modifier.</p>
@@ -159,30 +194,6 @@
   </div>
 </div>
 
-	<div class="container" style="width: 24%;">
-	<div class="panel-group">
-	<div class="panel panel-default">
-      <div class="panel-heading" style="font-size:1.2vw;">Rule Tip: <br>AC Calculations Don't Stack</div>
-	  <div class="panel-body sub" style="font-size:.9vw; font-weight:bold;">When the game gives you more than one way to calculate your Armor Class, you can use only one of them. You choose the one to use. For example, if you have the loxodon’s Natural Armor trait and the monk’s Unarmored Defense feature, you don’t mix them together. Instead, you choose which one determines your AC.</div></div>
-	  <div class="panel panel-default">
-      <div class="panel-heading" style="font-size: 1.5vw;">Ability Score Increases by Race</div>
-	  <div class="panel-body" style="font-size: 1vw; font-weight:bold;">When determining your character’s ability scores, choose one:
-	  <ol>
-	  <li style="margin-left:-1.5vw;">the suggested stat increases provided on the by the race and subrace</li>
-	  <li style="margin-left:-1.5vw;">you can increase one score by 2 and increase a different score by 1</li>
-	  <li style="margin-left:-1.5vw;">increase three different scores by 1.</li>
-	  </ol>
-	  Follow this rule regardless of the method you use to determine the scores, such as rolling or point buy. You can follow those suggestions or ignore them, but you can’t raise any of your scores above 20. If you choose not to use the suggested stats ignore them entirely on the race and subrace. </div>
-	</div>
-	<div class="panel panel-default">
-      <div class="panel-heading" style="font-size:1.2vw;">Languages</div>
-	  <div class="panel-body sub" style="font-size:.9vw; font-weight:bold;">Standard Languages: Common, Dwarvish, Elvish, Giant, Gnomish, Goblin, Halfling, Orc</div>
-	  <div class="panel-body sub" style="font-size:.9vw; font-weight:bold;">Exotic Languages: Abyssal, Celestial, Draconic, Deep Speech, Infernal, Primordial, Sylvan, Undercommon.</div>
-	  </div>
-	  <div class="panel panel-default">
-      <div class="panel-heading" style="font-size: 1.5vw;">Creature Type</div>
-	  <div class="panel-body" style="font-size: 1vw; font-weight:bold;">Every creature in D&D, including each player character, has a special tag in the rules that identifies the type of creature they are. Most player characters are of the Humanoid type. A race in this chapter tells you what your character’s creature type is.<br>Here’s a list of the game’s creature types in alphabetical order: Aberration, Beast, Celestial, Construct, Dragon, Elemental, Fey, Fiend, Giant, Humanoid, Monstrosity, Ooze, Plant, Undead. <br>These types don’t have rules themselves, but some rules in the game affect creatures of certain types in different ways. For example, the cure wounds spell doesn’t work on a Construct or an Undead.</div></div>
-	</div></div>
 	<script>
 		  $(document).ready(function(){
 		    $('[data-toggle="tooltip"]').tooltip();

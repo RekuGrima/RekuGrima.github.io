@@ -39,10 +39,11 @@ button:active {
 }
 /* Style the links*/
 a { text-decoration:none;	color:black;}
-a:link { color: black;	text-decoration:none;}
-a:link { color: black;	text-decoration:none;}
-a:hover { color: black;	text-decoration:none;}
-
+a:link { color: black; text-decoration:none;}
+a[target="content"] {  font-family: sans-serif;  font-size: 1.5em;  }
+a[data-toggle="dropdown"] { font-family: sans-serif;  font-size: 1em;  }
+a.menu {  font-family: sans-serif;  font-size: 1em;  color:white;}
+a.menu:link {  font-family: sans-serif;  font-size: 1em;  color:white;}
 
 /* Style the tabs*/
 .nav-tabs{
@@ -59,12 +60,7 @@ ul.nav-tabs li{
     border-image: url('images/box empty.png') 35 round;
 	padding: 1.5vw;
 }
-li.active {
-	background-color: thistle;
-}
-ul.subm li{
-	font-size: 2em;
-}
+li.active {	background-color: thistle;}
 /* Style the images*/
 img.stamp {	height: auto;	width: 4vw;}
 img.portrait {
@@ -72,8 +68,7 @@ img.portrait {
 	float:right;
 	padding: 3vw;
 	margin: 1vw;
-	border: solid black .5vw transparent;
-    border-image: url('images/box empty.png') 35 round;
+	border: solid black .5vw;
 	background-image: url('images/bg 3.png');
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -81,14 +76,33 @@ img.portrait {
 	box-shadow: 5px 5px 5px grey;
 	border-radius:5px;
 }
-
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
 /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
-@media screen and (max-device-width: 400px) {
-  .navbar,.navbar-brand,a {
-	  font-size: 5vw;
+@media screen and (max-width: 400px) {
+  /* .navbar,.navbar-brand,a {
+	  font-size: 1.5em;
+  } */
+  iframe{
+	  margin-top: 15vh;
+  }
+  body {
+    background-color: lightgreen;
+	background-image:none;
   }
 }
-
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: linen;
+	background-image:none;
+  }
+  iframe{
+	  margin-top: 15vh;
+  }
+}
 /* Style tables*/
 table { border-collapse: collapse;}
 
