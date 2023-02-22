@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8"><!-- define the character set-->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="../style.css"><!--link the stylesheet-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Character Creation</title><!--set the title-->
+		<style>
+			
+		</style>
+	</head>
+	<body>
+	<h1 class="cls">Name</h1>
+	<div style="text-align:center"><label for="rollout">Hit Die: <button type="button" onclick="roll(8)">d8</button></label><input type="text" class="roll" name="rollout" id="rollout" readonly></div>
+	<!--Class Table -->
+		<table class="cls">
+			<tr><th style="width:10%" rowspan="2">Level</th><th style="width:10%" rowspan="2">Proficiency Bonus</th><th style="width:30%" rowspan="2">Features</th><th style="width:10%" rowspan="2">Cantrips Known</th><th style="width:10%" rowspan="2">Spells Known</th><th style="width:30%" colspan="9">Spells Slots per Level</th></tr>
+			<tr><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th></tr>
+			<tr><td>1</td><td>2</td><td>detail</td><td>detail</td><td>detail</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+			<tr><td>2</td><td>2</td><td>detail</td><td>detail</td><td>detail</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+			<tr><td>3</td><td>2</td><td>detail</td><td>detail</td><td>detail</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+			<tr><td>4</td><td>2</td><td>detail</td><td>detail</td><td>detail</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+			<tr><td>5</td><td>3</td><td>detail</td><td>detail</td><td>detail</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+			<tr><td>6</td><td>3</td><td>detail</td><td>detail</td><td>detail</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+			<tr><td>7</td><td>3</td><td>detail</td><td>detail</td><td>detail</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+			<tr><td>8</td><td>3</td><td>detail</td><td>detail</td><td>detail</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+			<tr><td>9</td><td>4</td><td>detail</td><td>detail</td><td>detail</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+			<tr><td>10</td><td>4</td><td>detail</td><td>detail</td><td>detail</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+			<tr><td>11</td><td>4</td><td>detail</td><td>detail</td><td>detail</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+			<tr><td>12</td><td>4</td><td>detail</td><td>detail</td><td>detail</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+			<tr><td>13</td><td>5</td><td>detail</td><td>detail</td><td>detail</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+			<tr><td>14</td><td>5</td><td>detail</td><td>detail</td><td>detail</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+			<tr><td>15</td><td>5</td><td>detail</td><td>detail</td><td>detail</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+			<tr><td>16</td><td>5</td><td>detail</td><td>detail</td><td>detail</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+			<tr><td>17</td><td>6</td><td>detail</td><td>detail</td><td>detail</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+			<tr><td>18</td><td>6</td><td>detail</td><td>detail</td><td>detail</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+			<tr><td>19</td><td>6</td><td>detail</td><td>detail</td><td>detail</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+			<tr><td>20</td><td>6</td><td>detail</td><td>detail</td><td>detail</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+		</table><!--Class Table end--><!--Archtypes Features -->
+	<div class="container" style="margin-top: 2vh; width:100%; font-size: 1em;">
+		<ul class="nav nav-tabs">
+			<li class="active"><a data-toggle="tab" href="#home">Class Features</a></li>
+			<li><a data-toggle="tab" href="#arch1">Archtype 1</a></li>
+			<li><a data-toggle="tab" href="#arch2">Archtype 2</a></li>
+			<li><a data-toggle="tab" href="#arch3">Archtype 3</a></li>
+		</ul>
+	<div class="tab-content center"><div id="home" class="tab-pane fade in active">
+	<!--Class Features -->
+	<div class="panel-group center" id="accordion" style="width:95%;">
+		<div class="panel panel-default">
+			<div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#oncreation">On Creation</a></h4></div>
+			<div id="oncreation" class="panel-collapse collapse">
+			<div class="panel-body">
+				<p>Hit Die: 1d8 per __ level, max at first level.</p>
+				<p>Proficiencies:
+					<ul><li>Armor:  __</li>
+						<li>Weapons:  __</li>
+						<li>Tools:  __</li>
+						<li>Saving Throws:  __</li>
+						<li>Skills:  __</li></ul>
+				</p>
+				<p>You start with the following equipment, in addition to the equipment granted by your background:
+					<ul><li>__</li>
+						<li>__</li>
+						<li>__</li>
+						<li>__</li></ul>
+				</p></div>
+			</div></div>
+		<div class="panel panel-default">
+			<div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#classability1">Spellcasting</a></h4></div>
+			<div id="classability1" class="panel-collapse collapse">
+			<div class="panel-body"><p>__</p></div>
+			</div></div>
+		<div class="panel panel-default">
+			<div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#classability2">__</a></h4></div>
+			<div id="classability2" class="panel-collapse collapse">
+			<div class="panel-body"><p>__</p></div>
+			</div></div>
+		<div class="panel panel-default">
+			<div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#classability3">3</a></h4></div>
+			<div id="classability3" class="panel-collapse collapse">
+			<div class="panel-body"><p> </p></div>
+			</div></div>
+		<div class="panel panel-default">
+			<div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#classability4">4</a></h4></div>
+			<div id="classability4" class="panel-collapse collapse">
+			<div class="panel-body"><p> </p></div>
+			</div></div>
+		<div class="panel panel-default">
+			<div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#classability5">5</a></h4></div>
+			<div id="classability5" class="panel-collapse collapse">
+			<div class="panel-body"><p></p></div>
+			</div></div>
+		<div class="panel panel-default">
+			<div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#classability6">6</a></h4></div>
+			<div id="classability6" class="panel-collapse collapse">
+			<div class="panel-body"><p></p></div>
+			</div></div>
+		<div class="panel panel-default">
+			<div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#classability7">7</a></h4></div>
+			<div id="classability7" class="panel-collapse collapse">
+			<div class="panel-body"><p></p></div>
+			</div></div>
+		<div class="panel panel-default">
+			<div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#classability8">8</a></h4></div>
+			<div id="classability8" class="panel-collapse collapse">
+			<div class="panel-body"><p></p></div>
+			</div></div>
+		<div class="panel panel-default">
+			<div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#classability9">9</a></h4></div>
+			<div id="classability9" class="panel-collapse collapse">
+			<div class="panel-body"><p></p></div>
+			</div></div>
+		<div class="panel panel-default">
+			<div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#classability10">10</a></h4></div>
+			<div id="classability10" class="panel-collapse collapse">
+			<div class="panel-body"><p></p></div>
+			</div></div>
+		<div class="panel panel-default">
+			<div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#classability11">11</a></h4></div>
+			<div id="classability11" class="panel-collapse collapse">
+			<div class="panel-body"><p></p></div>
+			</div></div>
+		<div class="panel panel-default">
+			<div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#classability12">12</a></h4></div>
+			<div id="classability12" class="panel-collapse collapse">
+			<div class="panel-body"><p></p></div>
+			</div></div>
+		<div class="panel panel-default">
+			<div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#classability13">13</a></h4></div>
+			<div id="classability13" class="panel-collapse collapse">
+			<div class="panel-body"><p></p></div>
+			</div></div>
+		<div class="panel panel-default">
+			<div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#classability14">14</a></h4></div>
+			<div id="classability14" class="panel-collapse collapse">
+			<div class="panel-body"><p></p></div>
+			</div></div>
+    </div><!--Class Features end-->
+	<div class="panel-footer">Source: Player's Handbook</div>
+		</div>
+    <div id="arch1" class="tab-pane fade"><!-- <h3>Path of the Berserker</h3> -->
+		<p> </p>
+	<div class="panel-footer">Source: Player's Handbook</div>
+		</div>
+    <div id="arch2" class="tab-pane fade"><h3>Archtype 2</h3>
+      <p> </p>
+	<div class="panel-footer">Source: Player's Handbook</div>
+	  </div>
+    <div id="arch3" class="tab-pane fade"><h3>Archtype 3</h3>
+      <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+	  </div>
+  </div>
+</div>
+	
+	
+		<script>
+		  $(document).ready(function(){
+		    $('[data-toggle="tooltip"]').tooltip();
+		  });
+		  $(document).ready(function(){
+			$('[data-toggle="popover"]').popover();   
+		  });
+		  function roll(x=20) {
+		    // get the ability score
+		    var w = Math.floor(Math.random() * x)+1;
+			//output the desired number
+			document.getElementById("rollout").value = w;
+			}
+		</script>
+	</body>
+</html>
