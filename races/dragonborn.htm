@@ -10,58 +10,139 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Dragonborn</title><!--set the title-->
 		<style>
-			ul{	font-family: balth;	}
 		</style>
 	</head>
-	<body><div class="container" style="width: 95%;">
-	<div class="panel-group">
-    <div class="panel panel-primary" style="float:center;">
-      <div class="panel-heading" style="background-color:green;">Dragonborn Traits</div>
-		<div class="panel-body" style="font-size:2vw;">
+	<body>
+	<h1 style="text-align: center;">Dragonborn Traits</h1>
+	<div class="container" style="margin-top: 2vh; width:100%; font-size: 1em;">
+	
+		<ul class="nav nav-tabs">
+			<li class="active"><a data-toggle="tab" href="#legacy">PHB</a></li>
+			<li><a data-toggle="tab" href="#source1">Draconblood</a></li>
+			<li><a data-toggle="tab" href="#source2">Ravenite</a></li>
+		</ul>
+		<div class="tab-content center">
+		<div id="legacy" class="tab-pane fade  in active clearfix">
+			<figure>
+				<img class="portrait" src="../images/races/dragonborn.png">
+				<figcaption>Dragonborn</figcaption>
+			</figure>
+		<!-- contents -->
 		<div class="panel panel-default" style="float:right; width:49%;">
 		<div class="panel-heading" style="font-size:1.5vw;">MotM ASI & Language</div>
 			<div class="panel-body sub" style="font-size:1vw;">When determining your character’s ability scores and languages you can instead: <br>increase one score by 2 and increase a different score by 1, or increase three different scores by 1.
 			<br>Your character can speak, read, and write Common and one other language that you and your DM agree is appropriate for the character. </div></div>
-		<ul  style="float:left; list-style-type:none;width:150px;">
-		<li><img src="../images/stats/str2.png" class="stamp"></li>
-		<li><img src="../images/stats/cha1.png" class="stamp"></li>
-		<li><img src="../images/stats/speed30.png" class="stamp"></li>
-		<li><img src="../images/stats/med.png" class="stamp"></li></ul>
 		<ul>
+		<li>ASI: Str +2, Cha +1</li>
+		<li>Speed: 30ft</li>
+		<li>Size: Medium</li>
 		<li>Creature Type. You are a Humanoid.</li>
-		<li>Age. Young dragonborn grow quickly. They walk hours after hatching, attain the size and development of a 10-year-old human child by the age of 3, and reach adulthood by 15. They live to be around 80.</li><img class="portrait" src="../images/races/dragonborn.png">
+		<li>Age. Young dragonborn grow quickly. They walk hours after hatching, attain the size and development of a 10-year-old human child by the age of 3, and reach adulthood by 15. They live to be around 80.</li>
 		<li>Draconic Ancestry. You have draconic ancestry. Choose one type of dragon from the Draconic Ancestry table. Your breath weapon and damage resistance are determined by the dragon type, as shown in the table.</li>
 		<li>Breath Weapon. You can use your action to exhale destructive energy. Your draconic ancestry determines the size, shape, and damage type of the exhalation.<br>When you use your breath weapon, each creature in the area of the exhalation must make a saving throw, the type of which is determined by your draconic ancestry. The DC for this saving throw equals 8 + your Constitution modifier + your proficiency bonus. A creature takes 2d6 damage on a failed save, and half as much damage on a successful one. The damage increases to 3d6 at 6th level, 4d6 at 11th level, and 5d6 at 16th level.<br>After you use your breath weapon, you can’t use it again until you complete a short or long rest.</li>
 		<li>Damage Resistance. You have resistance to the damage type associated with your draconic ancestry.</li>
 		<li>Languages. You can speak, read, and write Common and Draconic. Draconic is thought to be one of the oldest languages and is often used in the study of magic. The language sounds harsh to most other creatures and includes numerous hard consonants and sibilants.</li></ul>
-		<table class="vis" style="float:left; width:33%; font-size:1vw;">
-			<tr class="vis"><th colspan="4" class="vis">Chromatic Ancestry</th></tr>
-			<tr class="vis"><th class="vis">Dragon</th><th class="vis">Damage Type</th><th class="vis">Breath Weapon</th><th class="vis">FToD Breath</th></tr>
-			<tr class="vis"><td class="vis">Black</td><td class="vis">Acid</td><td class="vis">5 by 30 ft. line (Dex. save)</td><td class="vis">5 by 30 ft. line (Dex. save)</td></tr>
-			<tr class="vis"><td class="vis">Blue</td><td class="vis">Lightning</td><td class="vis">5 by 30 ft. line (Dex. save)</td><td class="vis">5 by 30 ft. line (Dex. save)</td></tr>
-			<tr class="vis"><td class="vis">Green</td><td class="vis">Poison</td><td class="vis">15 ft. cone (Con. save)</td><td class="vis">5 by 30 ft. line (Dex. save)</td></tr>
-			<tr class="vis"><td class="vis">Red</td><td class="vis">Fire</td><td class="vis">15 ft. cone (Dex. save)</td><td class="vis">5 by 30 ft. line (Dex. save)</td></tr>
-			<tr class="vis"><td class="vis">White</td><td class="vis">Cold</td><td class="vis">15 ft. cone (Con. save)</td><td class="vis">5 by 30 ft. line (Dex. save)</td></tr>
-		</table>
-		<table class="vis" style="float:left; width:33%; font-size:1vw;">
-			<tr class="vis"><th colspan="4" class="vis">Metallic Ancestry</th></tr>
-			<tr class="vis"><th class="vis">Dragon</th><th class="vis">Damage Type</th><th class="vis">Breath Weapon</th><th class="vis">FToD Breath</th></tr>
-			<tr class="vis"><td class="vis">Brass</td><td class="vis">Fire</td><td class="vis">5 by 30 ft. line (Dex. save)</td><td class="vis">15 ft. cone (Dex. save)</td></tr>
-			<tr class="vis"><td class="vis">Bronze</td><td class="vis">Lightning</td><td class="vis">5 by 30 ft. line (Dex. save)</td><td class="vis">15 ft. cone (Dex. save)</td></tr>
-			<tr class="vis"><td class="vis">Copper</td><td class="vis">Acid</td><td class="vis">5 by 30 ft. line (Dex. save)</td><td class="vis">15 ft. cone (Dex. save)</td></tr>
-			<tr class="vis"><td class="vis">Gold</td><td class="vis">Fire</td><td class="vis">15 ft. cone (Dex. save)</td><td class="vis">15 ft. cone (Dex. save)</td></tr>
-			<tr class="vis"><td class="vis">Silver</td><td class="vis">Cold</td><td class="vis">15 ft. cone (Con. save)</td><td class="vis">15 ft. cone (Dex. save)</td></tr>
-		</table>
-		<table class="vis" style="float:left; width:33%; font-size:1vw;">
-			<tr class="vis"><th colspan="3" class="vis">Gem Ancestry</th></tr>
-			<tr class="vis"><th class="vis">Dragon</th><th class="vis">Damage Type</th><th class="vis">Breath Weapon</th></tr>
-			<tr class="vis"><td class="vis">Amethyst</td><td class="vis">Force</td><td class="vis">15 ft. cone (Dex. save)</td></tr>
-			<tr class="vis"><td class="vis">Crystal</td><td class="vis">Radiant</td><td class="vis">15 ft. cone (Dex. save)</td></tr>
-			<tr class="vis"><td class="vis">Emerald</td><td class="vis">Psychic</td><td class="vis">15 ft. cone (Dex. save)</td></tr>
-			<tr class="vis"><td class="vis">Sapphire</td><td class="vis">Thunder</td><td class="vis">15 ft. cone (Dex. save)</td></tr>
-			<tr class="vis"><td class="vis">Topaz</td><td class="vis">Necrotic</td><td class="vis">15 ft. cone (Dex. save)</td></tr>
-		</table>
-	</div><div class="panel-footer phb"></div></div></div></div>
+		
+	<div class="panel-footer">Source: Player's Handbook</div></div>
+	<div id="source1" class="tab-pane fade clearfix">
+			<figure>
+				<img class="portrait" src="../images/races/dragonborn.png">
+				<figcaption>Dragonborn</figcaption>
+			</figure>
+		<!-- contents -->
+		<div class="panel panel-default" style="float:right; width:49%;">
+		<div class="panel-heading" style="font-size:1.5vw;">MotM ASI & Language</div>
+			<div class="panel-body sub" style="font-size:1vw;">When determining your character’s ability scores and languages you can instead: <br>increase one score by 2 and increase a different score by 1, or increase three different scores by 1.
+			<br>Your character can speak, read, and write Common and one other language that you and your DM agree is appropriate for the character. </div></div>
+		<ul>
+		<li>ASI: Int +2, Cha +1</li>
+		<li>Speed: 30ft</li>
+		<li>Size: Medium</li>
+		<li>Darkvision: 60ft</li>
+		<li>Creature Type. You are a Humanoid.</li>
+		<li>Age. Young dragonborn grow quickly. They walk hours after hatching, attain the size and development of a 10-year-old human child by the age of 3, and reach adulthood by 15. They live to be around 80.</li>
+		<li>Draconic Ancestry. You have draconic ancestry. Choose one type of dragon from the Draconic Ancestry table. Your breath weapon and damage resistance are determined by the dragon type, as shown in the table.</li>
+		<li>Breath Weapon. You can use your action to exhale destructive energy. Your draconic ancestry determines the size, shape, and damage type of the exhalation.<br>When you use your breath weapon, each creature in the area of the exhalation must make a saving throw, the type of which is determined by your draconic ancestry. The DC for this saving throw equals 8 + your Constitution modifier + your proficiency bonus. A creature takes 2d6 damage on a failed save, and half as much damage on a successful one. The damage increases to 3d6 at 6th level, 4d6 at 11th level, and 5d6 at 16th level.<br>After you use your breath weapon, you can’t use it again until you complete a short or long rest.</li>
+		<li>Forceful Presence. You can use your understanding of creative diplomacy or intimidation to guide a conversation in your favor. When you make a Charisma (Intimidation or Persuasion) check, you can do so with advantage. Once you use this trait, you can’t do so again until you finish a short or long rest.</li>
+		<li>Languages. You can speak, read, and write Common and Draconic. Draconic is thought to be one of the oldest languages and is often used in the study of magic. The language sounds harsh to most other creatures and includes numerous hard consonants and sibilants.</li></ul>
+			 
+	<div class="panel-footer">Source: Explorer's Guide to Wildmount</div></div>
+	
+	<div id="source2" class="tab-pane fade clearfix">
+			<figure>
+				<img class="portrait" src="../images/races/dragonborn.png">
+				<figcaption>Dragonborn</figcaption>
+			</figure>
+		<!-- contents -->
+		<div class="panel panel-default" style="float:right; width:49%;">
+		<div class="panel-heading" style="font-size:1.5vw;">MotM ASI & Language</div>
+			<div class="panel-body sub" style="font-size:1vw;">When determining your character’s ability scores and languages you can instead: <br>increase one score by 2 and increase a different score by 1, or increase three different scores by 1.
+			<br>Your character can speak, read, and write Common and one other language that you and your DM agree is appropriate for the character. </div></div>
+		<ul>
+		<li>ASI: Str +2, Con +1</li>
+		<li>Speed: 30ft</li>
+		<li>Size: Medium</li>
+		<li>Darkvision: 60ft</li>
+		<li>Creature Type. You are a Humanoid.</li>
+		<li>Age. Young dragonborn grow quickly. They walk hours after hatching, attain the size and development of a 10-year-old human child by the age of 3, and reach adulthood by 15. They live to be around 80.</li>
+		<li>Draconic Ancestry. You have draconic ancestry. Choose one type of dragon from the Draconic Ancestry table. Your breath weapon and damage resistance are determined by the dragon type, as shown in the table.</li>
+		<li>Breath Weapon. You can use your action to exhale destructive energy. Your draconic ancestry determines the size, shape, and damage type of the exhalation.<br>When you use your breath weapon, each creature in the area of the exhalation must make a saving throw, the type of which is determined by your draconic ancestry. The DC for this saving throw equals 8 + your Constitution modifier + your proficiency bonus. A creature takes 2d6 damage on a failed save, and half as much damage on a successful one. The damage increases to 3d6 at 6th level, 4d6 at 11th level, and 5d6 at 16th level.<br>After you use your breath weapon, you can’t use it again until you complete a short or long rest.</li>
+		<li>Vengeful Assault. When you take damage from a creature in range of a weapon you are wielding, you can use your reaction to make an attack with the weapon against that creature. Once you use this trait, you can’t do so again until you finish a short or long rest.</li>
+		<li>Languages. You can speak, read, and write Common and Draconic. Draconic is thought to be one of the oldest languages and is often used in the study of magic. The language sounds harsh to most other creatures and includes numerous hard consonants and sibilants.</li></ul>			 
+	<div class="panel-footer">Source: Explorer's Guide to Wildmount</div></div>
+	<div class="container"><div class="panel-group" id="accordion">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <button data-toggle="collapse" data-parent="#accordion" data-target="#collapse1">Chromatic</button>
+          <button data-toggle="collapse" data-parent="#accordion" data-target="#collapse2">Metallic</button>
+          <button data-toggle="collapse" data-parent="#accordion" data-target="#collapse3">Gem</button>
+        </h4>
+      </div>
+      <div id="collapse1" class="panel-collapse in active  collapse">
+        <div class="panel-body">
+		<table class="cls">
+			<tr><th>Dragon</th><th>Damage Type</th><th style="text-align:center;">Breath Weapon</th><th title="Fizban's Treasury of Dragons" style="text-align:center;">FToD Breath</th></tr>
+			<tr><td>Black</td><td>Acid</td><td colspan="2" rowspan="2" style="text-align:center;">5 by 30 ft. line (Dex. save)</td></tr>
+			<tr><td>Blue</td><td>Lightning</td></tr>
+			<tr><td>Green</td><td>Poison</td><td style="text-align:center;">15 ft. cone (Con. save)</td><td style="text-align:center;">5 by 30 ft. line (Dex. save)</td></tr>
+			<tr><td>Red</td><td>Fire</td><td style="text-align:center;">15 ft. cone (Dex. save)</td><td style="text-align:center;">5 by 30 ft. line (Dex. save)</td></tr>
+			<tr><td>White</td><td>Cold</td><td style="text-align:center;">15 ft. cone (Con. save)</td><td style="text-align:center;">5 by 30 ft. line (Dex. save)</td></tr>
+		</table></div>
+		<div class="panel-footer">Source: Player's Handbook and Fizban's Treasury of Dragons</div>
+      </div>    
+      <div id="collapse2" class="panel-collapse collapse">
+        <div class="panel-body">
+		<table class="cls">
+			<tr><th>Dragon</th><th>Damage Type</th><th style="text-align:center;">Breath Weapon</th><th title="Fizban's Treasury of Dragons" style="text-align:center;">FToD Breath</th></tr>
+			<tr><td>Brass</td><td>Fire</td><td colspan="2" style="text-align:center;">5 by 30 ft. line (Dex. save)</td></tr>
+			<tr><td>Bronze</td><td>Lightning</td><td colspan="2" style="text-align:center;">5 by 30 ft. line (Dex. save)</td></tr>
+			<tr><td>Copper</td><td>Acid</td><td style="text-align:center;">5 by 30 ft. line (Dex. save)</td><td style="text-align:center;">15 ft. cone (Dex. save)</td></tr>
+			<tr><td>Gold</td><td>Fire</td><td colspan="2" style="text-align:center;">15 ft. cone (Dex. save)</td></tr>
+			<tr><td>Silver</td><td>Cold</td><td style="text-align:center;">15 ft. cone (Con. save)</td><td style="text-align:center;">15 ft. cone (Dex. save)</td></tr>
+		</table></div>
+		<div class="panel-footer">Source: Player's Handbook and Fizban's Treasury of Dragons</div>
+      </div>    
+      <div id="collapse3" class="panel-collapse collapse">
+        <div class="panel-body">
+		<table class="cls">
+			<tr><th>Dragon</th><th>Damage Type</th><th style="text-align:center;">Breath Weapon</th></tr>
+			<tr><td>Amethyst</td><td>Force</td><td rowspan="5" style="text-align:center;">15 ft. cone (Dex. save)</td></tr>
+			<tr><td>Crystal</td><td>Radiant</td> </tr>
+			<tr><td>Emerald</td><td>Psychic</td> </tr>
+			<tr><td>Sapphire</td><td>Thunder</td> </tr>
+			<tr><td>Topaz</td><td>Necrotic</td> </tr>
+		</table></div>
+      <div class="panel-footer">Source: Fizban's Treasury of Dragons</div></div>
+    </div>
+    </div>
+  </div>
+	
+	
+	</div></div>
+	
+		
+		
 	<!-- start of subrace section -->
 	<div class="container" style="width: 95%;">
 	<div class="panel-group">
@@ -70,26 +151,8 @@
       <div class="panel-body sub">Most subrace traits are in addition to the trait listed in the base race section. Those that are named the same or are straight up better versions over write existing traits (example:Superior Darkvision replaces Darkvision. Those that don't follow those conventions will be denoted with an astrik and will replace an existing trait entirely.
 	</div></div></div>
 	<div class="panel-group">
-	<!-- Start of subrace card-->
-    <div class="panel panel-info" style="float:left;">
-      <div class="panel-heading">Draconblood<span data-toggle="tooltip" data-placement="top" title="This varient uses the dragonborn traits in the Player’s Handbook, with the following traits replacing the Ability Score Increase and Damage Resistance traits.">*</span></div>
-      <div class="panel-body">
-	  <img src="../images/stats/int2.png" class="stamp">
-	  <img src="../images/stats/cha1.png" class="stamp">
-	  <img src="../images/stats/dv60.png" class="stamp"><p></p>
-	  <p><a href="#" class="pop" title=" " data-toggle="popover" data-content="You can use your understanding of creative diplomacy or intimidation to guide a conversation in your favor. When you make a Charisma (Intimidation or Persuasion) check, you can do so with advantage. Once you use this trait, you can’t do so again until you finish a short or long rest.">Forceful Presence.</a></p>
-    </div><div class="panel-footer egtw"></div></div>
-    <!-- End of subrace card -->
-	<!-- Start of subrace card-->
-    <div class="panel panel-info" style="float:left;">
-      <div class="panel-heading">Ravenite<span data-toggle="tooltip" data-placement="top" title="This varient uses the dragonborn traits in the Player’s Handbook, with the following traits replacing the Ability Score Increase and Damage Resistance traits.">*</span></div>
-      <div class="panel-body">
-	  <img src="../images/stats/str2.png" class="stamp">
-	  <img src="../images/stats/con1.png" class="stamp">
-	  <img src="../images/stats/dv60.png" class="stamp"><p></p>
-	  <p><a href="#" class="pop" title=" " data-toggle="popover" data-content="When you take damage from a creature in range of a weapon you are wielding, you can use your reaction to make an attack with the weapon against that creature. Once you use this trait, you can’t do so again until you finish a short or long rest.">Vengeful Assault.</a></p>
-    </div><div class="panel-footer egtw"></div></div>
-    <!-- End of subrace card -->
+	
+	
 	<!-- Start of subrace card-->
     <div class="panel panel-success" style="float:left;">
       <div class="panel-heading">Chromatic</div>
@@ -120,9 +183,6 @@
 	</div></div>
   </div>
 </div>
-
-	
-
 
 		<script>
 		  $(document).ready(function(){

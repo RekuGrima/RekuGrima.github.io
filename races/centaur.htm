@@ -10,54 +10,51 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Centaur</title><!--set the title-->
 		<style>
-			ul{	font-family: balth;	}
 		</style>
 	</head>
 	<body>
-	<div class="container" style="width: 95%;">
-	<div class="panel-group">
-    <div class="panel panel-primary" style="float:left; width:49%;">
-      <div class="panel-heading" style="background-color:green;">Centaur Traits (Legacy)</div>
-		<div class="panel-body" style="font-size:2vw;">
-		<ul  style="float:left; list-style-type:none;width:150px;">
-		<li><img src="../images/stats/str2.png" class="stamp"></li>
-		<li><img src="../images/stats/wis1.png" class="stamp"></li>
-		<li><img src="../images/stats/speed40.png" class="stamp"></li>
-		<li><img src="../images/stats/med.png" class="stamp"></li></ul>
+	<h1 style="text-align: center;">Centaur Traits</h1>
+	<div class="container" style="margin-top: 2vh; width:100%; font-size: 1em;">
+	
+		<ul class="nav nav-tabs">
+			<li class="active"><a data-toggle="tab" href="#source1">MotM</a></li>
+			<li><a data-toggle="tab" href="#legacy">Legacy DMG</a></li>
+		</ul>
+		<div class="tab-content center">
+		<div id="legacy" class="tab-pane fade clearfix">
+			<figure>
+				<img class="portrait" src="../images/races/centaur.png">
+			</figure>
+		<!-- contents -->
 		<ul>
+		<li>ASI: Str +2, Wis +1</li>
 		<li>Fey. Your creature type is fey, rather than humanoid.</li>
+		<li>Speed: 40ft</li>
+		<li>Size: Medium</li>
 		<li>Age. Centaurs mature and age at about the same rate as humans.</li>
 		<li>Charge. If you move at least 30 feet straight toward a target and then hit it with a melee weapon attack on the same turn, you can immediately follow that attack with a bonus action, making one attack against the target with your hooves.</li>
 		<li>Hooves. Your hooves are natural melee weapons, which you can use to make unarmed strikes. If you hit with them, you deal bludgeoning damage equal to 1d4 + your Strength modifier, instead of the bludgeoning damage normal for an unarmed strike.</li>
 		<li>Equine Build. You count as one size larger when determining your carrying capacity and the weight you can push or drag.<br>In addition, any climb that requires hands and feet is especially difficult for you because of your equine legs. When you make such a climb, each foot of movement costs you 4 extra feet instead of the normal 1 extra foot.</li>
 		<li>Survivor. You have proficiency in one of the following skills of your choice: Animal Handling, Medicine, Nature, or Survival.</li>
 		<li>Languages. You can speak, read, and write Common and Sylvan.</li></ul>
-	</div><div class="panel-footer ggtr" style="font-size:1vw; text-align: right;">Also seen in Mythic Odysseys of Theros</div></div>
-	<div class="panel panel-primary" style="float:left; width:49%;">
-      <div class="panel-heading" style="background-color:green;">Centaur Traits</div>
-		<div class="panel-body" style="font-size:2vw;">
-		<div class="panel panel-default" style="float:right; width:49%;">
-		<div class="panel-heading" style="font-size:1.5vw;">MotM ASI & Language</div>
-			<div class="panel-body sub" style="font-size:1vw;">When determining your character’s ability scores and languages you can instead: <br>increase one score by 2 and increase a different score by 1, or increase three different scores by 1.
-			<br>Your character can speak, read, and write Common and one other language that you and your DM agree is appropriate for the character. </div></div>
-		<ul  style="float:left; list-style-type:none;width:150px;">
-		<li><img src="../images/stats/speed40.png" class="stamp"></li>
-		<li><img src="../images/stats/med.png" class="stamp"></li></ul>
+	<div class="panel-footer">Source: Guild Master's Guide to Ravnica and Mythic Odysseys of Theros</div></div>	
+	<div id="source1" class="tab-pane fade in active clearfix">
+			<figure>
+				<img class="portrait" src="../images/races/centaur.png">
+			</figure>
+		<!-- contents -->
 		<ul>
+		<li>ASI: When determining your character’s ability scores, increase one score by 2 and increase a different score by 1, or increase three different scores by 1.</li>
+		<li>Speed: 30ft</li>
+		<li>Size: Medium</li>
 		<li>Age: No change</li>
-		<li>Charge: No change</li>
-		
-		<li>Hooves. You have hooves that you can use to make unarmed strikes. When you hit with them, the strike deals <i>1d6 +</i> your Strength modifier bludgeoning damage, instead of the bludgeoning damage normal for an unarmed strike.</li>
-		
-		<li>Equine Build. No change.</li>
-		
+		<li>Charge: No change</li>		
+		<li>Hooves. You have hooves that you can use to make unarmed strikes. When you hit with them, the strike deals <i>1d6 +</i> your Strength modifier bludgeoning damage, instead of the bludgeoning damage normal for an unarmed strike.</li>		
+		<li>Equine Build. No change.</li>		
 		<li>Natural Affinity. Your fey connection to nature gives you an intuitive connection to the natural world and the animals within it. You therefore have proficiency in one of the following skills of your choice: Animal Handling, Medicine, Nature, or Survival.</li>
 		</ul>
-	</div><div class="panel-footer motm"></div></div>
-	</div></div>
-	<img class="portrait" src="../images/races/centaur.png">
-
-
+	<div class="panel-footer">Source: Monsters of the Multiverse</div></div>
+	
 		<script>
 		  $(document).ready(function(){
 		    $('[data-toggle="tooltip"]').tooltip();

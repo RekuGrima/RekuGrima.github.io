@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8"><!-- define the character set-->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="../style.css"><!--link the stylesheet-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Monk</title><!--set the title-->
+		<style>
+			.panel-heading{ font-size: 2.5vw; }
+			.panel-body{ font-size: 2vw; }
+			.container { float:left; }
+			table{
+				border-collapse: collapse;
+				width: 100%;
+				border: solid .1vw;
+			}
+			tr, td, th{
+				border-bottom: solid .1vw;
+				padding: 1vw;
+			}
+			tr:nth-child(even) {background-color: #f2f2f2;}
+			tr.a:hover {
+				background-color: lightgreen;
+			}
+			
+		</style>
+	</head>
+	<body>
+	<h1 class="cls">Monk</h1></div>
+	<div style="text-align:center"><label for="rollout">Hit Die: <button type="button" onclick="roll(8)">d8</button></label><input type="text" class="roll" name="rollout" id="rollout" readonly></div>
+	<!--Class Table -->
+		<table class="cls">
+			<tr><th style="width:10%">Level</th><th style="width:10%">Proficiency Bonus</th><th style="width:50%">Features</th><th style="width:10%">Martial Arts</th><th style="width:10%">Ki Points</th><th style="width:10%">Unarmored Movement</th></tr>
+			<tr><td>1</td><td>2</td><td>Unarmored Defense, Martial Arts	</td><td>1d4</td><td>-</td><td>-</td></tr>
+			<tr><td>2</td><td>2</td><td>Ki, Unarmored Movement</td><td>1d4</td><td>2</td><td>10ft</td></tr>
+			<tr><td>3</td><td>2</td><td>Monastic Tradition, Deflect Missiles</td><td>1d4</td><td>3</td><td>10ft</td></tr>
+			<tr><td>4</td><td>2</td><td>Ability Score Improvement, Slow Fall</td><td>1d4</td><td>4</td><td>10ft</td></tr>
+			<tr><td>5</td><td>3</td><td>Extra Attack, Stunning Strike</td><td>1d6</td><td>5</td><td>10ft</td></tr>
+			<tr><td>6</td><td>3</td><td>Ki-Empowered Strikes, Monastic Tradition Feature</td><td>1d6</td><td>6</td><td>15ft</td></tr>
+			<tr><td>7</td><td>3</td><td>Evasion, Stillness of Mind</td><td>1d6</td><td>7</td><td>15ft</td></tr>
+			<tr><td>8</td><td>3</td><td>Ability Score Improvement</td><td>1d6</td><td>8</td><td>15ft</td></tr>
+			<tr><td>9</td><td>4</td><td>Unarmored Movement Improvement</td><td>1d6</td><td>9</td><td>15ft</td></tr>
+			<tr><td>10</td><td>4</td><td>Purity of Body</td><td>1d6</td><td>10</td><td>20ft</td></tr>
+			<tr><td>11</td><td>4</td><td>Monastic Tradition Feature</td><td>1d8</td><td>11</td><td>20ft</td></tr>
+			<tr><td>12</td><td>4</td><td>Ability Score Improvement</td><td>1d8</td><td>12</td><td>20ft</td></tr>
+			<tr><td>13</td><td>5</td><td>Tongue of the Sun and Moon</td><td>1d8</td><td>13</td><td>20ft</td></tr>
+			<tr><td>14</td><td>5</td><td>Diamond Soul</td><td>1d8</td><td>14</td><td>25ft</td></tr>
+			<tr><td>15</td><td>5</td><td>Timeless Body</td><td>1d8</td><td>15</td><td>25ft</td></tr>
+			<tr><td>16</td><td>5</td><td>Ability Score Improvement</td><td>1d8</td><td>16</td><td>25ft</td></tr>
+			<tr><td>17</td><td>6</td><td>Monastic Tradition Feature</td><td>1d10</td><td>17</td><td>25ft</td></tr>
+			<tr><td>18</td><td>6</td><td>Empty Body</td><td>1d10</td><td>18</td><td>30ft</td></tr>
+			<tr><td>19</td><td>6</td><td>Ability Score Improvement</td><td>1d10</td><td>19</td><td>30ft</td></tr>
+			<tr><td>20</td><td>6</td><td>Perfect Self</td><td>1d10</td><td>20</td><td>30ft</td></tr>
+		</table><!--Class Table end--><!--Archtypes Features -->
+	<div class="container" style="margin-top: 2vh; width:100%; font-size: 1em;">
+		<ul class="nav nav-tabs">
+			<li class="active"><a data-toggle="tab" href="#home">Class Features</a></li>
+			<li><a data-toggle="tab" href="#arch1">Way of the Open Hand</a></li>
+			<li><a data-toggle="tab" href="#arch2">Way of Shadow</a></li>
+			<li><a data-toggle="tab" href="#arch3">Way of the Four Elements</a></li>
+		</ul>
+	<div class="tab-content center"><div id="home" class="tab-pane fade in active">
+	<!--Class Features -->
+	<div class="panel-group center" id="accordion" style="width:95%;">
+		<div class="panel panel-default">
+			<div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#oncreation">On Creation</a></h4></div>
+			<div id="oncreation" class="panel-collapse collapse">
+			<div class="panel-body">
+				<p>Hit Die: 1d8 per <class> level, max at first level.</p>
+				<p>Proficiencies:
+					<ul><li>Armor:  None</li>
+						<li>Weapons:  Simple weapons, shortswords</li>
+						<li>Tools:  Choose one type of artisan’s tools or one musical instrument</li>
+						<li>Saving Throws:  Strength, Dexterity</li>
+						<li>Skills:  Choose two from Acrobatics, Athletics, History, Insight, Religion, and Stealth</li></ul>
+				</p>
+				<p>You start with the following equipment, in addition to the equipment granted by your background:
+					<ul><li>(a) a shortsword or (b) any simple weapon</li>
+						<li>(a) a dungeoneer’s pack or (b) an explorer’s pack</li>
+						<li>10 darts</li></ul>
+				</p></div>
+			</div></div>
+		<div class="panel panel-default">
+			<div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#classability1">Unarmored Defense</a></h4></div>
+			<div id="classability1" class="panel-collapse collapse">
+			<div class="panel-body"><p>Beginning at 1st level, while you are wearing no armor and not wielding a shield, your AC equals 10 + your Dexterity modifier + your Wisdom modifier.</p></div>
+			</div></div>
+		<div class="panel panel-default">
+			<div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#classability2">Martial Arts</a></h4></div>
+			<div id="classability2" class="panel-collapse collapse">
+			<div class="panel-body"><p>At 1st level, your practice of martial arts gives you mastery of combat styles that use unarmed strikes and monk weapons, which are shortswords and any simple melee weapons that don’t have the two-handed or heavy property.<br>You gain the following benefits while you are unarmed or wielding only monk weapons and you aren’t wearing armor or wielding a shield:
+			<ul><li>You can use Dexterity instead of Strength for the attack and damage rolls of your unarmed strikes and monk weapons.</li>
+			<li>You can roll a d4 in place of the normal damage of your unarmed strike or monk weapon. This die changes as you gain monk levels, as shown in the Martial Arts column of the Monk table.</li>
+			<li>When you use the Attack action with an unarmed strike or a monk weapon on your turn, you can make one unarmed strike as a bonus action. For example, if you take the Attack action and attack with a quarterstaff, you can also make an unarmed strike as a bonus action, assuming you haven’t already taken a bonus action this turn.</li></ul>
+			<p>Certain monasteries use specialized forms of the monk weapons. For example, you might use a club that is two lengths of wood connected by a short chain (called a nunchaku) or a sickle with a shorter, straighter blade (called a kama). Whatever name you use for a monk weapon, you can use the game statistics provided for the weapon in chapter 5, “Equipment.”</p></div>
+			</div></div>
+		<div class="panel panel-default">
+			<div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#classability3">Ki</a></h4></div>
+			<div id="classability3" class="panel-collapse collapse">
+			<div class="panel-body"><p>Starting at 2nd level, your training allows you to harness the mystic energy of ki. Your access to this energy is represented by a number of ki points. Your monk level determines the number of points you have, as shown in the Ki Points column of the Monk table.<br>You can spend these points to fuel various ki features. You start knowing three such features: Flurry of Blows, Patient Defense, and Step of the Wind. You learn more ki features as you gain levels in this class.<br>When you spend a ki point, it is unavailable until you finish a short or long rest, at the end of which you draw all of your expended ki back into yourself. You must spend at least 30 minutes of the rest meditating to regain your ki points.<br>Some of your ki features require your target to make a saving throw to resist the feature’s effects. The saving throw DC is calculated as follows:</p>
+			<div style="text-align:center">Ki save DC = 8 + your proficiency bonus + your Wisdom modifier</div>
+			<ul><li>Flurry of Blows<dl>Immediately after you take the Attack action on your turn, you can spend 1 ki point to make two unarmed strikes as a bonus action.</dl></li>
+			<li>Patient Defense<dl>You can spend 1 ki point to take the Dodge action as a bonus action on your turn.</dl></li>
+			<li>Step of the Wind<dl>You can spend 1 ki point to take the Disengage or Dash action as a bonus action on your turn, and your jump distance is doubled for the turn.</dl></li></ul>
+			</div>
+			</div></div>
+		<div class="panel panel-default">
+			<div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#classability4">Unarmored Movement</a></h4></div>
+			<div id="classability4" class="panel-collapse collapse">
+			<div class="panel-body"><p>Starting at 2nd level, your speed increases by 10 feet while you are not wearing armor or wielding a shield. This bonus increases when you reach certain monk levels, as shown in the Monk table.<br>At 9th level, you gain the ability to move along vertical surfaces and across liquids on your turn without falling during the move.</p></div>
+			</div></div>
+		<div class="panel panel-default">
+			<div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#classability5">Monastic Tradition</a></h4></div>
+			<div id="classability5" class="panel-collapse collapse">
+			<div class="panel-body"><p>When you reach 3rd level, you commit yourself to a monastic tradition: the Way of the Open Hand, the Way of Shadow, or the Way of the Four Elements, all detailed at the end of the class description. Your tradition grants you features at 3rd level and again at 6th, 11th, and 17th level.</p></div>
+			</div></div>
+		<div class="panel panel-default">
+			<div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#classability6">Deflect Missiles</a></h4></div>
+			<div id="classability6" class="panel-collapse collapse">
+			<div class="panel-body"><p>Starting at 3rd level, you can use your reaction to deflect or catch the missile when you are hit by a ranged weapon attack. When you do so, the damage you take from the attack is reduced by 1d10 + your Dexterity modifier + your monk level.<br>If you reduce the damage to 0, you can catch the missile if it is small enough for you to hold in one hand and you have at least one hand free. If you catch a missile in this way, you can spend 1 ki point to make a ranged attack with the weapon or piece of ammunition you just caught, as part of the same reaction. You make this attack with proficiency, regardless of your weapon proficiencies, and the missile counts as a monk weapon for the attack, which has a normal range of 20 feet and a long range of 60 feet.</p></div>
+			</div></div>
+		
+		<div class="panel panel-default">
+			<div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#classability8">Ability Score Improvement</a></h4></div>
+			<div id="classability8" class="panel-collapse collapse">
+			<div class="panel-body"><p>When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can’t increase an ability score above 20 using this feature.</p></div>
+			</div></div>
+		<div class="panel panel-default">
+			<div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#classability9">Slow Fall</a></h4></div>
+			<div id="classability9" class="panel-collapse collapse">
+			<div class="panel-body"><p>Beginning at 4th level, you can use your reaction when you fall to reduce any falling damage you take by an amount equal to five times your monk level.</p></div>
+			</div></div>
+		<div class="panel panel-default">
+			<div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#classability10">Extra Attack</a></h4></div>
+			<div id="classability10" class="panel-collapse collapse">
+			<div class="panel-body"><p>Beginning at 5th level, you can attack twice, instead of once, whenever you take the Attack action on your turn.</p></div>
+			</div></div>
+		<div class="panel panel-default">
+			<div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#classability11">Stunning Strike</a></h4></div>
+			<div id="classability11" class="panel-collapse collapse">
+			<div class="panel-body"><p>Starting at 5th level, you can interfere with the flow of ki in an opponent’s body. When you hit another creature with a melee weapon attack, you can spend 1 ki point to attempt a stunning strike. The target must succeed on a Constitution saving throw or be stunned until the end of your next turn.</p></div>
+			</div></div>
+		<div class="panel panel-default">
+			<div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#classability12">Ki-Empowered Strikes</a></h4></div>
+			<div id="classability12" class="panel-collapse collapse">
+			<div class="panel-body"><p>Starting at 6th level, your unarmed strikes count as magical for the purpose of overcoming resistance and immunity to nonmagical attacks and damage.</p></div>
+			</div></div>
+		<div class="panel panel-default">
+			<div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#classability13">Evasion</a></h4></div>
+			<div id="classability13" class="panel-collapse collapse">
+			<div class="panel-body"><p>At 7th level, your instinctive agility lets you dodge out of the way of certain area effects, such as a blue dragon’s lightning breath or a fireball spell. When you are subjected to an effect that allows you to make a Dexterity saving throw to take only half damage, you instead take no damage if you succeed on the saving throw, and only half damage if you fail.</p></div>
+			</div></div>
+		<div class="panel panel-default">
+			<div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#classability14">Stillness of Mind</a></h4></div>
+			<div id="classability14" class="panel-collapse collapse">
+			<div class="panel-body"><p>Starting at 7th level, you can use your action to end one effect on yourself that is causing you to be charmed or frightened.</p></div>
+			</div></div>
+		<div class="panel panel-default">
+			<div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#classability15">Purity of Body</a></h4></div>
+			<div id="classability15" class="panel-collapse collapse">
+			<div class="panel-body"><p>At 10th level, your mastery of the ki flowing through you makes you immune to disease and poison.</p></div>
+			</div></div>
+		<div class="panel panel-default">
+			<div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#classability16">Tongue of the Sun and Moon</a></h4></div>
+			<div id="classability16" class="panel-collapse collapse">
+			<div class="panel-body"><p>Starting at 13th level, you learn to touch the ki of other minds so that you understand all spoken languages. Moreover, any creature that can understand a language can understand what you say.</p></div>
+			</div></div>
+		<div class="panel panel-default">
+			<div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#classability17">Diamond Soul</a></h4></div>
+			<div id="classability17" class="panel-collapse collapse">
+			<div class="panel-body"><p>Beginning at 14th level, your mastery of ki grants you proficiency in all saving throws.<br>Additionally, whenever you make a saving throw and fail, you can spend 1 ki point to reroll it and take the second result.</p></div>
+			</div></div>
+		<div class="panel panel-default">
+			<div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#classability18">Timeless Body</a></h4></div>
+			<div id="classability18" class="panel-collapse collapse">
+			<div class="panel-body"><p>At 15th level, your ki sustains you so that you suffer none of the frailty of old age, and you can’t be aged magically. You can still die of old age, however. In addition, you no longer need food or water.</p></div>
+			</div></div>
+		<div class="panel panel-default">
+			<div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#classability19">Empty Body</a></h4></div>
+			<div id="classability19" class="panel-collapse collapse">
+			<div class="panel-body"><p>Beginning at 18th level, you can use your action to spend 4 ki points to become invisible for 1 minute. During that time, you also have resistance to all damage but force damage.<br>Additionally, you can spend 8 ki points to cast the astral projection spell, without needing material components. When you do so, you can’t take any other creatures with you.</p></div>
+			</div></div>
+		<div class="panel panel-default">
+			<div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#classability20">Perfect Self</a></h4></div>
+			<div id="classability20" class="panel-collapse collapse">
+			<div class="panel-body"><p>At 20th level, when you roll for initiative and have no ki points remaining, you regain 4 ki points.</p></div>
+			</div></div>
+    </div><!--Class Features end-->
+	<div class="panel-footer">Source: Player's Handbook</div>
+		</div>
+    <div id="arch1" class="tab-pane fade"><!-- <h3>Path of the Berserker</h3> -->
+		<p>Monks of the Way of the Open Hand are the ultimate masters of martial arts combat, whether armed or unarmed. They learn techniques to push and trip their opponents, manipulate ki to heal damage to their bodies, and practice advanced meditation that can protect them from harm.</p>
+		<p>Open Hand Technique<br>Starting when you choose this tradition at 3rd level, you can manipulate your enemy’s ki when you harness your own. Whenever you hit a creature with one of the attacks granted by your Flurry of Blows, you can impose one of the following effects on that target:
+		<ul>
+			<li>It must succeed on a Dexterity saving throw or be knocked prone.</li>
+			<li>It must make a Strength saving throw. If it fails, you can push it up to 15 feet away from you.</li>
+			<li>It can’t take reactions until the end of your next turn.</li></ul>
+		<p>Wholeness of Body<br>At 6th level, you gain the ability to heal yourself. As an action, you can regain hit points equal to three times your monk level. You must finish a long rest before you can use this feature again.</p>
+		<p>Tranquility<br>Beginning at 11th level, you can enter a special meditation that surrounds you with an aura of peace. At the end of a long rest, you gain the effect of a sanctuary spell that lasts until the start of your next long rest (the spell can end early as normal). The saving throw DC for the spell equals 8 + your Wisdom modifier + your proficiency bonus.</p>
+		<p>Quivering Palm<br>At 17th level, you gain the ability to set up lethal vibrations in someone’s body. When you hit a creature with an unarmed strike, you can spend 3 ki points to start these imperceptible vibrations, which last for a number of days equal to your monk level. The vibrations are harmless unless you use your action to end them. To do so, you and the target must be on the same plane of existence. When you use this action, the creature must make a Constitution saving throw. If it fails, it is reduced to 0 hit points. If it succeeds, it takes 10d10 necrotic damage.<br>You can have only one creature under the effect of this feature at a time. You can choose to end the vibrations harmlessly without using an action.</p>
+	<div class="panel-footer">Source: Player's Handbook</div>
+		</div>
+    <div id="arch2" class="tab-pane fade"><h3>Archtype 2</h3>
+      <p>Monks of the Way of Shadow follow a tradition that values stealth and subterfuge. These monks might be called ninjas or shadowdancers, and they serve as spies and assassins. Sometimes the members of a ninja monastery are family members, forming a clan sworn to secrecy about their arts and missions. Other monasteries are more like thieves’ guilds, hiring out their services to nobles, rich merchants, or anyone else who can pay their fees. Regardless of their methods, the heads of these monasteries expect the unquestioning obedience of their students.</p>
+	  <p>Shadow Arts<br>Starting when you choose this tradition at 3rd level, you can use your ki to duplicate the effects of certain spells. As an action, you can spend 2 ki points to cast darkness, darkvision, pass without trace, or silence, without providing material components. Additionally, you gain the minor illusion cantrip if you don’t already know it.</p>
+	  <p>Shadow Step<br>At 6th level, you gain the ability to step from one shadow into another. When you are in dim light or darkness, as a bonus action you can teleport up to 60 feet to an unoccupied space you can see that is also in dim light or darkness. You then have advantage on the first melee attack you make before the end of the turn.</p>
+	  <p>Cloak of Shadows<br>By 11th level, you have learned to become one with the shadows. When you are in an area of dim light or darkness, you can use your action to become invisible. You remain invisible until you make an attack, cast a spell, or are in an area of bright light.</p>
+	  <p>Opportunist<br>At 17th level, you can exploit a creature’s momentary distraction when it is hit by an attack. Whenever a creature within 5 feet of you is hit by an attack made by a creature other than you, you can use your reaction to make a melee attack against that creature.</p>
+	<div class="panel-footer">Source: Player's Handbook</div>
+	  </div>
+    <div id="arch3" class="tab-pane fade">
+      <p>You follow a monastic tradition that teaches you to harness the elements. When you focus your ki, you can align yourself with the forces of creation and bend the four elements to your will, using them as an extension of your body. Some members of this tradition dedicate themselves to a single element, but others weave the elements together.<br>Many monks of this tradition tattoo their bodies with representations of their ki powers, commonly imagined as coiling dragons, but also as phoenixes, fish, plants, mountains, and cresting waves.</p>
+	  <p>Disciple of the Elements<br>When you choose this tradition at 3rd level, you learn magical disciplines that harness the power of the four elements. A discipline requires you to spend ki points each time you use it.<br>You know the Elemental Attunement discipline and one other elemental discipline of your choice, which are detailed in the “Elemental Disciplines” section below. You learn one additional elemental discipline of your choice at 6th, 11th, and 17th level.<br>Whenever you learn a new elemental discipline, you can also replace one elemental discipline that you already know with a different discipline.</p>
+	  <p>Casting Elemental Spells. Some elemental disciplines allow you to cast spells. See chapter 10 for the general rules of spellcasting. To cast one of these spells, you use its casting time and other rules, but you don’t need to provide material components for it.<br>Once you reach 5th level in this class, you can spend additional ki points to increase the level of an elemental discipline spell that you cast, provided that the spell has an enhanced effect at a higher level, as burning hands does. The spell’s level increases by 1 for each additional ki point you spend. For example, if you are a 5th-level monk and use Sweeping Cinder Strike to cast burning hands, you can spend 3 ki points to cast it as a 2nd-level spell (the discipline’s base cost of 2 ki points plus 1).<br>The maximum number of ki points you can spend to cast a spell in this way (including its base ki point cost and any additional ki points you spend to increase its level) is determined by your monk level, as shown in the Spells and Ki Points table.</p>
+	  <p>Spells and Ki Points
+	  <table class="cls">
+		<tr><th>Monk Levels</th><th>Maximum Ki Points for a Spell</th></tr>
+		<tr><td>5th–8th</td><td>3</td></tr>
+		<tr><td>9th–12th</td><td>4</td></tr>
+		<tr><td>13th–16th</td><td>5</td></tr>
+		<tr><td>17th–20th</td><td>6</td></tr>
+		</table></p>
+	  <p>Elemental Disciplines<br>The elemental disciplines are presented in alphabetical order. If a discipline requires a level, you must be that level in this class to learn the discipline.
+	  <ul>
+		<li>Breath of Winter (17th Level Required). You can spend 6 ki points to cast cone of cold.</li>
+		<li>Clench of the North Wind (6th Level Required). You can spend 3 ki points to cast hold person.</li>
+		<li>Elemental Attunement. You can use your action to briefly control elemental forces within 30 feet of you, causing one of the following effects of your choice:
+		<dl>Create a harmless, instantaneous sensory effect related to air, earth, fire, or water, such as a shower of sparks, a puff of wind, a spray of light mist, or a gentle rumbling of stone.</dl>
+		<dl>Instantaneously light or snuff out a candle, a torch, or a small campfire.</dl>
+		<dl>Chill or warm up to 1 pound of nonliving material for up to 1 hour.</dl>
+		<dl>Cause earth, fire, water, or mist that can fit within a 1-foot cube to shape itself into a crude form you designate for 1 minute.</dl>
+		<li>Eternal Mountain Defense (17th Level Required). You can spend 5 ki points to cast stoneskin, targeting yourself.</li>
+		<li>Fangs of the Fire Snake. When you use the Attack action on your turn, you can spend 1 ki point to cause tendrils of flame to stretch out from your fists and feet. Your reach with your unarmed strikes increases by 10 feet for that action, as well as the rest of the turn. A hit with such an attack deals fire damage instead of bludgeoning damage, and if you spend 1 ki point when the attack hits, it also deals an extra 1d10 fire damage.</li>
+		<li>Fist of Four Thunders. You can spend 2 ki points to cast thunderwave.</li>
+		<li>Fist of Unbroken Air. You can create a blast of compressed air that strikes like a mighty fist. As an action, you can spend 2 ki points and choose a creature within 30 feet of you. That creature must make a Strength saving throw. On a failed save, the creature takes 3d10 bludgeoning damage, plus an extra 1d10 bludgeoning damage for each additional ki point you spend, and you can push the creature up to 20 feet away from you and knock it prone. On a successful save, the creature takes half as much damage, and you don’t push it or knock it prone.</li>
+		<li>Flames of the Phoenix (11th Level Required). You can spend 4 ki points to cast fireball.</li>
+		<li>Gong of the Summit (6th Level Required). You can spend 3 ki points to cast shatter.</li>
+		<li>Mist Stance (11th Level Required). You can spend 4 ki points to cast gaseous form, targeting yourself.</li>
+		<li>Ride the Wind (11th Level Required). You can spend 4 ki points to cast fly, targeting yourself.</li>
+		<li>River of Hungry Flame (17th Level Required). You can spend 5 ki points to cast wall of fire.</li>
+		<li>Rush of the Gale Spirits. You can spend 2 ki points to cast gust of wind.</li>
+		<li>Shape the Flowing River. As an action, you can spend 1 ki point to choose an area of ice or water no larger than 30 feet on a side within 120 feet of you. You can change water to ice within the area and vice versa, and you can reshape ice in the area in any manner you choose. You can raise or lower the ice’s elevation, create or fill in a trench, erect or flatten a wall, or form a pillar. The extent of any such changes can’t exceed half the area’s largest dimension. For example, if you affect a 30-foot square, you can create a pillar up to 15 feet high, raise or lower the square’s elevation by up to 15 feet, dig a trench up to 15 feet deep, and so on. You can’t shape the ice to trap or damage a creature in the area.</li>
+		<li>Sweeping Cinder Strike. You can spend 2 ki points to cast burning hands.</li>
+		<li>Water Whip. You can spend 2 ki points as an action to create a whip of water that shoves and pulls a creature to unbalance it. A creature that you can see that is within 30 feet of you must make a Dexterity saving throw. On a failed save, the creature takes 3d10 bludgeoning damage, plus an extra 1d10 bludgeoning damage for each additional ki point you spend, and you can either knock it prone or pull it up to 25 feet closer to you. On a successful save, the creature takes half as much damage, and you don’t pull it or knock it prone.</li>
+		<li>Wave of Rolling Earth (17th Level Required). You can spend 6 ki points to cast wall of stone.</li></ul></p>
+	  </div>
+  </div>
+</div>
+	
+	
+		<script>
+		  $(document).ready(function(){
+		    $('[data-toggle="tooltip"]').tooltip();
+		  });
+		  $(document).ready(function(){
+			$('[data-toggle="popover"]').popover();   
+		  });
+		  function roll(x=20) {
+		    // get the ability score
+		    var w = Math.floor(Math.random() * x)+1;
+			//output the desired number
+			document.getElementById("rollout").value = w;
+			}
+		</script>
+	</body>
+</html>

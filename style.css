@@ -168,6 +168,8 @@ table.cls tr:hover {	background-color: thistle;}
 	font-size:.6em;
 	min-height:5.5vw;
 }
+.panel-info .panel-body { font-size:.6em; }
+.panel-success .panel-body { font-size:.6em; }
 .panel-heading.book + .panel-body {	font-size:.6em; }
 /* Add banners to the background*/
 .phb {	background: url('images/banners/bannerphb.png') no-repeat bottom left;	background-size: 8vw auto;}
