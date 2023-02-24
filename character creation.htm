@@ -120,31 +120,33 @@
     <div id="3" class="tab-pane fade"><!-- Ability Scores -->
       <p>Much of what your character does in the game depends on his or her six abilities: Strength, Dexterity, Constitution, Intelligence, Wisdom, and Charisma. Each ability has a score, which is a number you record on your character sheet.</p>
 	  <p>You generate your character’s six ability scores randomly. Roll four 6-sided dice and record the total of the highest three dice on a piece of scratch paper. Do this five more times, so that you have six numbers.</p>
+		   <button type="button" onclick="stat()">roll</button> <span id="statout">__</span><br>
 	  <p>Now take your six numbers and write each number beside one of your character’s six abilities to assign scores to Strength, Dexterity, Constitution, Intelligence, Wisdom, and Charisma. Afterward, make any changes to your ability scores as a result of your race choice.</p>
 	  <p>After assigning your ability scores, determine your ability modifiers using the Ability Scores and Modifiers table. To determine an ability modifier without consulting the table, subtract 10 from the ability score and then divide the result by 2 (round down). Write the modifier next to each of your scores.</p>
 		  <p>Ability Scores and Modifiers</p>
-		   <button type="button" onclick="stat()">roll</button> <span id="statout">__</span><br>
 		   <b>Ability Score:</b><input type="number" id="ability" name="ability" min="1" max="30" value="10">
 		   <button type="button" onclick="mod()">calculate</button> Modifier:<b id="modifier">__</b>
 	  <div class="panel-group" id="accordion">
 	  <div class="panel panel-default">
 	  <div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse4">Variant: Point Buy</a></h4></div>
 	    <div id="collapse4" class="panel-collapse collapse">
-		  <div class="panel-body"><p>At your Dungeon Master’s option, you can use this variant for determining your ability scores. The method described here allows you to build a character with a set of ability scores you choose individually.</p>
+		  <div class="panel-body">
+		  <div style="float:left; width:75%;"><p>At your Dungeon Master’s option, you can use this variant for determining your ability scores. The method described here allows you to build a character with a set of ability scores you choose individually.</p>
 		  <p>You have 27 points to spend on your ability scores. The cost of each score is shown on the Ability Score Point Cost table. For example, a score of 14 costs 7 points. Using this method, 15 is the highest ability score you can end up with, before applying racial increases. You can’t have a score lower than 8.</p>
-		  <p>This method of determining ability scores enables you to create a set of three high numbers and three low ones (15, 15, 15, 8, 8, 8), a set of numbers that are above average and nearly equal (13, 13, 13, 12, 12, 12), or any set of numbers between those extremes.</p>
-		  <table class="vis" style="font-size:1vw; text-align:center;">
-		    <tr class="vis"><th class="vis">Score</th><th class="vis">Cost</th></tr>
-			<tr class="vis"><td class="vis">8</td><td class="vis">0</td></tr>
-			<tr class="vis"><td class="vis">9</td><td class="vis">1</td></tr>
-			<tr class="vis"><td class="vis">10</td><td class="vis">2</td></tr>
-			<tr class="vis"><td class="vis">11</td><td class="vis">3</td></tr>
-			<tr class="vis"><td class="vis">12</td><td class="vis">4</td></tr>
-			<tr class="vis"><td class="vis">13</td><td class="vis">5</td></tr>
-			<tr class="vis"><td class="vis">14</td><td class="vis">7</td></tr>
-			<tr class="vis"><td class="vis">15</td><td class="vis">9</td></tr>
+		  <p>This method of determining ability scores enables you to create a set of three high numbers and three low ones (15, 15, 15, 8, 8, 8), a set of numbers that are above average and nearly equal (13, 13, 13, 12, 12, 12), or any set of numbers between those extremes.</p></div>
+		  <div style="float: right; width:25%;">
+		  <table class="cls" style="font-size:1vw; text-align:center;">
+		    <tr><th>Score</th><th>Cost</th></tr>
+			<tr><td>8</td><td>0</td></tr>
+			<tr><td>9</td><td>1</td></tr>
+			<tr><td>10</td><td>2</td></tr>
+			<tr><td>11</td><td>3</td></tr>
+			<tr><td>12</td><td>4</td></tr>
+			<tr><td>13</td><td>5</td></tr>
+			<tr><td>14</td><td>7</td></tr>
+			<tr><td>15</td><td>9</td></tr>
 		  </table>
-		  
+		  </div>
 		  </div>
 		</div>
       </div>
@@ -214,7 +216,7 @@
 			var x = Math.floor(Math.random() * 6)+1;
 			var y = Math.floor(Math.random() * 6)+1;
 			var z = Math.floor(Math.random() * 6)+1;
-			let text = w+" "+x+" "+y+" "+z;
+			let text = w+", "+x+", "+y+", "+z;
 			var tot = (w+x+y+z)-Math.min(w,x,y,z);
 			//output the desired number
 			document.getElementById("statout").innerHTML = text+":<b>"+tot+"</b>";
