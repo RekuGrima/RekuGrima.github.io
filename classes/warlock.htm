@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8"><!-- define the character set-->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="../style.css"><!--link the stylesheet-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Warlock</title><!--set the title-->
+		<style>
+			.panel-heading{ font-size: 2.5vw; }
+			.panel-body{ font-size: 2vw; }
+			.container { float:left; }
+			table{
+				border-collapse: collapse;
+				width: 100%;
+				border: solid .1vw;
+			}
+			tr, td, th{
+				border-bottom: solid .1vw;
+				padding: 1vw;
+			}
+			tr:nth-child(even) {background-color: #f2f2f2;}
+			tr.a:hover {
+				background-color: lightgreen;
+			}
+			
+		</style>
+	</head>
+	<body>
+	<h1 class="cls">Warlock</h1></div>
+	<div style="text-align:center"><label for="rollout">Hit Die: <button type="button" onclick="roll(8)">d8</button></label><input type="text" class="roll" name="rollout" id="rollout" readonly></div>
+	<!--Class Table -->
+	  <table class="cls">
+		<tr><th style="width:5%">Level</th><th style="width:10%">Proficiency Bonus</th><th style="width:50%">Features</th><th>Cantrips Known</th><th>Spells Known</th><th>Spell Slots</th><th>Slot Level</th><th>Invocations Known</th></tr>
+		<tr><td> 1</td><td>2</td><td>Otherworldly Patron, Pact Magic</td><td>2</td><td> 2</td><td>1</td><td>1st</td><td>-</td></tr>
+		<tr><td> 2</td><td>2</td><td>Eldritch Invocations</td><td>2</td><td> 3</td><td>2</td><td>1st</td><td>2</td></tr>
+		<tr><td> 3</td><td>2</td><td>Pact Boon</td><td>2</td><td> 4</td><td>2</td><td>2nd</td><td>2</td></tr>
+		<tr><td> 4</td><td>2</td><td>Ability Score Improvement</td><td>3</td><td> 5</td><td>2</td><td>2nd</td><td>2</td></tr>
+		<tr><td> 5</td><td>3</td><td> </td><td>3</td><td> 6</td><td>2</td><td>3rd</td><td>3</td></tr>
+		<tr><td> 6</td><td>3</td><td>Otherworldly Patron Feature</td><td>3</td><td> 7</td><td>2</td><td>3rd</td><td>3</td></tr>
+		<tr><td> 7</td><td>3</td><td> </td><td>3</td><td> 8</td><td>2</td><td>4th</td><td>4</td></tr>
+		<tr><td> 8</td><td>3</td><td>Ability Score Improvement</td><td>3</td><td> 9</td><td>2</td><td>4th</td><td>4</td></tr>
+		<tr><td> 9</td><td>4</td><td> </td><td>3</td><td>10</td><td>2</td><td>5th</td><td>5</td></tr>
+		<tr><td>10</td><td>4</td><td>Otherworldly Patron Feature</td><td>4</td><td>10</td><td>2</td><td>5th</td><td>5</td></tr>
+		<tr><td>11</td><td>4</td><td>Mystic Arcanum (6th level)</td><td>4</td><td>11</td><td>3</td><td>5th</td><td>5</td></tr>
+		<tr><td>12</td><td>4</td><td>Ability Score Improvement</td><td>4</td><td>11</td><td>3</td><td>5th</td><td>6</td></tr>
+		<tr><td>13</td><td>5</td><td>Mystic Arcanum (7th level)</td><td>4</td><td>12</td><td>3</td><td>5th</td><td>6</td></tr>
+		<tr><td>14</td><td>5</td><td>Otherworldly Patron Feature</td><td>4</td><td>12</td><td>3</td><td>5th</td><td>6</td></tr>
+		<tr><td>15</td><td>5</td><td>Mystic Arcanum (8th level)</td><td>4</td><td>13</td><td>3</td><td>5th</td><td>7</td></tr>
+		<tr><td>16</td><td>5</td><td>Ability Score Improvement</td><td>4</td><td>13</td><td>3</td><td>5th</td><td>7</td></tr>
+		<tr><td>17</td><td>6</td><td>Mystic Arcanum (9th level)</td><td>4</td><td>14</td><td>4</td><td>5th</td><td>7</td></tr>
+		<tr><td>18</td><td>6</td><td> </td><td>4</td><td>14</td><td>4</td><td>5th</td><td>8</td></tr>
+		<tr><td>19</td><td>6</td><td>Ability Score Improvement</td><td>4</td><td>15</td><td>4</td><td>5th</td><td>8</td></tr>
+		<tr><td>20</td><td>6</td><td>Eldritch Master</td><td>4</td><td>15</td><td>4</td><td>5th</td><td>8</td></tr>
+	  </table><!--Class Table end--><!--Archtypes Features -->
+	<div class="container" style="margin-top: 2vh; width:100%; font-size: 1em;">
+		<ul class="nav nav-tabs">
+			<li class="active"><a data-toggle="tab" href="#home">Class Features</a></li>
+			<li><a data-toggle="tab" href="#arch1">The Archfey</a></li>
+			<li><a data-toggle="tab" href="#arch2">The Fiend</a></li>
+			<li><a data-toggle="tab" href="#arch3">The Great Old One</a></li>
+		</ul>
+	<div class="tab-content center"><div id="home" class="tab-pane fade in active">
+	<!--Class Features -->
+	<div class="panel-group center" id="accordion" style="width:95%;">
+		<div class="panel panel-default">
+			<div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#oncreation">On Creation</a></h4></div>
+			<div id="oncreation" class="panel-collapse collapse">
+			<div class="panel-body">
+				<p>Hit Die: 1d8 per Warlock level, max at first level.</p>
+				<p>Proficiencies:
+					<ul><li>Armor:  Light armor</li>
+						<li>Weapons:  Simple weapons</li>
+						<li>Tools:  None</li>
+						<li>Saving Throws:  Wisdom, Charisma</li>
+						<li>Skills:  Choose two skills from Arcana, Deception, History, Intimidation, Investigation, Nature, and Religion</li></ul>
+				</p>
+				<p>You start with the following equipment, in addition to the equipment granted by your background:
+					<ul><li>(a) a light crossbow and 20 bolts or (b) any simple weapon</li>
+						<li>(a) a component pouch or (b) an arcane focus</li>
+						<li>(a) a scholar’s pack or (b) a dungeoneer’s pack</li>
+						<li>Leather armor, any simple weapon, and two daggers</li></ul>
+				</p></div>
+			</div></div>
+		<div class="panel panel-default">
+			<div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#classability1">Otherworldly Patron</a></h4></div>
+			<div id="classability1" class="panel-collapse collapse">
+			<div class="panel-body"><p>At 1st level, you have struck a bargain with an otherworldly being of your choice: the Archfey, the Fiend, or the Great Old One, each of which is detailed at the end of the class description. Your choice grants you features at 1st level and again at 6th, 10th, and 14th level.</p></div>
+			</div></div>
+		<div class="panel panel-default">
+			<div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#classability2">Pact Magic</a></h4></div>
+			<div id="classability2" class="panel-collapse collapse">
+			<div class="panel-body"><p>Your arcane research and the magic bestowed on you by your patron have given you facility with spells. See chapter 10 for the general rules of spellcasting and chapter 11 for the warlock spell list.</p>
+			<p>Cantrips<br>You know two cantrips of your choice from the warlock spell list. You learn additional warlock cantrips of your choice at higher levels, as shown in the Cantrips Known column of the Warlock table.</p>
+			<p>Spell Slots<br>The Warlock table shows how many spell slots you have to cast your warlock spells of 1st through 5th level. The table also shows what the level of those slots is; all of your spell slots are the same level. To cast one of your warlock spells of 1st level or higher, you must expend a spell slot. You regain all expended spell slots when you finish a short or long rest.<br>For example, when you are 5th level, you have two 3rd-level spell slots. To cast the 1st-level spell witch bolt, you must spend one of those slots, and you cast it as a 3rd-level spell.</p>
+			<p>Spells Known of 1st Level and Higher<br>At 1st level, you know two 1st-level spells of your choice from the warlock spell list.<br>The Spells Known column of the Warlock table shows when you learn more warlock spells of your choice of 1st level and higher. A spell you choose must be of a level no higher than what’s shown in the table’s Slot Level column for your level. When you reach 6th level, for example, you learn a new warlock spell, which can be 1st, 2nd, or 3rd level.<br>Additionally, when you gain a level in this class, you can choose one of the warlock spells you know and replace it with another spell from the warlock spell list, which also must be of a level for which you have spell slots.</p>
+			<p>Spellcasting Ability<br>Charisma is your spellcasting ability for your warlock spells, so you use your Charisma whenever a spell refers to your spellcasting ability. In addition, you use your Charisma modifier when setting the saving throw DC for a warlock spell you cast and when making an attack roll with one.
+			<div style="float:center;">Spell save DC = 8 + your proficiency bonus + your Charisma modifier
+			<br>Spell attack modifier = your proficiency bonus + your Charisma modifier</div>
+			<p>Spellcasting Focus<br>You can use an arcane focus as a spellcasting focus for your warlock spells.</p></div>
+			</div></div>
+		<div class="panel panel-default">
+			<div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#classability3">Eldritch Invocations</a></h4></div>
+			<div id="classability3" class="panel-collapse collapse">
+			<div class="panel-body"><p>In your study of occult lore, you have unearthed eldritch invocations, fragments of forbidden knowledge that imbue you with an abiding magical ability. A level prerequisite refers to your level in this class.<br>At 2nd level, you gain two eldritch invocations of your choice. Your invocation options are detailed at the end of the class description. When you gain certain warlock levels, you gain additional invocations of your choice, as shown in the Invocations Known column of the Warlock table.<br>Additionally, when you gain a level in this class, you can choose one of the invocations you know and replace it with another invocation that you could learn at that level.</p></div>
+			</div></div>
+		<div class="panel panel-default">
+			<div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#classability4">Pact Boon</a></h4></div>
+			<div id="classability4" class="panel-collapse collapse">
+			<div class="panel-body"><p>At 3rd level, your otherworldly patron bestows a gift upon you for your loyal service. You gain one of the following features of your choice.</p>
+			<p>Pact of the Chain<br>You learn the find familiar spell and can cast it as a ritual. The spell doesn’t count against your number of spells known.<br>When you cast the spell, you can choose one of the normal forms for your familiar or one of the following special forms: imp, pseudodragon, quasit, or sprite.<br>Additionally, when you take the Attack action, you can forgo one of your own attacks to allow your familiar to make one attack with its reaction.</p>
+			<p>Pact of the Blade<br>You can use your action to create a pact weapon in your empty hand. You can choose the form that this melee weapon takes each time you create it (see chapter 5 for weapon options). You are proficient with it while you wield it. This weapon counts as magical for the purpose of overcoming resistance and immunity to nonmagical attacks and damage.<br>Your pact weapon disappears if it is more than 5 feet away from you for 1 minute or more. It also disappears if you use this feature again, if you dismiss the weapon (no action required), or if you die.<br>You can transform one magic weapon into your pact weapon by performing a special ritual while you hold the weapon. You perform the ritual over the course of 1 hour, which can be done during a short rest. You can then dismiss the weapon, shunting it into an extradimensional space, and it appears whenever you create your pact weapon thereafter. You can’t affect an artifact or a sentient weapon in this way. The weapon ceases being your pact weapon if you die, if you perform the 1-hour ritual on a different weapon, or if you use a 1-hour ritual to break your bond to it. The weapon appears at your feet if it is in the extradimensional space when the bond breaks.</p>
+			<p>Pact of the Tome<br>Your patron gives you a grimoire called a Book of Shadows. When you gain this feature, choose three cantrips from any class’s spell list (the three needn’t be from the same list). While the book is on your person, you can cast those cantrips at will. They don’t count against your number of cantrips known. If they don’t appear on the warlock spell list, they are nonetheless warlock spells for you.<br>If you lose your Book of Shadows, you can perform a 1-hour ceremony to receive a replacement from your patron. This ceremony can be performed during a short or long rest, and it destroys the previous book. The book turns to ash when you die.</p></div>
+			</div></div>
+		<div class="panel panel-default">
+			<div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#classability5">Ability Score Improvement</a></h4></div>
+			<div id="classability5" class="panel-collapse collapse">
+			<div class="panel-body"><p>When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can’t increase an ability score above 20 using this feature.</p></div>
+			</div></div>
+		<div class="panel panel-default">
+			<div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#classability6">Mystic Arcanum</a></h4></div>
+			<div id="classability6" class="panel-collapse collapse">
+			<div class="panel-body"><p>At 11th level, your patron bestows upon you a magical secret called an arcanum. Choose one 6th-level spell from the warlock spell list as this arcanum.<br>You can cast your arcanum spell once without expending a spell slot. You must finish a long rest before you can do so again.<br>At higher levels, you gain more warlock spells of your choice that can be cast in this way: one 7th-level spell at 13th level, one 8th-level spell at 15th level, and one 9th-level spell at 17th level. You regain all uses of your Mystic Arcanum when you finish a long rest.</p></div>
+			</div></div>
+		<div class="panel panel-default">
+			<div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#classability7">Eldritch Master</a></h4></div>
+			<div id="classability7" class="panel-collapse collapse">
+			<div class="panel-body"><p>At 20th level, you can draw on your inner reserve of mystical power while entreating your patron to regain expended spell slots. You can spend 1 minute entreating your patron for aid to regain all your expended spell slots from your Pact Magic feature. Once you regain spell slots with this feature, you must finish a long rest before you can do so again.</p></div>
+			</div></div>
+    </div><!--Class Features end-->
+	<div class="panel-footer">Source: Player's Handbook</div>
+		</div>
+    <div id="arch1" class="tab-pane fade">
+		<div style="float:right; width:33%;">
+			<table class="cls">
+				<tr><th colspan="2">Archfey Expanded Spells</th></tr>
+				<tr><th>Spell Level</th><th>Spells</th></tr>
+				<tr><td>1st</td><td>faerie fire, sleep</td></tr>
+				<tr><td>2nd</td><td>calm emotions, phantasmal force</td></tr>
+				<tr><td>3rd</td><td>blink, plant growth</td></tr>
+				<tr><td>4th</td><td>dominate beast, greater invisibility</td></tr>
+				<tr><td>5th</td><td>dominate person, seeming</td></tr></table></div>
+		<p>Your patron is a lord or lady of the fey, a creature of legend who holds secrets that were forgotten before the mortal races were born. This being’s motivations are often inscrutable, and sometimes whimsical, and might involve a striving for greater magical power or the settling of age-old grudges. Beings of this sort include the Prince of Frost; the Queen of Air and Darkness, ruler of the Gloaming Court; Titania of the Summer Court; her consort Oberon, the Green Lord; Hyrsam, the Prince of Fools; and ancient hags.</p>
+		<p>Expanded Spell List<br>The Archfey lets you choose from an expanded list of spells when you learn a warlock spell. The following spells are added to the warlock spell list for you.</p>
+		<p>Fey Presence<br>Starting at 1st level, your patron bestows upon you the ability to project the beguiling and fearsome presence of the fey. As an action, you can cause each creature in a 10-foot cube originating from you to make a Wisdom saving throw against your warlock spell save DC. The creatures that fail their saving throws are all charmed or frightened by you (your choice) until the end of your next turn.<br>Once you use this feature, you can’t use it again until you finish a short or long rest.</p>
+		<p>Misty Escape<br>Starting at 6th level, you can vanish in a puff of mist in response to harm. When you take damage, you can use your reaction to turn invisible and teleport up to 60 feet to an unoccupied space you can see. You remain invisible until the start of your next turn or until you attack or cast a spell.<br>Once you use this feature, you can’t use it again until you finish a short or long rest.</p>
+		<p>Beguiling Defenses<br>Beginning at 10th level, your patron teaches you how to turn the mind-affecting magic of your enemies against them. You are immune to being charmed, and when another creature attempts to charm you, you can use your reaction to attempt to turn the charm back on that creature. The creature must succeed on a Wisdom saving throw against your warlock spell save DC or be charmed by you for 1 minute or until the creature takes any damage.</p>
+		<p>Dark Delirium<br>Starting at 14th level, you can plunge a creature into an illusory realm. As an action, choose a creature that you can see within 60 feet of you. It must make a Wisdom saving throw against your warlock spell save DC. On a failed save, it is charmed or frightened by you (your choice) for 1 minute or until your concentration is broken (as if you are concentrating on a spell). This effect ends early if the creature takes any damage.<br>Until this illusion ends, the creature thinks it is lost in a misty realm, the appearance of which you choose. The creature can see and hear only itself, you, and the illusion.<br>You must finish a short or long rest before you can use this feature again.</p>
+	<div class="panel-footer">Source: Player's Handbook</div>
+		</div>
+    <div id="arch2" class="tab-pane fade">
+	  <div style="float:right; width:33%;">
+			<table class="cls">
+				<tr><th colspan="2">Fiend Expanded Spells</th></tr>
+				<tr><th>Spell Level</th><th>Spells</th></tr>
+				<tr><td>1st</td><td>burning hands, command</td></tr>
+				<tr><td>2nd</td><td>blindness/deafness, scorching ray</td></tr>
+				<tr><td>3rd</td><td>fireball, stinking cloud</td></tr>
+				<tr><td>4th</td><td>fire shield, wall of fire</td></tr>
+				<tr><td>5th</td><td>flame strike, hallow</td></tr></table></div>
+      <p>You have made a pact with a fiend from the lower planes of existence, a being whose aims are evil, even if you strive against those aims. Such beings desire the corruption or destruction of all things, ultimately including you. Fiends powerful enough to forge a pact include demon lords such as Demogorgon, Orcus, Fraz’Urb-luu, and Baphomet; archdevils such as Asmodeus, Dispater, Mephistopheles, and Belial; pit fiends and balors that are especially mighty; and ultroloths and other lords of the yugoloths.</p>
+	  <p>Expanded Spell List<br>The Fiend lets you choose from an expanded list of spells when you learn a warlock spell. The following spells are added to the warlock spell list for you.</p>
+		<p>Dark One’s Blessing<br>Starting at 1st level, when you reduce a hostile creature to 0 hit points, you gain temporary hit points equal to your Charisma modifier + your warlock level (minimum of 1).</p>
+		<p>Dark One’s Own Luck<br>Starting at 6th level, you can call on your patron to alter fate in your favor. When you make an ability check or a saving throw, you can use this feature to add a d10 to your roll. You can do so after seeing the initial roll but before any of the roll’s effects occur.<br>Once you use this feature, you can’t use it again until you finish a short or long rest.</p>
+		<p>Fiendish Resilience<br>Starting at 10th level, you can choose one damage type when you finish a short or long rest. You gain resistance to that damage type until you choose a different one with this feature. Damage from magical weapons or silver weapons ignores this resistance.</p>
+		<p>Hurl Through Hell<br>Starting at 14th level, when you hit a creature with an attack, you can use this feature to instantly transport the target through the lower planes. The creature disappears and hurtles through a nightmare landscape.<br>At the end of your next turn, the target returns to the space it previously occupied, or the nearest unoccupied space. If the target is not a fiend, it takes 10d10 psychic damage as it reels from its horrific experience.<br>Once you use this feature, you can’t use it again until you finish a long rest.</p>
+	<div class="panel-footer">Source: Player's Handbook</div>
+	  </div>
+    <div id="arch3" class="tab-pane fade">
+	  <div style="float:right; width:33%;">
+			<table class="cls">
+				<tr><th colspan="2">Great Old One Expanded Spells</th></tr>
+				<tr><th>Spell Level</th><th>Spells</th></tr>
+				<tr><td>1st</td><td>dissonant whispers, Tasha’s hideous laughter</td></tr>
+				<tr><td>2nd</td><td>detect thoughts, phantasmal force</td></tr>
+				<tr><td>3rd</td><td>clairvoyance, sending</td></tr>
+				<tr><td>4th</td><td>dominate beast, Evard’s black tentacles</td></tr>
+				<tr><td>5th</td><td>dominate person, telekinesis</td></tr></table></div>
+      <p>Your patron is a mysterious entity whose nature is utterly foreign to the fabric of reality. It might come from the Far Realm, the space beyond reality, or it could be one of the elder gods known only in legends. Its motives are incomprehensible to mortals, and its knowledge so immense and ancient that even the greatest libraries pale in comparison to the vast secrets it holds. The Great Old One might be unaware of your existence or entirely indifferent to you, but the secrets you have learned allow you to draw your magic from it.<br>Entities of this type include Ghaunadar, called That Which Lurks; Tharizdun, the Chained God; Dendar, the Night Serpent; Zargon, the Returner; Great Cthulhu; and other unfathomable beings.
+	  <p>Expanded Spell List<br>The Great Old One lets you choose from an expanded list of spells when you learn a warlock spell. The following spells are added to the warlock spell list for you.</p>
+	  <p>Awakened Mind<br>Starting at 1st level, your alien knowledge gives you the ability to touch the minds of other creatures. You can telepathically speak to any creature you can see within 30 feet of you. You don’t need to share a language with the creature for it to understand your telepathic utterances, but the creature must be able to understand at least one language.</p>
+	  <p>Entropic Ward<br>At 6th level, you learn to magically ward yourself against attack and to turn an enemy’s failed strike into good luck for yourself. When a creature makes an attack roll against you, you can use your reaction to impose disadvantage on that roll. If the attack misses you, your next attack roll against the creature has advantage if you make it before the end of your next turn.<br>Once you use this feature, you can’t use it again until you finish a short or long rest.</p>
+	  <p>Thought Shield<br>Starting at 10th level, your thoughts can’t be read by telepathy or other means unless you allow it. You also have resistance to psychic damage, and whenever a creature deals psychic damage to you, that creature takes the same amount of damage that you do.</p>
+	  <p>Create Thrall<br>At 14th level, you gain the ability to infect a humanoid’s mind with the alien magic of your patron. You can use your action to touch an incapacitated humanoid. That creature is then charmed by you until a remove curse spell is cast on it, the charmed condition is removed from it, or you use this feature again.<br>You can communicate telepathically with the charmed creature as long as the two of you are on the same plane of existence.</p>
+	  </div>
+  </div>
+</div>
+	
+	
+		<script>
+		  $(document).ready(function(){
+		    $('[data-toggle="tooltip"]').tooltip();
+		  });
+		  $(document).ready(function(){
+			$('[data-toggle="popover"]').popover();   
+		  });
+		  function roll(x=20) {
+		    // get the ability score
+		    var w = Math.floor(Math.random() * x)+1;
+			//output the desired number
+			document.getElementById("rollout").value = w;
+			}
+		</script>
+	</body>
+</html>
