@@ -207,7 +207,7 @@
 		<tr><td>93–94</td><td>Your size increases by one size category for the next minute.</td></tr>
 		<tr><td>95–96</td><td>You and all creatures within 30 feet of you gain vulnerability to piercing damage for the next minute.</td></tr>
 		<tr><td>97–98</td><td>You are surrounded by faint, ethereal music for the next minute.</td></tr>
-		<tr><td>99–100</td><td>You regain all expended sorcery points.</td></tr></table></div>
+		<tr><td>99–00</td><td>You regain all expended sorcery points.</td></tr></table></div>
       <p>Your innate magic comes from the forces of chaos that underlie the order of creation. You might have endured exposure to raw magic, perhaps through a planar portal leading to Limbo, the Elemental Planes, or the Far Realm. Perhaps you were blessed by a fey being or marked by a demon. Or your magic could be a fluke of your birth, with no apparent cause. However it came to be, this magic churns within you, waiting for any outlet.</p>
 	  <p>Wild Magic Surge<br>Starting when you choose this origin at 1st level, your spellcasting can unleash surges of untamed magic. Once per turn, the DM can have you roll a d20 immediately after you cast a sorcerer spell of 1st level or higher. If you roll a 1, roll on the Wild Magic Surge table to create a magical effect. If that effect is a spell, it is too wild to be affected by your Metamagic, and if it normally requires concentration, it doesn’t require concentration in this case; the spell lasts for its full duration.</p>
 	  <p>Tides of Chaos<br>Starting at 1st level, you can manipulate the forces of chance and chaos to gain advantage on one attack roll, ability check, or saving throw. Once you do so, you must finish a long rest before you can use this feature again.<br>Any time before you regain the use of this feature, the DM can have you roll on the Wild Magic Surge table immediately after you cast a sorcerer spell of 1st level or higher. You then regain the use of this feature.
@@ -240,7 +240,7 @@
 			}
 		  function roll100(x=20) {
 		    // get the ability score
-		    var w = Math.floor(Math.random() * x)+1;
+		    var w = Math.floor(Math.random() * x);
 			if (w<10){ 
 				w = "0"+w;
 			}
@@ -251,9 +251,6 @@
 			// Declare variables
 			var input, filter, table, tr, td, i, txtValue;
 			input = document.getElementById("rollout100");
-			if (input.value<10){ 
-				input.value = "0"+input.value;
-			}
 			filter = input.value.toUpperCase();
 			table = document.getElementById("wmagic");
 			tr = table.getElementsByTagName("tr");
