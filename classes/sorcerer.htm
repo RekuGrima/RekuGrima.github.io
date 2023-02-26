@@ -156,7 +156,7 @@
     <div id="arch2" class="tab-pane fade clearfix">
 	<div style="float:right; width:50%;">
 	  <table class="cls" id="wmagic">
-		<tr><th colspan="2">Wild Magic Surge <button type="button" onclick="roll100(100),search()">d100</button></label><input type="text" class="roll" name="rollout100" id="rollout100" onkeyup="search()"></th><tr>
+		<tr><th colspan="2">Wild Magic Surge <button type="button" onclick="roll100(100),search()">d100</button></label><input type="number" class="roll" name="rollout100" id="rollout100" onkeyup="search()"></th><tr>
 		<tr><th style="width:15%;">d100</th><th>Effect</th></tr>
 		<tr><td>01–02</td><td>Roll on this table at the start of each of your turns for the next minute, ignoring this result on subsequent rolls.</td></tr>
 		<tr><td>03–04</td><td>For the next minute, you can see any invisible creature if you have line of sight to it.</td></tr>
@@ -241,30 +241,34 @@
 		  function roll100(x=20) {
 		    // get the ability score
 		    var w = Math.floor(Math.random() * x)+1;
+			if (w<10){ 
+				w = "0"+w;
+			}
 			//output the desired number
 			document.getElementById("rollout100").value = w;
 			}
 		  function search() {
-  // Declare variables
-  var input, filter, table, tr, td, i, txtValue;
-  input = document.getElementById("rollout100");
-  filter = input.value.toUpperCase();
-  table = document.getElementById("wmagic");
-  tr = table.getElementsByTagName("tr");
-
-  // Loop through all table rows, and hide those who don't match the search query
-  for (i = 0; i < tr.length; i++) {
-    td = tr[i].getElementsByTagName("td")[0];
-    if (td) {
-      txtValue = td.textContent || td.innerText;
-      if (txtValue.toUpperCase().indexOf(filter) > -1) {
-        tr[i].style.display = "";
-      } else {
-        tr[i].style.display = "none";
-      }
-    }
-  }
-}
+			// Declare variables
+			var input, filter, table, tr, td, i, txtValue;
+			input = document.getElementById("rollout100");
+			if (input.value<10){ 
+				input.value = "0"+input.value;
+			}
+			filter = input.value.toUpperCase();
+			table = document.getElementById("wmagic");
+			tr = table.getElementsByTagName("tr");
+			// Loop through all table rows, and hide those who don't match the search query
+			for (i = 0; i < tr.length; i++) {
+				td = tr[i].getElementsByTagName("td")[0];
+				if (td) {
+					txtValue = td.textContent || td.innerText;
+					if (txtValue.toUpperCase().indexOf(filter) > -1) {
+						tr[i].style.display = "";
+					} 
+					else {tr[i].style.display = "none";}
+				}
+			}
+		  }
 		</script>
 	</body>
 </html>
