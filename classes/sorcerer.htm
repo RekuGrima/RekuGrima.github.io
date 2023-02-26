@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8"><!-- define the character set-->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="../style.css"><!--link the stylesheet-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Sorcerer</title><!--set the title-->
+		<style>
+			
+		</style>
+	</head>
+	<body>
+	<h1 class="cls">Sorcerer</h1>
+	<div style="text-align:center"><label for="rollout">Hit Die: <button type="button" onclick="roll(6)">d6</button></label><input type="text" class="roll" name="rollout" id="rollout" readonly></div>
+	<!--Class Table -->
+		<table class="cls">
+			<tr><th style="width:5%" rowspan="2">Level</th><th style="width:10%" rowspan="2">Proficiency Bonus</th><th style="width:10%" rowspan="2">Sorcery Points</th><th style="width:25%" rowspan="2">Features</th><th style="width:10%" rowspan="2">Cantrips Known</th><th style="width:10%" rowspan="2">Spells Known</th><th style="width:30%" colspan="9">Spells Slots per Level</th></tr>
+			<tr>                                                    <th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th></tr>
+			<tr><td> 1</td><td>2</td><td> -</td><td>Spellcasting, Sorcerous Origin</td><td>4</td><td> 2</td><td>2</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+			<tr><td> 2</td><td>2</td><td> 2</td><td>Font of Magic</td><td>4</td><td> 3</td><td>3</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+			<tr><td> 3</td><td>2</td><td> 3</td><td>Metamagic</td><td>4</td><td> 4</td><td>4</td><td>2</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+			<tr><td> 4</td><td>2</td><td> 4</td><td>Ability Score Improvement</td><td>5</td><td> 5</td><td>4</td><td>3</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+			<tr><td> 5</td><td>3</td><td> 5</td><td> </td><td>5</td><td> 6</td><td>4</td><td>3</td><td>2</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+			<tr><td> 6</td><td>3</td><td> 6</td><td>Sorcerous Origin Feature</td><td>5</td><td> 7</td><td>4</td><td>3</td><td>3</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+			<tr><td> 7</td><td>3</td><td> 7</td><td> </td><td>5</td><td> 8</td><td>4</td><td>3</td><td>3</td><td>1</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+			<tr><td> 8</td><td>3</td><td> 8</td><td>Ability Score Improvement</td><td>5</td><td> 9</td><td>4</td><td>3</td><td>3</td><td>2</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+			<tr><td> 9</td><td>4</td><td> 9</td><td> </td><td>5</td><td>10</td><td>4</td><td>3</td><td>3</td><td>3</td><td>1</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+			<tr><td>10</td><td>4</td><td>10</td><td>Metamagic</td><td>6</td><td>11</td><td>4</td><td>3</td><td>3</td><td>3</td><td>2</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+			<tr><td>11</td><td>4</td><td>11</td><td> </td><td>6</td><td>12</td><td>4</td><td>3</td><td>3</td><td>3</td><td>2</td><td>1</td><td>-</td><td>-</td><td>-</td></tr>
+			<tr><td>12</td><td>4</td><td>12</td><td>Ability Score Improvement</td><td>6</td><td>12</td><td>4</td><td>3</td><td>3</td><td>3</td><td>2</td><td>1</td><td>-</td><td>-</td><td>-</td></tr>
+			<tr><td>13</td><td>5</td><td>13</td><td> </td><td>6</td><td>13</td><td>4</td><td>3</td><td>3</td><td>3</td><td>2</td><td>1</td><td>1</td><td>-</td><td>-</td></tr>
+			<tr><td>14</td><td>5</td><td>14</td><td>Sorcerous Origin Feature</td><td>6</td><td>13</td><td>4</td><td>3</td><td>3</td><td>3</td><td>2</td><td>1</td><td>1</td><td>-</td><td>-</td></tr>
+			<tr><td>15</td><td>5</td><td>15</td><td> </td><td>6</td><td>14</td><td>4</td><td>3</td><td>3</td><td>3</td><td>2</td><td>1</td><td>1</td><td>1</td><td>-</td></tr>
+			<tr><td>16</td><td>5</td><td>16</td><td>Ability Score Improvement</td><td>6</td><td>14</td><td>4</td><td>3</td><td>3</td><td>3</td><td>2</td><td>1</td><td>1</td><td>1</td><td>-</td></tr>
+			<tr><td>17</td><td>6</td><td>17</td><td>Metamagic</td><td>6</td><td>15</td><td>4</td><td>3</td><td>3</td><td>3</td><td>2</td><td>1</td><td>1</td><td>1</td><td>1</td></tr>
+			<tr><td>18</td><td>6</td><td>18</td><td>Sorcerous Origin Feature</td><td>6</td><td>15</td><td>4</td><td>3</td><td>3</td><td>3</td><td>3</td><td>1</td><td>1</td><td>1</td><td>1</td></tr>
+			<tr><td>19</td><td>6</td><td>19</td><td>Ability Score Improvement</td><td>6</td><td>15</td><td>4</td><td>3</td><td>3</td><td>3</td><td>3</td><td>2</td><td>1</td><td>1</td><td>1</td></tr>
+			<tr><td>20</td><td>6</td><td>20</td><td>Sorcerous Restoration</td><td>6</td><td>15</td><td>4</td><td>3</td><td>3</td><td>3</td><td>3</td><td>2</td><td>2</td><td>1</td><td>1</td></tr>
+		</table><!--Class Table end--><!--Archtypes Features -->
+	<div class="container" style="margin-top: 2vh; width:100%; font-size: 1em;">
+		<ul class="nav nav-tabs">
+			<li class="active"><a data-toggle="tab" href="#home">Class Features</a></li>
+			<li><a data-toggle="tab" href="#arch1">Draconic Bloodline</a></li>
+			<li><a data-toggle="tab" href="#arch2">Wild Magic</a></li>
+		</ul>
+	<div class="tab-content center"><div id="home" class="tab-pane fade in active">
+	<!--Class Features -->
+	<div class="panel-group center" id="accordion" style="width:95%;">
+		<div class="panel panel-default">
+			<div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#oncreation">On Creation</a></h4></div>
+			<div id="oncreation" class="panel-collapse collapse">
+			<div class="panel-body">
+				<p>Hit Die: 1d6 per sorcerer level, max at first level.</p>
+				<p>Proficiencies:
+					<ul><li>Armor:  None</li>
+						<li>Weapons:  Daggers, darts, slings, quarterstaffs, light crossbows</li>
+						<li>Tools:  None</li>
+						<li>Saving Throws:  Constitution, Charisma</li>
+						<li>Skills:  Choose two from Arcana, Deception, Insight, Intimidation, Persuasion, and Religion</li></ul>
+				</p>
+				<p>You start with the following equipment, in addition to the equipment granted by your background:
+					<ul><li>(a) a light crossbow and 20 bolts or (b) any simple weapon</li>
+						<li>(a) a component pouch or (b) an arcane focus</li>
+						<li>(a) a dungeoneer’s pack or (b) an explorer’s pack</li>
+						<li>Two daggers</li></ul>
+				</p></div>
+			</div></div>
+		<div class="panel panel-default">
+			<div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#classability1">Spellcasting</a></h4></div>
+			<div id="classability1" class="panel-collapse collapse">
+			<div class="panel-body"><p>An event in your past, or in the life of a parent or ancestor, left an indelible mark on you, infusing you with arcane magic. This font of magic, whatever its origin, fuels your spells. See chapter 10 for the general rules of spellcasting and chapter 11 for the sorcerer spell list.</p>
+			<p>Cantrips<br>At 1st level, you know four cantrips of your choice from the sorcerer spell list. You learn additional sorcerer cantrips of your choice at higher levels, as shown in the Cantrips Known column of the Sorcerer table.</p>
+			<p>Spell Slots<br>The Sorcerer table shows how many spell slots you have to cast your sorcerer spells of 1st level and higher. To cast one of these sorcerer spells, you must expend a slot of the spell’s level or higher. You regain all expended spell slots when you finish a long rest.<br>For example, if you know the 1st-level spell burning hands and have a 1st-level and a 2nd-level spell slot available, you can cast burning hands using either slot.</p>
+			<p>Spells Known of 1st Level and Higher<br>You know two 1st-level spells of your choice from the sorcerer spell list.<br>The Spells Known column of the Sorcerer table shows when you learn more sorcerer spells of your choice. Each of these spells must be of a level for which you have spell slots. For instance, when you reach 3rd level in this class, you can learn one new spell of 1st or 2nd level.<br>Additionally, when you gain a level in this class, you can choose one of the sorcerer spells you know and replace it with another spell from the sorcerer spell list, which also must be of a level for which you have spell slots.</p>
+			<p>Spellcasting Ability<br>Charisma is your spellcasting ability for your sorcerer spells, since the power of your magic relies on your ability to project your will into the world. You use your Charisma whenever a spell refers to your spellcasting ability. In addition, you use your Charisma modifier when setting the saving throw DC for a sorcerer spell you cast and when making an attack roll with one.
+			<div style="text-align:center">Spell save DC = 8 + your proficiency bonus + your Charisma modifier
+			<br>Spell attack modifier = your proficiency bonus + your Charisma modifier</div>
+			<p>Spellcasting Focus<br>You can use an arcane focus (see chapter 5, “Equip­ment”) as a spellcasting focus for your sorcerer spells.</p></div>
+			</div></div>
+		<div class="panel panel-default">
+			<div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#classability2">Sorcerous Origin</a></h4></div>
+			<div id="classability2" class="panel-collapse collapse">
+			<div class="panel-body"><p>Choose a sorcerous origin, which describes the source of your innate magical power: Draconic Bloodline or Wild Magic, both detailed at the end of the class description.<br>Your choice grants you features when you choose it at 1st level and again at 6th, 14th, and 18th level.</p></div>
+			</div></div>
+		<div class="panel panel-default">
+			<div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#classability3">Font of Magic</a></h4></div>
+			<div id="classability3" class="panel-collapse collapse">
+			<div class="panel-body"><p>At 2nd level, you tap into a deep wellspring of magic within yourself. This wellspring is represented by sorcery points, which allow you to create a variety of magical effects.</p>
+			<p>Sorcery Points<br>You have 2 sorcery points, and you gain more as you reach higher levels, as shown in the Sorcery Points column of the Sorcerer table. You can never have more sorcery points than shown on the table for your level. You regain all spent sorcery points when you finish a long rest.</p><div style="float:right;">
+				<table class="cls">
+					<tr><th colspan="2">Creating Spell Slots</th></tr>
+					<tr><th>Spell Slot Level</th><th>Sorcery Point Cost</th></tr>
+					<tr><td>1st</td><td>2</td></tr>
+					<tr><td>2nd</td><td>3</td></tr>
+					<tr><td>3rd</td><td>5</td></tr>
+					<tr><td>4th</td><td>6</td></tr>
+					<tr><td>5th</td><td>7</td></tr></table></div>
+			<p>Flexible Casting<br>You can use your sorcery points to gain additional spell slots, or sacrifice spell slots to gain additional sorcery points. You learn other ways to use your sorcery points as you reach higher levels.</p>
+			<p>Creating Spell Slots. You can transform unexpended sorcery points into one spell slot as a bonus action on your turn. The Creating Spell Slots table shows the cost of creating a spell slot of a given level. You can create spell slots no higher in level than 5th.<br>Any spell slot you create with this feature vanishes when you finish a long rest.
+			
+			<p>Converting a Spell Slot to Sorcery Points. As a bonus action on your turn, you can expend one spell slot and gain a number of sorcery points equal to the slot’s level.</p></div>
+			</div></div>
+		<div class="panel panel-default">
+			<div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#classability4">Metamagic</a></h4></div>
+			<div id="classability4" class="panel-collapse collapse">
+			<div class="panel-body"><p>At 3rd level, you gain the ability to twist your spells to suit your needs. You gain two of the following Metamagic options of your choice. You gain another one at 10th and 17th level.<br>You can use only one Metamagic option on a spell when you cast it, unless otherwise noted.</p>
+			<ul>
+				<li>Careful Spell<dl>When you cast a spell that forces other creatures to make a saving throw, you can protect some of those creatures from the spell’s full force. To do so, you spend 1 sorcery point and choose a number of those creatures up to your Charisma modifier (minimum of one creature). A chosen creature automatically succeeds on its saving throw against the spell.</dl></li>
+				<li>Distant Spell<dl>When you cast a spell that has a range of 5 feet or greater, you can spend 1 sorcery point to double the range of the spell.</dl><dl>When you cast a spell that has a range of touch, you can spend 1 sorcery point to make the range of the spell 30 feet.</dl></li>
+				<li>Empowered Spell<dl>When you roll damage for a spell, you can spend 1 sorcery point to reroll a number of the damage dice up to your Charisma modifier (minimum of one). You must use the new rolls.</dl><dl>You can use Empowered Spell even if you have already used a different Metamagic option during the casting of the spell.</dl></li>
+				<li>Extended Spell<dl>When you cast a spell that has a duration of 1 minute or longer, you can spend 1 sorcery point to double its duration, to a maximum duration of 24 hours.</dl></li>
+				<li>Heightened Spell<dl>When you cast a spell that forces a creature to make a saving throw to resist its effects, you can spend 3 sorcery points to give one target of the spell disadvantage on its first saving throw made against the spell.</dl></li>
+				<li>Quickened Spell<dl>When you cast a spell that has a casting time of 1 action, you can spend 2 sorcery points to change the casting time to 1 bonus action for this casting.</dl></li>
+				<li>Subtle Spell<dl>When you cast a spell, you can spend 1 sorcery point to cast it without any somatic or verbal components.</dl></li>
+				<li>Twinned Spell<dl>When you cast a spell that targets only one creature and doesn’t have a range of self, you can spend a number of sorcery points equal to the spell’s level to target a second creature in range with the same spell (1 sorcery point if the spell is a cantrip).</dl><dl>To be eligible, a spell must be incapable of targeting more than one creature at the spell’s current level. For example, magic missile and scorching ray aren’t eligible, but ray of frost and chromatic orb are.</p></div>
+			</div></div>
+		<div class="panel panel-default">
+			<div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#classability5">Ability Score Improvement</a></h4></div>
+			<div id="classability5" class="panel-collapse collapse">
+			<div class="panel-body"><p>When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can’t increase an ability score above 20 using this feature.</p></div>
+			</div></div>
+		<div class="panel panel-default">
+			<div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#classability6">Sorcerous Restoration</a></h4></div>
+			<div id="classability6" class="panel-collapse collapse">
+			<div class="panel-body"><p>At 20th level, you regain 4 expended sorcery points whenever you finish a short rest.</p></div>
+			</div></div>
+    </div><!--Class Features end-->
+	<div class="panel-footer">Source: Player's Handbook</div>
+		</div>
+    <div id="arch1" class="tab-pane fade"><div style="float:right; width:25%">
+		<table class="cls">
+			<tr><th colspan="2">Draconic Ancestry</th></tr>
+			<tr><th>Dragon</th><th>Damage Type</th></tr>
+			<tr><td>Black</td><td>Acid</td></tr>
+			<tr><td>Blue</td><td>Lightning</td></tr>
+			<tr><td>Brass</td><td>Fire</td></tr>
+			<tr><td>Bronze</td><td>Lightning</td></tr>
+			<tr><td>Copper</td><td>Acid</td></tr>
+			<tr><td>Gold</td><td>Fire</td></tr>
+			<tr><td>Green</td><td>Poison</td></tr>
+			<tr><td>Red</td><td>Fire</td></tr>
+			<tr><td>Silver</td><td>Cold</td></tr>
+			<tr><td>White</td><td>Cold</td></tr></table>
+		</div>
+		<p>Your innate magic comes from draconic magic that was mingled with your blood or that of your ancestors. Most often, sorcerers with this origin trace their descent back to a mighty sorcerer of ancient times who made a bargain with a dragon or who might even have claimed a dragon parent. Some of these bloodlines are well established in the world, but most are obscure. Any given sorcerer could be the first of a new bloodline, as a result of a pact or some other exceptional circumstance.</p>
+		<p>Dragon Ancestor<br>At 1st level, you choose one type of dragon as your ancestor. The damage type associated with each dragon is used by features you gain later.<br>You can speak, read, and write Draconic. Additionally, whenever you make a Charisma check when interacting with dragons, your proficiency bonus is doubled if it applies to the check.</p>
+		<p>Draconic Resilience<br>As magic flows through your body, it causes physical traits of your dragon ancestors to emerge. At 1st level, your hit point maximum increases by 1 and increases by 1 again whenever you gain a level in this class.<br>Additionally, parts of your skin are covered by a thin sheen of dragon-like scales. When you aren’t wearing armor, your AC equals 13 + your Dexterity modifier.</p>
+		<p>Elemental Affinity<br>Starting at 6th level, when you cast a spell that deals damage of the type associated with your draconic ancestry, you can add your Charisma modifier to one damage roll of that spell. At the same time, you can spend 1 sorcery point to gain resistance to that damage type for 1 hour.</p>
+		<p>Dragon Wings<br>At 14th level, you gain the ability to sprout a pair of dragon wings from your back, gaining a flying speed equal to your current speed. You can create these wings as a bonus action on your turn. They last until you dismiss them as a bonus action on your turn.<br>You can’t manifest your wings while wearing armor unless the armor is made to accommodate them, and clothing not made to accommodate your wings might be destroyed when you manifest them.
+		<p>Draconic Presence<br>Beginning at 18th level, you can channel the dread presence of your dragon ancestor, causing those around you to become awestruck or frightened. As an action, you can spend 5 sorcery points to draw on this power and exude an aura of awe or fear (your choice) to a distance of 60 feet. For 1 minute or until you lose your concentration (as if you were casting a concentration spell), each hostile creature that starts its turn in this aura must succeed on a Wisdom saving throw or be charmed (if you chose awe) or frightened (if you chose fear) until the aura ends. A creature that succeeds on this saving throw is immune to your aura for 24 hours.</p>
+	<div class="panel-footer">Source: Player's Handbook</div>
+		</div>
+    <div id="arch2" class="tab-pane fade clearfix">
+	<div style="float:right; width:50%;">
+	  <table class="cls" id="wmagic">
+		<tr><th colspan="2">Wild Magic Surge <button type="button" onclick="roll100(100),search()">d100</button></label><input type="text" class="roll" name="rollout100" id="rollout100" onkeyup="search()"></th><tr>
+		<tr><th style="width:15%;">d100</th><th>Effect</th></tr>
+		<tr><td>01–02</td><td>Roll on this table at the start of each of your turns for the next minute, ignoring this result on subsequent rolls.</td></tr>
+		<tr><td>03–04</td><td>For the next minute, you can see any invisible creature if you have line of sight to it.</td></tr>
+		<tr><td>05–06</td><td>A modron chosen and controlled by the DM appears in an unoccupied space within 5 feet of you, then disappears 1 minute later.</td></tr>
+		<tr><td>07–08</td><td>You cast fireball as a 3rd-level spell centered on yourself.</td></tr>
+		<tr><td>09–10</td><td>You cast magic missile as a 5th-level spell.</td></tr>
+		<tr><td>11–12</td><td>Roll a d10. Your height changes by a number of inches equal to the roll. If the roll is odd, you shrink. If the roll is even, you grow.</td></tr>
+		<tr><td>13–14</td><td>You cast confusion centered on yourself.</td></tr>
+		<tr><td>15–16</td><td>For the next minute, you regain 5 hit points at the start of each of your turns.</td></tr>
+		<tr><td>17–18</td><td>You grow a long beard made of feathers that remains until you sneeze, at which point the feathers explode out from your face.</td></tr>
+		<tr><td>19–20</td><td>You cast grease centered on yourself.</td></tr>
+		<tr><td>21–22</td><td>Creatures have disadvantage on saving throws against the next spell you cast in the next minute that involves a saving throw.</td></tr>
+		<tr><td>23–24</td><td>Your skin turns a vibrant shade of blue. A remove curse spell can end this effect.</td></tr>
+		<tr><td>25–26</td><td>An eye appears on your forehead for the next minute. During that time, you have advantage on Wisdom (Perception) checks that rely on sight.</td></tr>
+		<tr><td>27–28</td><td>For the next minute, all your spells with a casting time of 1 action have a casting time of 1 bonus action.</td></tr>
+		<tr><td>29–30</td><td>You teleport up to 60 feet to an unoccupied space of your choice that you can see.</td></tr>
+		<tr><td>31–32</td><td>You are transported to the Astral Plane until the end of your next turn, after which time you return to the space you previously occupied or the nearest unoccupied space if that space is occupied.</td></tr>
+		<tr><td>33–34</td><td>Maximize the damage of the next damaging spell you cast within the next minute.</td></tr>
+		<tr><td>35–36</td><td>Roll a d10. Your age changes by a number of years equal to the roll. If the roll is odd, you get younger (minimum 1 year old). If the roll is even, you get older.</td></tr>
+		<tr><td>37–38</td><td>1d6 flumphs controlled by the DM appear in unoccupied spaces within 60 feet of you and are frightened of you. They vanish after 1 minute.</td></tr>
+		<tr><td>39–40</td><td>You regain 2d10 hit points.</td></tr>
+		<tr><td>41–42</td><td>You turn into a potted plant until the start of your next turn. While a plant, you are incapacitated and have vulnerability to all damage. If you drop to 0 hit points, your pot breaks, and your form reverts.</td></tr>
+		<tr><td>43–44</td><td>For the next minute, you can teleport up to 20 feet as a bonus action on each of your turns.</td></tr>
+		<tr><td>45–46</td><td>You cast levitate on yourself.</td></tr>
+		<tr><td>47–48</td><td>A unicorn controlled by the DM appears in a space within 5 feet of you, then disappears 1 minute later.</td></tr>
+		<tr><td>49–50</td><td>You can’t speak for the next minute. Whenever you try, pink bubbles float out of your mouth.</td></tr>
+		<tr><td>51–52</td><td>A spectral shield hovers near you for the next minute, granting you a +2 bonus to AC and immunity to magic missile.</td></tr>
+		<tr><td>53–54</td><td>You are immune to being intoxicated by alcohol for the next 5d6 days.</td></tr>
+		<tr><td>55–56</td><td>Your hair falls out but grows back within 24 hours.</td></tr>
+		<tr><td>57–58</td><td>For the next minute, any flammable object you touch that isn’t being worn or carried by another creature bursts into flame.</td></tr>
+		<tr><td>59–60</td><td>You regain your lowest-level expended spell slot.</td></tr>
+		<tr><td>61–62</td><td>For the next minute, you must shout when you speak.</td></tr>
+		<tr><td>63–64</td><td>You cast fog cloud centered on yourself.</td></tr>
+		<tr><td>65–66</td><td>Up to three creatures you choose within 30 feet of you take 4d10 lightning damage.</td></tr>
+		<tr><td>67–68</td><td>You are frightened by the nearest creature until the end of your next turn.</td></tr>
+		<tr><td>69–70</td><td>Each creature within 30 feet of you becomes invisible for the next minute. The invisibility ends on a creature when it attacks or casts a spell.</td></tr>
+		<tr><td>71–72</td><td>You gain resistance to all damage for the next minute.</td></tr>
+		<tr><td>73–74</td><td>A random creature within 60 feet of you becomes poisoned for 1d4 hours.</td></tr>
+		<tr><td>75–76</td><td>You glow with bright light in a 30-foot radius for the next minute. Any creature that ends its turn within 5 feet of you is blinded until the end of its next turn.</td></tr>
+		<tr><td>77–78</td><td>You cast polymorph on yourself. If you fail the saving throw, you turn into a sheep for the spell’s duration.</td></tr>
+		<tr><td>79–80</td><td>Illusory butterflies and flower petals flutter in the air within 10 feet of you for the next minute.</td></tr>
+		<tr><td>81–82</td><td>You can take one additional action immediately.</td></tr>
+		<tr><td>83–84</td><td>Each creature within 30 feet of you takes 1d10 necrotic damage. You regain hit points equal to the sum of the necrotic damage dealt.</td></tr>
+		<tr><td>85–86</td><td>You cast mirror image.</td></tr>
+		<tr><td>87–88</td><td>You cast fly on a random creature within 60 feet of you.</td></tr>
+		<tr><td>89–90</td><td>You become invisible for the next minute. During that time, other creatures can’t hear you. The invisibility ends if you attack or cast a spell.</td></tr>
+		<tr><td>91–92</td><td>If you die within the next minute, you immediately come back to life as if by the reincarnate spell.</td></tr>
+		<tr><td>93–94</td><td>Your size increases by one size category for the next minute.</td></tr>
+		<tr><td>95–96</td><td>You and all creatures within 30 feet of you gain vulnerability to piercing damage for the next minute.</td></tr>
+		<tr><td>97–98</td><td>You are surrounded by faint, ethereal music for the next minute.</td></tr>
+		<tr><td>99–00</td><td>You regain all expended sorcery points.</td></tr></table></div>
+      <p>Your innate magic comes from the forces of chaos that underlie the order of creation. You might have endured exposure to raw magic, perhaps through a planar portal leading to Limbo, the Elemental Planes, or the Far Realm. Perhaps you were blessed by a fey being or marked by a demon. Or your magic could be a fluke of your birth, with no apparent cause. However it came to be, this magic churns within you, waiting for any outlet.</p>
+	  <p>Wild Magic Surge<br>Starting when you choose this origin at 1st level, your spellcasting can unleash surges of untamed magic. Once per turn, the DM can have you roll a d20 immediately after you cast a sorcerer spell of 1st level or higher. If you roll a 1, roll on the Wild Magic Surge table to create a magical effect. If that effect is a spell, it is too wild to be affected by your Metamagic, and if it normally requires concentration, it doesn’t require concentration in this case; the spell lasts for its full duration.</p>
+	  <p>Tides of Chaos<br>Starting at 1st level, you can manipulate the forces of chance and chaos to gain advantage on one attack roll, ability check, or saving throw. Once you do so, you must finish a long rest before you can use this feature again.<br>Any time before you regain the use of this feature, the DM can have you roll on the Wild Magic Surge table immediately after you cast a sorcerer spell of 1st level or higher. You then regain the use of this feature.
+	  <p>Bend Luck<br>Starting at 6th level, you have the ability to twist fate using your wild magic. When another creature you can see makes an attack roll, an ability check, or a saving throw, you can use your reaction and spend 2 sorcery points to roll 1d4 and apply the number rolled as a bonus or penalty (your choice) to the creature’s roll. You can do so after the creature rolls but before any effects of the roll occur.</p>
+	  <p>Controlled Chaos<br>At 14th level, you gain a modicum of control over the surges of your wild magic. Whenever you roll on the Wild Magic Surge table, you can roll twice and use either number.</p>
+	  <p>Spell Bombardment<br>Beginning at 18th level, the harmful energy of your spells intensifies. When you roll damage for a spell and roll the highest number possible on any of the dice, choose one of those dice, roll it again and add that roll to the damage. You can use the feature only once per turn.</p>
+	  
+		</p>
+	<div class="panel-footer">Source: Player's Handbook</div>
+	  </div>
+    <div id="arch3" class="tab-pane fade">
+      <p> </p>
+	  </div>
+  </div>
+</div>
+	
+	
+		<script>
+		  $(document).ready(function(){
+		    $('[data-toggle="tooltip"]').tooltip();
+		  });
+		  $(document).ready(function(){
+			$('[data-toggle="popover"]').popover();   
+		  });
+		  function roll(x=20) {
+		    // get the ability score
+		    var w = Math.floor(Math.random() * x)+1;
+			//output the desired number
+			document.getElementById("rollout").value = w;
+			}
+		  function roll100(x=20) {
+		    // get the ability score
+		    var w = Math.floor(Math.random() * x)+1;
+			//output the desired number
+			document.getElementById("rollout100").value = w;
+			}
+		  function search() {
+  // Declare variables
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("rollout100");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("wmagic");
+  tr = table.getElementsByTagName("tr");
+
+  // Loop through all table rows, and hide those who don't match the search query
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }
+  }
+}
+		</script>
+	</body>
+</html>
