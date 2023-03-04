@@ -171,6 +171,23 @@ table.cls tr:hover {	background-color: thistle;}
 .panel-info .panel-body { font-size:.6em; }
 .panel-success .panel-body { font-size:.6em; }
 .panel-heading.book + .panel-body {	font-size:.6em; }
+.creature{
+	width: 50%;
+	float:right;
+	font-size:.7em;
+	background-image: url('images/page.png');
+	background-repeat: repeat;
+	background-size: stretch;
+	background-position:center;
+	border: solid .3vw transparent;
+    border-image: url('images/box empty.png') 35 round;
+	box-shadow: 5px 5px 3px grey;
+	padding:.7vw;
+	margin:.7vw;
+}
+.creature > hr {
+	border: solid .2vw maroon;
+
 /* Add banners to the background*/
 .phb {	background: url('images/banners/bannerphb.png') no-repeat bottom left;	background-size: 8vw auto;}
 .dmg {	background: url('images/banners/bannerdmg.png') no-repeat bottom left;	background-size: 8vw auto;}
