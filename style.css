@@ -136,6 +136,19 @@ table.cls td {	padding:5px;}
 table.cls th {	background-color:white;	padding: 5px;	}
 table.cls tr:hover {	background-color: thistle;}
 
+/*style search bars*/
+.srch {	
+  width: 25%;
+  font-size: 16px;
+  background-image: url('images/query.png');
+  background-size: 2em;
+  background-repeat: no-repeat;
+  background-position: left center;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
 /* Style popovers*/
 .pop {
 	color:maroon;
@@ -185,8 +198,25 @@ table.cls tr:hover {	background-color: thistle;}
 	padding:.7vw;
 	margin:.7vw;
 }
+.feat{
+	width: 50%;
+	float:right;
+	font-size:.8em;
+	background-image: url('images/page.png');
+	background-repeat: repeat;
+	background-size: stretch;
+	background-position:center;
+	border: solid .3vw transparent;
+    border-image: url('images/box empty.png') 35 round;
+	box-shadow: 5px 5px 3px grey;
+	padding:.7vw;
+	margin:.7vw;
+}
 .creature > hr {
 	border: solid .2vw maroon;
+}
+mark { background-color: rgb(0, 206, 209);}
+s { color: red;}
 
 /* Add banners to the background*/
 .phb {	background: url('images/banners/bannerphb.png') no-repeat bottom left;	background-size: 8vw auto;}

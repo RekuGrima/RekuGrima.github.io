@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8"><!-- define the character set-->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="../style.css"><!--link the stylesheet-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Class</title><!--set the title-->
+		<style>
+			.panel-heading{ font-size: 2.5vw; }
+			.panel-body{ font-size: 2vw; }
+			.container { float:left; }
+			table{
+				border-collapse: collapse;
+				width: 100%;
+				border: solid .1vw;
+			}
+			tr, td, th{
+				border-bottom: solid .1vw;
+				padding: 1vw;
+			}
+			tr:nth-child(even) {background-color: #f2f2f2;}
+			tr.a:hover {
+				background-color: lightgreen;
+			}
+			
+		</style>
+	</head>
+	<body>
+	<h1 class="cls">Chemist</h1></div>
+	<div style="text-align:center"><label for="rollout">Hit Die: <button type="button" onclick="roll(8)">d8</button></label><input type="text" class="roll" name="rollout" id="rollout" readonly></div>
+	<!--Class Table -->
+		<table class="cls">
+			<tr><th rowspan="2" style="width:10%">Level</th><th rowspan="2" style="width:10%">Proficiency Bonus</th><th rowspan="2" style="width:50%">Features</th><th rowspan="2">Discoveries</th><th rowspan="2" style="width:5%">Bomb Damage</th><th colspan="6">Extracts per Day</th></tr>
+			<tr> <th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th></tr>
+			<tr><td> 1</td><td>2</td><td>Alchemy, Bombs, brew potion, mutagen, throw anything</td><td> </td><td>1d6</td><td>1</td><td> </td><td> </td><td> </td><td> </td><td> </td></tr>
+			<tr><td> 2</td><td>2</td><td>Discovery, poison use</td><td>1</td><td>1d6</td><td>2</td><td> </td><td> </td><td> </td><td> </td><td> </td></tr>
+			<tr><td> 3</td><td>2</td><td>swift alchemy</td><td>1</td><td>2d6</td><td>3</td><td> </td><td> </td><td> </td><td> </td><td> </td></tr>
+			<tr><td> 4</td><td>2</td><td> </td><td>2</td><td>2d6</td><td>3</td><td>1</td><td> </td><td> </td><td> </td><td> </td></tr>
+			<tr><td> 5</td><td>3</td><td>poison resistance</td><td>2</td><td>3d6</td><td>4</td><td>2</td><td> </td><td> </td><td> </td><td> </td></tr>
+			<tr><td> 6</td><td>3</td><td>swift poisoning </td><td>3</td><td>3d6</td><td>4</td><td>3</td><td> </td><td> </td><td> </td><td> </td></tr>
+			<tr><td> 7</td><td>3</td><td> </td><td>3</td><td>4d6</td><td>4</td><td>3</td><td>1</td><td> </td><td> </td><td> </td></tr>
+			<tr><td> 8</td><td>3</td><td></td><td>4</td><td>4d6</td><td>4</td><td>4</td><td>2</td><td> </td><td> </td><td> </td></tr>
+			<tr><td> 9</td><td>4</td><td> </td><td>4</td><td>5d6</td><td>5</td><td>4</td><td>3</td><td> </td><td> </td><td> </td></tr>
+			<tr><td>10</td><td>4</td><td>poison immunity </td><td>5</td><td>5d6</td><td>5</td><td>4</td><td>3</td><td>1</td><td> </td><td> </td></tr>
+			<tr><td>11</td><td>4</td><td> </td><td>5</td><td>6d6</td><td>5</td><td>4</td><td>4</td><td>2</td><td> </td><td> </td></tr>
+			<tr><td>12</td><td>4</td><td> </td><td>6</td><td>6d6</td><td>5</td><td>5</td><td>4</td><td>3</td><td> </td><td> </td></tr>
+			<tr><td>13</td><td>5</td><td> </td><td>6</td><td>7d6</td><td>5</td><td>5</td><td>4</td><td>3</td><td>1</td><td> </td></tr>
+			<tr><td>14</td><td>5</td><td>persistent mutagen </td><td>7</td><td>7d6</td><td>5</td><td>5</td><td>4</td><td>4</td><td>2</td><td> </td></tr>
+			<tr><td>15</td><td>5</td><td> </td><td>7</td><td>8d6</td><td>5</td><td>5</td><td>5</td><td>4</td><td>3</td><td> </td></tr>
+			<tr><td>16</td><td>5</td><td> </td><td>8</td><td>8d6</td><td>5</td><td>5</td><td>5</td><td>4</td><td>3</td><td>1</td></tr>
+			<tr><td>17</td><td>6</td><td> </td><td>8</td><td>9d6</td><td>5</td><td>5</td><td>5</td><td>4</td><td>4</td><td>2</td></tr>
+			<tr><td>18</td><td>6</td><td>instant alchemy </td><td>9</td><td>9d6</td><td>5</td><td>5</td><td>5</td><td>5</td><td>4</td><td>3</td></tr>
+			<tr><td>19</td><td>6</td><td> </td><td>9</td><td>10d6</td><td>5</td><td>5</td><td>5</td><td>5</td><td>5</td><td>4</td></tr>
+			<tr><td>20</td><td>6</td><td>Grand Discovery </td><td>11</td><td>10d6</td><td>5</td><td>5</td><td>5</td><td>5</td><td>5</td><td>5</td></tr>
+		</table><!--Class Table end--><!--Archtypes Features -->
+	<div class="container" style="margin-top: 2vh; width:100%; font-size: 1em;">
+		<ul class="nav nav-tabs">
+			<li class="active"><a data-toggle="tab" href="#home">Class Features</a></li>
+			<li><a data-toggle="tab" href="#arch1">Discoveries</a></li>
+			<li><a data-toggle="tab" href="#arch2">Formulae</a></li>
+			<li><a data-toggle="tab" href="#arch3">Poisoner</a></li>
+			<li><a data-toggle="tab" href="#arch4">Mutation Master</a></li>
+		</ul>
+	<div class="tab-content center"><div id="home" class="tab-pane fade in active">
+	<!--Class Features -->
+	<div class="panel-group center" id="accordion" style="width:95%;">
+		<div class="panel panel-default">
+			<div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#oncreation">On Creation</a></h4></div>
+			<div id="oncreation" class="panel-collapse collapse">
+			<div class="panel-body">
+				<p>Hit Die: 1d8 per chemist level, max at first level.</p>
+				<p>Proficiencies:
+					<ul><li>Armor:  Light</li>
+						<li>Weapons:  Simple Weapons, bombs</li>
+						<li>Tools:  Alchemist Supplies</li>
+						<li>Saving Throws:  Dexterity, Constitution</li>
+						<li>Skills:  Choose two from: Acrobatics, Arcana, Investigation, Medicine, Nature, Perception, Sleight of Hand, Survival</li></ul>
+				</p>
+				<p>You start with the following equipment, in addition to the equipment granted by your background:
+					<ul><li>needs consideration</li></ul>
+				</p></div>
+			</div></div>
+		<div class="panel panel-default">
+			<div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#classability1">Alchemy</a></h4></div>
+			<div id="classability1" class="panel-collapse collapse">
+			<div class="panel-body"><p>Chemists are not only masters of creating mundane alchemical substances such as alchemist’s fire and smokesticks, but also of fashioning magical extracts that function like potions. When a chemist creates an extract or bomb, they infuses the concoction with a tiny fraction of their own magical power—this enables the creation of powerful effects, but also binds the effects to the creator. <br>Chemists have expertise when crafting using Alchemist Supplies. In addition, a chemist can use Alchemist Supplies to identify potions as if using detect magic. They must hold the potion for 1 round to make such a check.</p>
+			<p>An chemist can create three special types of magical items—extracts, bombs, and mutagens. Bombs are explosive splash weapons, and mutagens are transformative elixirs that the chemist drinks to enhance their physical abilities—both of these are detailed in their own sections below.</p>
+			<p>Extracts are the most varied of the three. In many ways, they behave like spells in potion form, and as such their effects can be dispelled by effects like dispel magic using the chemist’s level as the caster level. Unlike potions, though, extracts can have powerful effects and duplicate spells that a potion normally could not.</p>
+			<p>An chemist can create only a certain number of extracts of each level per day. In addition, they receives bonus extracts per day if they has a high Intelligence score, in the same way a wizard receives bonus spells per day. When a chemist mixes a<s>n extract</s><mark>potion</mark>, they infuses the chemicals and reagents in the <s>extract</s><mark>potion</mark> with magic siphoned from their own magical aura. An <s>extract</s><mark>potion</mark> immediately becomes inert if it leaves the chemist’s possession, reactivating as soon as it returns to their keeping—an chemist cannot normally pass out their <s>extract</s><mark>potion</mark>s for allies to use (but see the “infusion” discovery below). An <s>extract</s><mark>potion</mark>, once created, remains potent for 1 day before becoming inert, so a chemist must re-prepare their <s>extract</s><mark>potion</mark>s every day. Mixing an <s>extract</s><mark>potion</mark> takes 1 minute of work—most chemists prepare many <s>extract</s><mark>potion</mark>s at the start of the day or just before going on an adventure, but it’s not uncommon for a chemist to keep some (or even all) of their daily <s>extract</s><mark>potion</mark> slots open so that they can prepare <s>extract</s><mark>potion</mark>s in the field as needed.</p>
+			<p><s>Although the chemist doesn’t actually cast spells, they does have</s><mark>The chemist has</mark> a formulae list that determines what <s>extract</s><mark>potion</mark>s they can create. <s>An chemist can utilize spell-trigger items if the spell appears on their formulae list, but not spell-completion items (unless they uses Use Magic Device to do so). An extract is “cast” by drinking it, as if imbibing a potion—the effects of an extract exactly duplicate the spell upon which its formula is based, save that the spell always affects only the drinking chemist.</s> The chemist uses their level as the caster level to determine any effect based on caster level. Creating <s>extract</s><mark>potion</mark>s consumes raw materials, but the cost of these materials is insignificant—comparable to the valueless material components of most spells. If <s>a spell normally</s><mark>the formulae</mark> has a costly material component, that component is expended during the consumption of that particular <s>extract</s><mark>potion</mark>. <s>Extracts cannot be made from spells that have focus requirements (chemist extracts that duplicate divine spells never have a divine focus requirement). a chemist can prepare an extract of any formula they knows. To learn or use an extract, a chemist must have an Intelligence score equal to at least 10 + the extract’s level. The Difficulty Class for a saving throw against a chemist’s extract is 10 + the extract level + the chemist’s Intelligence modifier.</s></p>
+			<div style="text-align:center;"><mark>Save DC = 8 + your proficiency bonus + your Intelligence modifier</mark></div> 
+			<p>An chemist may know any number of formulae. They stores their formulae in a special tome called a formula book. They must refer to this book whenever they prepares an extract but not when they consumes it. a chemist begins play with two 1st level formulae of their choice, plus a number of additional forumlae equal to their Intelligence modifier. At each new chemist level, they gains one new formula of any level that they can create. a chemist can also add formulae to their book just like a wizard adds spells to their spellbook, using the same costs and time requirements. a chemist can study a wizard’s spellbook to learn any formula that is equivalent to a spell the spellbook contains. A wizard, however, cannot learn spells from a formula book. a chemist does not need to decipher arcane writings before copying them.</p></div>
+			</div></div>
+		<div class="panel panel-default">
+			<div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#classability2">Bomb</a></h4></div>
+			<div id="classability2" class="panel-collapse collapse">
+			<div class="panel-body"><p>In addition to magical extracts, chemists are adept at swiftly mixing various volatile chemicals and infusing them with their magical reserves to create powerful bombs that they can hurl at their enemies. a chemist can use a number of bombs each day equal to their class level + their Intelligence modifier. Bombs are unstable, and if not used in the round they are created, they degrade and become inert—their method of creation prevents large volumes of explosive material from being created and stored. In order to create a bomb, the chemist must use a small vial containing an ounce of liquid catalyst—the chemist can create this liquid catalyst from small amounts of chemicals from an alchemy lab, and these supplies can be readily refilled in the same manner as a spellcaster’s component pouch. Most chemists create a number of catalyst vials at the start of the day equal to the total number of bombs they can create in that day—once created, a catalyst vial remains usable by the chemist for years.</p>
+			<p>Drawing the components of, creating, and throwing a bomb requires a standard action that provokes an attack of opportunity. Thrown bombs have a range of 20 feet and use the Throw Splash Weapon special attack. Bombs are considered weapons and can be selected using feats such as Point-Blank Shot and Weapon Focus. On a direct hit, a chemist’s bomb inflicts 1d6 points of fire damage + additional damage equal to the chemist’s Intelligence modifier. The damage of a chemist’s bomb increases by 1d6 points at every odd-numbered chemist level (this bonus damage is not multiplied on a critical hit or by using feats such as Vital Strike). Splash damage from a chemist bomb is always equal to the bomb’s minimum damage (so if the bomb would deal 2d6+4 points of fire damage on a direct hit, its splash damage would be 6 points of fire damage). Those caught in the splash damage can attempt a Reflex save for half damage. The DC of this save is equal to 10 + 1/2 the chemist’s level + the chemist’s Intelligence modifier.</p>
+			<p>chemists can learn new types of bombs as discoveries (see the Discovery ability) as they level up. a chemist’s bomb, like an extract, becomes inert if used or carried by anyone else.</p></div>
+			</div></div>
+		<div class="panel panel-default">
+			<div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#classability3">Brew Potion</a></h4></div>
+			<div id="classability3" class="panel-collapse collapse">
+			<div class="panel-body"><p><s>At 1st level, chemists receive Brew Potion as a bonus feat.</s> a chemist can brew potions of any formulae they knows (up to 3rd level), using their chemist level as their caster level. <s>The spell must be one that can be made into a potion. The chemist does not need to meet the prerequisites for this feat.</s></p></div>
+			</div></div>
+		<div class="panel panel-default">
+			<div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#classability4">Mutagen</a></h4></div>
+			<div id="classability4" class="panel-collapse collapse">
+			<div class="panel-body"><p>At 1st level, a chemist discovers how to create a mutagen that mimics the effects of the Enhance ability spell. With a duration of 1 hour * the chemists proficiency bonus.</p>
+			<p>A non-chemist who drinks a mutagen must make a Con save or become poisoned for 1 hour, but a chemist can gain the effects of another chemist’s mutagen if they drinks it. (Although if the other chemist creates a different mutagen, the effects of the “stolen” mutagen immediately cease.) The effects of a mutagen do not stack. Whenever a chemist drinks a mutagen, the effects of any previous mutagen immediately end.</p>
+			<div style="text-align:center;">Save DC = 8 + your proficiency bonus + your Intelligence modifier</div></div>
+			</div></div>
+		<div class="panel panel-default">
+			<div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#classability5">Throw Anything</a></h4></div>
+			<div id="classability5" class="panel-collapse collapse">
+			<div class="panel-body"><p>All chemists gain the Throw Anything feat as a bonus feat at 1st level. a chemist adds their Intelligence modifier to damage done with splash weapons, including the splash damage if any. This bonus damage is already included in the bomb class feature.</p></div>
+			</div></div>
+		<div class="panel panel-default">
+			<div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#classability6">Discovery</a></h4></div>
+			<div id="classability6" class="panel-collapse collapse">
+			<div class="panel-body"><p>At 2nd level, and then again every 2 levels thereafter (up to 18th level), a chemist makes an incredible alchemical discovery. Unless otherwise noted, a chemist cannot select an individual discovery more than once. Some discoveries can only be made if the chemist has met certain prerequisites first, such as uncovering other discoveries. Discoveries that modify bombs that are marked with an asterisk (*) do not stack. Only one such discovery can be applied to an individual bomb. <s>The DC of any saving throw called for by a discovery is equal to 10 + 1/2 the chemist’s level + the chemist’s Intelligence modifier.</s>
+			<div style="text-align:center;"><mark>Save DC = 8 + your proficiency bonus + your Intelligence modifier</mark></div></p></div>
+			</div></div>
+		<div class="panel panel-default">
+			<div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#classability7">Poison Resistance</a></h4></div>
+			<div id="classability7" class="panel-collapse collapse">
+			<div class="panel-body"><p><s>At 2nd level, a chemist gains a +2 bonus on all saving throws against poison. This bonus increases to +4 at 5th level, and then again to +6 at 8th level.</s>You gain poison resistance. At 10th level, a chemist becomes completely immune to poison.</p></div>
+			</div></div>
+		<div class="panel panel-default">
+			<div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#classability8">Poison Use</a></h4></div>
+			<div id="classability8" class="panel-collapse collapse">
+			<div class="panel-body"><p>chemists are trained in the use of poison and starting at 2nd level, cannot accidentally poison themselves when applying poison to a weapon.</p></div>
+			</div></div>
+		<div class="panel panel-default">
+			<div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#classability9">Swift Alchemy</a></h4></div>
+			<div id="classability9" class="panel-collapse collapse">
+			<div class="panel-body"><p>At 3rd level, a chemist can create alchemical items with astounding speed. It takes a chemist half the normal amount of time to create alchemical items, and they can apply poison to a weapon as a move action.</p></div>
+			</div></div>
+		<div class="panel panel-default">
+			<div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#classability10">Swift Poisoning</a></h4></div>
+			<div id="classability10" class="panel-collapse collapse">
+			<div class="panel-body"><p>At 6th level, a chemist can apply a dose of poison to a weapon as a <s>swift</s><mark>bonus</mark> action.</p></div>
+			</div></div>
+		<div class="panel panel-default">
+			<div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#classability11">Persistent Mutagen</a></h4></div>
+			<div id="classability11" class="panel-collapse collapse">
+			<div class="panel-body"><p>At 14th level, the effects of a mutagen last for 1 hour per level.</p></div>
+			</div></div>
+		<div class="panel panel-default">
+			<div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#classability12">Instant Alchemy</a></h4></div>
+			<div id="classability12" class="panel-collapse collapse">
+			<div class="panel-body"><p>At 18th level, a chemist can create alchemical items with almost supernatural speed. They can create any alchemical item as a full-round action if they succeeds at the craft check and has the appropriate resources at hand to fund the creation. They can apply poison to a weapon as an immediate action.</p></div>
+			</div></div>
+		<div class="panel panel-default" hidden>
+			<div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#classability13">13</a></h4></div>
+			<div id="classability13" class="panel-collapse collapse">
+			<div class="panel-body"><p></p></div>
+			</div></div>
+		<div class="panel panel-default" hidden>
+			<div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#classability14">14</a></h4></div>
+			<div id="classability14" class="panel-collapse collapse">
+			<div class="panel-body"><p></p></div>
+			</div></div>
+    </div><!--Class Features end-->
+	<div class="panel-footer">Source: Homebrew (adapted from pathfinder 1st edition Alchemist)</div>
+		</div>
+    <div id="arch1" class="tab-pane fade"><!-- Discoveries -->
+		<input class="srch" type="text" id="disInput" onkeyup="search('discoveries','disInput',0)" placeholder="Search Discovery">
+		<input class="srch" type="text" id="disInput2" onkeyup="search('discoveries','disInput2',1)" placeholder="Search Prerequisites">
+		<input class="srch" type="text" id="disInput3" onkeyup="search('discoveries','disInput3',2)" placeholder="Search Benefits">
+		<table class="cls" id="discoveries">
+			<tr><th>Discovery</th><th>Prerequisites</th><th>Benefits</th></tr>
+			<tr><td>Versitile Bomb*</td><td>—</td><td>When the chemist creates a bomb, they can choose to have it do one of the following damage types: piercing, bludgeoning, or slashing instead of fire damage. At level 3 you can add acid, cold, lightning, or thunder to the options. At level 8 you can add force, radiant, or necrotic. The bombs count as magic weapons for the purpose of overcoming damage reduction.</td></tr>
+			<tr><td>Darkness Bomb</td><td>—</td><td>When the chemist creates a bomb, they can choose to have it suppress light sources on the target. This extinguishes non-magical light sources carried by the target and dispels magical light sources for 1 round/level as deeper darkness.</td></tr>
+			<tr><td>Ectoplasmic Bomb*</td><td>—</td><td>The chemist can infuse their bombs with a special unction that damages incorporeal creatures and reveals the presence of undead creatures hiding in the area. Incorporeal creatures struck by an ectoplasmic bomb take full damage from the bomb. In addition, squares in the affected area of the bomb begin to faintly glow in the spaces where undead creatures have traveled in the last minute, including undead benefiting from invisibility or other forms of obscurity (such as ethereal jaunt), effectively creating a glowing trail. Any undead creatures in the affected area at the time of the explosion likewise glow faintly. This glowing effect lasts for 1 minute, and is otherwise identical to faerie fire.</td></tr>
+			<tr><td>Elemental Mutagen</td><td>—</td><td>The chemist chooses an element (air, earth, fire, or water). Whenever the chemist imbibes a mutagen, they gains resistance 5 to the associated energy type and a +2 competence bonus on an associated skill check. This resistance increases by 5 and the competence bonus by 2 for each of the following discoveries the chemist possesses: grand mutagen, greater mutagen, and true mutagen. The elements and their associated energies and skills are air (electricity, Stealth), earth (acid, Athletics), fire (fire, Acrobatics), and water (cold, Sleight of Hand).<br>An chemist can select this discovery up to four times, but must choose a different element each time. a chemist can gain the benefits of only one elemental mutagen at a time, selected when they imbibes the mutagen.</td></tr>
+			<tr><td>Enhance Potion</td><td>—</td><td>A number of times per day equal to their Intelligence modifier, the chemist can cause any potion they drinks to function at a max. Any dice that would be rolled now produce their highest result</td></tr>
+			<tr><td>Explosive Bomb*</td><td>—</td><td>The chemist’s bombs now have a splash radius of 10 feet rather than 5 feet. Creatures that take a direct hit from an explosive bomb catch fire, taking 1d6 points of fire damage each round until the fire is extinguished. Extinguishing the flames is a full-round action that requires a Dexterity save. Dousing the target with at least 2 gallons of water automatically extinguishes the flames.</td></tr>
+			<tr><td>Extend Potion</td><td>—</td><td>A number of times per day equal to their Intelligence modifier, the chemist can cause any potion they drinks that does not have an instantaneous duration to function at twice its normal duration. This does not apply to extracts.</td></tr>
+			<tr><td>Fire Brand</td><td>Goblin</td><td>An chemist with this discovery can expend one daily bomb use to apply the bomb reagents to their weapon as a swift action. A weapon treated this way deals an extra 1d6 points of fire damage on a successful hit.<br>At 10th level, the weapon deals an extra 1d10 points of fire damage on a successful critical hit. The bomb reagents continue burning for 1 minute or until extinguished by dousing the weapon in water.<br>An chemist can use this ability with natural weapons, but they takes 1d6 points of fire damage per round for each natural weapon treated.</td></tr>
+			<tr><td>Flesh-Eating Bomb*</td><td>—</td><td>Your bomb deals damage one die step higher than normal (regular bombs deal d8s, concussive bombs deal 1d6, and so on), but they have no effect on inorganic matter such as constructs and elementals. </td></tr>
+			<tr><td>Glassfoot Bomb</td><td>—</td><td>You can cover the ground in jagged crystals in addition to its normal effects. These crystals act like caltrops, evaporating into a smelly but harmless gas in 2d6 rounds.</td></tr>
+			<tr><td>Defoliant Bomb</td><td>—</td><td>These poisonous bombs clear away foliage, dealing extra damage to plant creatures. When the chemist creates a bomb, they can choose to have it deal extra damage against plant creatures but less damage against other creatures. Against creatures with the plant type, a defoliant bomb deals 1d8 points of damage, plus 1d8 points of damage for every odd-numbered level the chemist possesses, instead of 1d6. Against all other creatures, the defoliant bomb only deals 1d4 points of damage, plus 1d4 points of damage for every odd-numbered level, instead of 1d6. This is a poison effect. A defoliant bomb kills all normal vegetation in the target’s square and its splash area; any plant-based difficult terrain in the affected area becomes normal terrain.</td></tr>
+			<tr><td>Grounding Goo</td><td>—</td><td>The chemist’s bomb applies a sticky residue after any damage from the bomb is resolved. If a creature damaged by the bomb has a non-magical fly speed, its flight is severely impaired, and it takes a penalty equal to the chemist’s level on Fly checks for 1 minute.</td></tr>
+			<tr><td>Healing Bomb*</td><td>—</td><td>When the chemist creates a bomb, they can choose to have it heal damage instead of dealing it. Creating a healing bomb requires the chemist to expend an infused extract or potion containing a cure spell. A creature that takes a direct hit from a healing bomb is healed as if she had imbibed the infusion or potion used to create the bomb. Creatures in the splash radius are healed for the minimum amount of damage the cure spell is capable of healing. A healing bomb damages undead instead of healing them.</td></tr>
+			<tr><td>Infusion</td><td>—</td><td>When the chemist creates an extract, they can infuse it with an extra bit of their own magical power. The extract created now persists even after the chemist sets it down. As long as the extract exists, it continues to occupy one of the chemist’s daily extract slots. An infused extract can be imbibed by a non-chemist to gain its effects.</td></tr>
+			<tr><td>Pheromones </td><td>—</td><td>You count as trained in on Persuasion and Intimidation.</td></tr>
+			<tr><td>Neutralizing Bomb*</td><td>—</td><td>When the chemist creates a bomb, they can choose to give it the potential to end certain ongoing effects instead of dealing damage. Each creature in the splash radius can attempt a new saving throw against any poison afflicting it and any ongoing conditions or ongoing acid, cold, fire, lightning, or thunder. (If an effect did not allow a saving throw, this bomb doesn’t allow affected creatures to attempt one.) Success counts as one successful save toward ending poison and immediately ends other conditions. Exposed poison in the splash radius is also rendered harmless. A creature with poison abilities that is directly struck by the bomb finds those abilities useless for 1d4 rounds unless it succeeds at a Constitution saving throw. This discovery doesn’t stack with any other that modifies bombs.</td></tr>
+			<tr><td>Precise Bombs</td><td>—</td><td>Whenever the chemist throws a bomb, they can select a number of squares equal to their Intelligence modifier that are not affected by the splash damage from their bombs. If the bomb misses, this discovery has no effect.</td></tr>
+			<tr><td>Tanglefoot Bomb*</td><td>—</td><td>A creature that takes a direct hit from a tanglefoot bomb must save against the bomb’s DC or be entangled and glued to the floor as if it had failed its save against a tanglefoot bag. Creatures in the splash area that fail their saves are entangled but not glued to the floor; those who make this save are not entangled at all.</td></tr>
+			<tr><td>Underwater Demolition</td><td>—</td><td>The chemist gains the ability to throw bombs underwater (normally, thrown weapons cannot be used underwater), including throwing from the air into the water. If the bomb travels through water, the range increment is reduced to 5 feet.</td></tr>
+			<tr><td>Sandstone Solution</td><td>—</td><td>As a full-round action, the chemist can convert any potion or extract into a solution that, when thrown or applied, solidifies sand or dirt to the hardness of stone for 1 hour, affecting an area with a radius of 10 feet × the level of the potion or extract. If this solution is thrown at or applied to stone, it instead causes a 5-foot cube of stone to become crumbly and soft for 1 minute, reducing its hardness by double the level of the potion or extract.</td></tr>
+			<tr><td>Scrap Bomb</td><td>Goblin</td><td>When the chemist creates a bomb, they can choose to have it explode into shards of shrapnel that deal piercing damage. A creature that takes a direct hit from a scrap bomb takes 1 point of bleed damage per die of bomb damage unless it succeeds at a Reflex save.</td></tr>
+			<tr><td>Smoke Bomb*</td><td>—</td><td>When the chemist creates a bomb, they can choose to have it create a cloud of thick smoke when it detonates. The cloud functions as fog cloud, filling an area equal to twice the bomb’s splash radius for 1 round per level.</td></tr>
+			<tr><td>Strafe Bomb</td><td>—</td><td>The chemist can throw bombs that splash in a 40-foot line rather than affecting a radius. The line starts at the chemist and extends away from him in the direction they chooses. The chemist designates one creature in the squares affected by the line to be the target of the bomb and makes their attack roll against that creature; all other squares in the line take splash damage.<br>Special: If the chemist has the explosive bomb discovery and throws an explosive strafe bomb, the line of splash damage is 80 feet long instead of 40 feet.</td></tr>
+			<tr><td>Volumizer (Su)</td><td>—</td><td>The chemist can use an extract slot of any level to create a reactive tablet that purifies water and doubles its volume. This works like purify food and drink for a maximum volume of water equal to 1 gallon for each level the chemist has × the level of the extract slot the chemist used to create the tablet. Additionally, if the chemist has a receptacle of sufficient volume to gather the water, the tablet doubles the volume of pure water. The water volume increases over the course of 1 minute, but the effect stops before it can create significant water pressure on a container that’s not large enough to hold the entire volume. An unused tablet remains usable until the next time the chemist recovers extract slots.</td></tr>
+			
+			<tr><th colspan="3">Level 3</th></tr>
+			<tr><td>Immolation Bomb*</td><td>chemist 3</td><td>When the chemist creates a bomb, they can choose to have its substance coat the direct target’s body, causing the bomb to deal its damage over time instead of all at once. The bomb’s effect lasts for a number of rounds equal to the number of damage dice the bomb would normally deal (for instance, a 5d6 bomb lasts for 5 rounds). When the bomb hits the direct target, the bomb deals 1d6 + the chemist’s Intelligence modifier in damage, and those within the splash zone take damage equal to 1 + the chemist’s Intelligence modifier. It repeats this damage against the direct target of the bomb each round the immolation bomb lasts, dealing the damage at the start of the chemist’s turn. Splash damage is dealt again to any creature that is adjacent to the direct target when it takes damage from the immolation bomb. A creature taking damage from an immolation bomb’s direct hit can attempt to extinguish the flames as a full-round action that requires a Dexterity save (DC = 8 + proficiency + the chemist’s Intelligence modifier). Because of the alchemical nature of this bomb, rolling on the ground or dousing a creature with water does not provide and bonus to put it out. These bombs can be used underwater.</td></tr>
+			
+			<tr><th colspan="3">Level 4</th></tr>
+			<tr><td>Explosive Missile</td><td>chemist 4</td><td>The chemist’s bombs now have a splash radius of 10 feet rather than 5 feet (see Throw Splash Weapon). Creatures that take a direct hit from an explosive bomb catch fire, taking 1d6 points of fire damage each round until the fire is extinguished. Extinguishing the flames is a full-round action that requires a Reflex save. Rolling on the ground provides the target with a +2 to the save. Dousing the target with at least 2 gallons of water automatically extinguishes the flames.</td></tr>
+			<tr><td>Ranged Baptism</td><td>chemist 4</td><td>When the chemist uses holy water as a splash weapon, any squares subject to its effects (including creatures affected by splash damage) or that contain creatures subject to its effects are also affected as if by consecrate, for a number of rounds equal to the chemist’s Intelligence modifier. Undead struck by holy water remain affected by the consecrate effect even if they leave the affected area.</td></tr>
+			<tr><td>Remedy Extract</td><td>chemist 4</td><td>When the chemist creates an extract, they can add one non-magical alchemical remedy (such as an antitoxin) to it. When the extract is consumed, both the formula and the alchemical remedy take effect. The extract has a level 1 higher than normal. This discovery cannot be combined with other methods of combining multiple consumed items or extracts into one.</td></tr>
+			
+			<tr><th colspan="3">Level 6</th></tr>
+			<tr><td>Bottled Ooze</td><td>chemist 6</td><td>The chemist has learned how to preserve a sample of oozes in a sealed bottle, which they can prepare for use as an extract. When the chemist activates the extract, they actually throws the bottle at a square within 30 feet, releasing the ooze, which reconstitutes and attacks the closest creature. The ooze is not under the chemist’s control, but is otherwise treated as a summoned creature. The ooze remains for 1 round per caster level, and decays into powder when the duration expires. If the chemist has the infusion discovery, another character can use the infused specimen. Creating a bottled ooze requires an extract with a level equal to the ooze’s CR (so a CR 4 gray ooze requires a 4th-level extract).</td></tr>
+			<tr><td>Breath Weapon Bomb*</td><td>chemist 6</td><td>Instead of drawing the components of, creating, and throwing a bomb, the chemist can draw the components, drink them, mix them within their body, and then expel them as a breath weapon as a standard action. This breath weapon is a 15-foot cone and has the same DC as the bomb. Each creature within the cone takes damage as if it had suffered a direct hit from the chemist’s bomb, but succeeding at a Reflex save (DC = 8 + proficiency + the chemist’s Intelligence modifier) halves the damage. Unlike throwing normal bombs, drawing, drinking, and expelling breath weapon bombs does not provoke attacks of opportunity.</td></tr>
+			<tr><td>Dispelling Bomb</td><td>chemist 6</td><td>When the chemist creates a bomb, they can choose to have it dispel magic effects instead of deal damage. Creatures that take a direct hit from a dispelling bomb are subject to a targeted dispel magic spell, using the chemist’s level as the caster level. This cannot be used to target a specific spell effect.</td></tr>
+			<tr><td>Explosive Calligraphy</td><td>chemist 6</td><td>The chemist can create especially volatile pigments that detonate when agitated. This requires expending one daily use of their bombs, but otherwise functions as explosive runes except that it deals damage as one of the chemist’s bombs. The chemist can expend an additional daily use of their bombs to apply one discovery that applies to their bombs, such as acid bomb or dispelling bomb, to the runes created with this discovery.</td></tr>
+			<tr><td>Grease Bomb*</td><td>chemist 6</td><td>When the chemist creates a bomb, they can choose to have it create a grease slick upon detonation. When a grease bomb detonates, it coats an area equal to the bomb’s splash radius in grease (as the grease spell) for 1 round per level. The DC of the Dexterity save to avoid falling after a failed Acrobatics check is equal to 8 + proficiency + the chemist’s Intelligence modifier. A grease bomb can’t affect items or armor.</td></tr>
+			<tr><td>Healing Touch</td><td>chemist 6, spontaneous healing</td><td>The chemist gains the ability to heal other creatures. As a standard action, they may touch a creature and apply 1 round’s effect of their spontaneous healing discovery to that creature; this counts toward their spontaneous healing limit for the day. The chemist’s daily limit for hit points healed by spontaneous healing increases to 5 × their chemist level. This ability only functions if the target is the same type of creature (humanoid, undead, and so on) as the chemist.</td></tr>
+			<tr><td>Promethean Disciple</td><td>chemist 6</td><td>You know how to craft constructs by way of alchemical research rather than arcane magic. You can make constructs with a total combined CR equal to half your chemist level. These constructs are under your control.</td></tr>
+			<tr><td>Psychoactive Bomb*</td><td>chemist 6</td><td>Psychoactive bombs are mixed with neurotoxic extracts that heighten certain sensations.<br>A creature struck by a psychoactive bomb have disadvantage on saving throws against charm, emotion, fear, pain effects, and Intimidation checks. This effect lasts for 1 hour per chemist level. These penalties do not stack, and a creature can only be affected by a single psychoactive bomb at a time. A psychoactive bomb deals 1d6 fewer hit points of damage than normal.</td></tr>
+			<tr><td>Rocket Bomb</td><td>Goblin, chemist 6th</td><td>chemists with this discovery can prepare special rockets to deliver their bombs. Rocket bombs travel farther and explode bigger than normal bombs, but cannot target individual creatures. Rocket bombs explode in a 20-foot radius, and all creatures in that area take the chemist’s normal splash damage. The range increment on a rocket bomb is 50 feet. Rocket bombs cannot be used with the precise bomb or fast bomb discoveries.</td></tr>
+			<tr><td>Syringe Stirge</td><td>chemist 6</td><td>As a full-round action, you can expend two daily uses of bombs to create a syringe stirge, a tiny construct primed with a bomb (if you have multiple types of bombs, you must select which type the syringe stirge carries when created). Undirected, they take no actions except to flock around you in your square and follow you as best they can. They can be attacked normally, but gain cover while occupying your square. As a swift action, you can order one of your syringe stirges to attack an enemy it can see. Once ordered to attack that enemy, the syringe stirge will continue to attack every round, attempting to attach and deliver its payload<br>A syringe stirge has all of the statistics of a stirge but lacks the blood drain ability.<br>If it ends its turn attached to an opponent, it injects your bomb into the opponent’s bloodstream, dealing damage as a direct hit plus the chemist’s Intelligence modifier this injection is a direct attack and doesn’t deal splash damage. A syringe stirge dies immediately after injecting its bomb. A syringe stirge lasts for 1 minute per chemist level or until destroyed; if it has not attached to an enemy before the end of its life span, it and its bomb payload fall inert.</td></tr>
+			<tr><td>Void Bomb*</td><td>Drow, chemist 6</td><td>By combining the spores from strange fungi with slivers from extradimensional voids, some drow chemists create bombs that cause bursts of gravity capable of crushing those inside.</td></tr>
+			
+			<tr><th colspan="3">Level 8</th></tr>
+			<tr><td>Blinding Bomb*</td><td>chemist 8</td><td>When the chemist creates a bomb, they can choose for it to detonate very brightly. Creatures that take a direct hit from a blinding bomb are blinded for 1 minute unless they succeed at a Fortitude save. Creatures in the splash area that fail their saves against the bomb are dazzled for 1 minute. This is a light effect.</td></tr>
+			<tr><td>Combine Extracts</td><td>chemist 8</td><td>When the chemist creates an extract, they can place two formulae into one extract. When the extract is consumed, both formulae take effect. This extract has a level two levels higher than the highest-level formulae placed in the extract.</td></tr>
+			<tr><td>Confusion Bomb*</td><td>chemist 8</td><td>The chemist’s bombs twist the target’s perception of friend and foe. A creature that takes a direct hit from a confusion bomb takes damage from the bomb and is under the effect of a confusion spell for 1 round per caster level of the chemist. Reduce the amount of normal damage dealt by the bomb by 2d6 (so a bomb that would normally deal 6d6+4 points of damage deals 4d6+4 points of damage instead).</td></tr>
+			<tr><td>Deadly Excretions</td><td>chemist 8, grung</td><td>When using their toxic skin ability, the chemist can choose to excrete a Constitution poison instead. This poison works the same as the normal grung toxic skin poison except that a failed save deals 1 point of Constitution damage.</td></tr>
+			<tr><td>Delayed Bomb</td><td>chemist 8</td><td>The chemist can place a bomb so that it explodes a number of rounds after the chemist ceases contact with the bomb. This delay can be any number of rounds as chosen by the chemist, up to a number of rounds equal to their level. If at any point the chemist reclaims possession of the delayed bomb, they can end the timer and prevent the bomb’s detonation. A delayed bomb detonates immediately if any other creature attempts to touch or move it, or if the bomb’s contents are removed from the vial (such as if the vial breaks). The bomb deals damage as if it scored a direct hit to any creature in the square with the bomb when it detonates, and splash damage (see Throw Splash Weapon) to all adjacent creatures as normal. a chemist cannot have more than one delayed bomb at one time. If they creates another delayed bomb, the previous bomb becomes inert. Dispel magic can neutralize a delayed bomb, as can a successful Disable Device check (DC = 8 + proficiency + the chemist’s Intelligence modifier).</td></tr>
+			<tr><td>Demolition Charge*</td><td>chemist 8</td><td>When the chemist creates a bomb, they can choose to have it deal damage to an object as if by a sunder combat maneuver. If the item is worn or held by an opponent, the item is considered the direct target, and the wearer/holder takes splash damage from the blast. If the object is unattended, a demolition charge deals an additional 2d6 points of damage on a direct hit. This bonus doesn’t affect the bomb’s splash damage.</td></tr>
+			<tr><td>Fast Bombs</td><td>chemist 8</td><td>An chemist with this discovery can quickly create enough bombs to throw more than one in a single round. The chemist can prepare and throw an additional bomb as part of their attack action.</td></tr>
+			<tr><td>Phantom Limb</td><td>chemist 8</td><td>The chemist can manifest a ghostly, incorporeal arm that juts out from their torso. This phantom limb does not grant the chemist any extra attacks or actions per round, and it cannot hold or grab anything (including incorporeal objects). The chemist may use their phantom limb to make a touch attack against a foe as a standard action, scraping away at the very fibers of the victim’s soul. This attack deals 1d4 points of damage per chemist level (Constitution half). The chemist may suppress or activate this ability as a free action, and can use their phantom limb for a number of rounds per day equal to Proficiency Bonus (these rounds need not be consecutive).</td></tr>
+			
+			<tr><th colspan="3">Level 10</th></tr>
+			<tr><td>Sticky Bomb</td><td>chemist 10</td><td>The effects of the chemist’s bombs are persistent and continue to damage creatures for 1 round after the initial damage. Creatures that take a direct hit from a sticky bomb take the splash damage 1 round later. Bombs that have effects that would normally occur 1 round later instead have those effects occur 2 rounds later.</td></tr>
+			<tr><td>Sunlight Bomb*</td><td>chemist 10<s>, blinding bomb</s></td><td>The chemist can throw bombs that explode with a searing radiance equivalent to that of sunlight and that act as blinding bombs. Undead, fungi, molds, oozes, slimes, and creatures to which sunlight is harmful or unnatural take +2 damage per die from the bomb. Undead that are harmed by sunlight and that fail their saves against the bomb are staggered for 1 round.</td></tr>
+			
+			<tr><th colspan="3">Level 12</th></tr>
+			<tr><td>Collective Memory</td><td> </td><td>Gain the Jack of All Trades trait from bard.</td></tr>
+			<tr><td>Cursed Bomb*</td><td>chemist 12</td><td>When a chemist creates a bomb, they can choose to have it deliver a debilitating curse. A creature that takes a direct hit from a cursed bomb must succeed at a Wisdom save or be affected by bestow curse.</td></tr>
+			<tr><td>Dilution</td><td>chemist 12</td><td>Once per day, the chemist can dilute any one potion or elixir, creating two doses of the same potion from one. Diluting a potion costs a number of gp equal to one-quarter of the potion’s market value. A potion that has been diluted cannot be diluted again. This discovery cannot be used to dilute extracts or mutagens.</td></tr>
+			<tr><td>Madness Bomb</td><td>chemist 12</td><td>The chemist’s bombs do more than sear flesh—they sear the mind. A creature that takes a direct hit from a madness bomb takes damage from the bomb plus 1d4 points of Wisdom damage. Reduce the amount of normal damage dealt by the bomb by 2d6 (so a bomb that would normally deal 6d6+4 points of damage deals 4d6+4 points of damage instead). The amount of Wisdom damage dealt by a madness bomb is reduced by 1 for each madness bomb that hit the target in the past 24 hours, to a minimum of 1 point of Wisdom damage.</td></tr>
+			<tr><td>Poison Bomb*</td><td>chemist 12, smoke bomb</td><td>The effects of the smoke created by a chemist’s bomb duplicates the effects of cloudkill instead of fog cloud, filling an area equal to twice the bomb’s splash radius for 1 round per level.</td></tr>
+			
+			<tr><th colspan="3">Level 16</th></tr>
+			<tr><td>Elixir of Life</td><td>chemist 16</td><td>Once per day, the chemist can brew an elixir of life. This special concoction costs 25,000 gp to create and takes 1 hour of work. An elixir of life, when administered by the chemist who brewed it, restores life to a dead creature as per the spell true resurrection. Alternatively, the chemist himself may drink the elixir of life, after which point they is immediately targeted with a resurrection spell the next time they is killed. Used in this manner, the effects of an elixir of life persist only for a number of days equal to the chemist’s Intelligence modifier; if they does not die before that time expires, the effects of the elixir of life end.</td></tr>
+			<tr><td>Eternal Potion</td><td>chemist 16, extend potion</td><td> If a chemist drinks a potion that they extends, the effects of that potion become permanent until they chooses to make another potion effect permanent.</td></tr>
+			<tr><td>Glimmering Infusion</td><td>Infusion discovery</td><td>The chemist can expend any prepared extract to produce a cube of glowing motes that act as per glitterdust. The area must be adjacent to the chemist and covers one 5-foot square per level of extract sacrificed, and the effect’s save DC is calculated using the level of the sacrificed extract.</td></tr>
+			<tr><td>Inferno Bomb*</td><td>chemist 16, smoke bomb</td><td>The effects of the smoke created by a chemist’s bomb duplicate the effects of incendiary cloud instead of fog cloud, filling an area equal to twice the bomb’s splash radius for 1 round per level (see Throw Splash Weapon).</td></tr></table>
+			
+			
+	<div class="panel-footer">Source: Homebrew (adapted from pathfinder 1st edition)</div>
+		</div>
+    <div id="arch2" class="tab-pane fade"><!-- Formulae -->
+      <p> </p>
+	<div class="panel-footer">Source: Homebrew (adapted from pathfinder 1st edition)</div>
+	  </div>
+    <div id="arch3" class="tab-pane fade"><!-- Poisoner -->
+		<div class="feat">
+			<p>Poisoner</p>
+			<p>You can prepare and deliver deadly poisons, granting you the following benefits:
+				<ul><li>When you make a damage roll that deals poison damage, it ignores resistance to poison damage.</li>
+					<li>You can apply poison to a weapon or piece of ammunition as a bonus action, instead of an action.</li>
+					<li>You gain proficiency with the Poisoner's Kit if you don’t already have it. With one hour of work using a poisoner’s kit and expending 50 gp worth of materials, you can create a number of doses of potent poison equal to your proficiency bonus. Once applied to a weapon or piece of ammunition, the poison retains its potency for 1 minute or until you hit with the weapon or ammunition. When a creature takes damage from the coated weapon or ammunition, that creature must succeed on a DC 14 Constitution saving throw or take 2d8 poison damage and become poisoned until the end of your next turn.</li></ul></p>
+		</div>
+      <p>Level 3: 
+	  <br>You gain the Poisoner feat.</p>
+	  <p>Fabricate Poison: You gain the ability to analyze, identify, and recreate poisons using your alchemy skill. Identifying and recreating poisons require a poisoner's kit instead of alchemy supplies. Recreated poisons require materials costing the listed cost divided by the chemists proficiency bonus for one dose.</p>
+	  <p>Poison Harvesting: You have advantage on checks to <a href="#" data-toggle="popover" html="true" title="Crafting and Harvesting Poison" data-content="During downtime between adventures, a character can use the crafting rules in the Player’s Handbook to create basic poison if the character has proficiency with a poisoner’s kit. At your discretion, the character can craft other kinds of poison. Not all poison ingredients are available for purchase, and tracking down certain ingredients might form the basis of an entire adventure. A character can instead attempt to harvest poison from a poisonous creature, such as a snake, wyvern, or carrion crawler. The creature must be incapacitated or dead, and the harvesting requires 1d6 minutes followed by a DC 20 Intelligence (Nature) check. (Proficiency with the poisoner’s kit applies to this check if the character doesn’t have proficiency in Nature). On a successful check, the character harvests enough poison for a single dose. On a failed check, the character is unable to extract any poison. If the character fails the check by 5 or more, the character is subjected to the creature’s poison."><b>harvest</b></a> poison.</p>
+	  <p>Level 6: 
+	  <br>Poison Conversion: By spending 1 minute, the chemist can convert 1 dose of poison from its current type (contact, ingested, inhaled, or injury) to another type. For example, the chemist can convert a dose of Small centipede poison (an injury poison) to an inhaled poison. This process requires an alchemist's kit.</p>
+	  <p>Sticky Poison: Any poison the chemist creates is sticky—when the chemist applies it to a weapon, the weapon remains poisoned for a number of strikes equal to the chemist’s Intelligence modifier.</p>
+	  <p>Level 10:
+	  <br>Malignant Poison:	As a action, the chemist can increase the duration of a dose of poison. Poisons with a duration now last twice as long and those without a duration now last a number of rounds equal to the chemist's Intelligence modifier. Additionally, malignant poisons take effect immediately and do not have an onset time. If unused this alchemical change lasts until the poison’s extended duration ends or for a number of minutes equal to the chemist’s level, whichever comes first. After that, the poison reverts back to its original state.</p>
+	  <p>Level 14: 
+	  <br>Concentrate Poison: The chemist can combine two doses of the same poison to increase their effects. This requires two doses of the poison and 1 minute of concentration. When completed, the chemist has one dose of poison. The poison’s duration is extended by 50% and the save DC is now = 8 + proficiency + the chemist’s Intelligence modifier. This poison must be used within 1 hour of its creation or it is ruined.</p>
+	  </div>
+    <div id="arch4" class="tab-pane fade"><!-- Mutagen Master -->
+      <p>Level 3: </p>
+		<p>Enhance Mutagen<br>The chemist's mutegen can now produce 2 of the options listed in the Enhance ability spell in a single dose.</p>
+		<p>Infuse Mutagen<br>When the chemist creates a mutagen they can infuse it with an extra bit of their own magical power. This allows non-chemists to use a the mutagen without penalty.</p>
+      <p>Level 6: </p>
+		<p>Side Effects may Vary:<br>
+			As the potency of your mutagens grow so do the side affects. Roll on the Side Effect table, a creature that consumes one of your mutagens also has the resultant mutation for the duration of the mutagen.
+			<table class="cls">
+				<tr><th>1d6</th><th>Mutation</th><th>Details</th></tr>
+				<tr><td>1</td><td>Tentacle</td><td>Gain a prehensile, arm-length tentacle on their body. The tentacle is fully under their control and cannot be concealed except with magic or bulky clothing. The tentacle does not give the chemist any extra attacks or actions per round, though they can use it to make a Melee Weapon Attack: reach 5 ft., one creature. Hit: 1d4 + Str mod bludgeoning damage, and the target is grappled (escape DC 14). Until this grapple ends, the creature is restrained, and the tentacle can't attack another target. The tentacle can manipulate or hold items as well as the chemist’s original arms can (for example, allowing the chemist to use one hand to wield a weapon, the tentacle to hold a potion, and the third hand to throw a bomb). Unlike an arm, the tentacle has no magic item slots.</td></tr>
+				<tr><td>2</td><td>Chameleon</td><td>Your skin changes colors, granting you advantage on Stealth checks</td></tr>
+				<tr><td>3</td><td>Feral Mutagen</td><td>Whenever the chemist imbibes a mutagen, they gains two claw attacks and a bite attack. These are primary attacks and are made using the chemist’s full base attack bonus. The claw attacks deal 1d6 points of damage and the bite attack deals 1d8 points of damage. While the mutagen is in effect, you gain advantage on Intimidation skill checks.</td></tr>
+				<tr><td>4</td><td>Wings</td><td>The chemist gains bat-like, bird-like, or insect-like functional wings, allowing him to fly as the fly spell for a number of minutes per day equal to their caster level. These minutes do not need to be consecutive, but they must be spent in 1-minute increments.</td></tr>
+				<tr><td>5</td><td>Nauseating Flesh</td><td>Your body is suffused with poison. Any creature that bites, engulfs, or swallows the chemist must make a Constitution saving throw or be <span title="A poisoned creature has disadvantage on attack rolls and ability checks.">poisoned</span> for 1d4 rounds. The chemist with this discovery does not suffer the effect of the poison of their own nauseating flesh.</td></tr>
+				<tr><td>6</td><td>Spontaneous Healing</td><td>You gain the ability to heal from wounds rapidly. As a free action once per round, they can heal 5 hit points. You can heal 5 hit points per day a number of times equal to the chemist's proficiency bonus. If you fall unconscious because of hit point damage and you still have healing available from this ability, the ability activates automatically at the start of your next turn.</td></tr>
+				</table>
+      <p>Level 14: </p>
+		<p>Enhance Mutagen<br>The chemist's mutagen can now produce 3 of the options listed in the Enhance ability spell in a single dose.</p>
+		<p>Splitting Mutagen<br>Once per day while under the effects of your mutagen, you can split into two identical copies of yourself as an immediate action after being damaged by a piercing or slashing weapon.<br>Each copy has an ooze-like complexion, most often manifesting as a slimy sheen to their skin. You split your current hit points evenly between the copies. The copies use the same statistics, share the same resources, and have identical equipment (except artifacts, which only one copy has). Similarly, if one of the copies expends a charge or daily use from a magic item that a copy has, the charge or daily use is expended from both copies. If one copy drops or gives away an item, the duplicate item disappears from the other copy as well. The two copies act independently and each one has a full set of actions.<br>At the end of your next turn, select one of the copies, which loses its ooze-like complexion as it becomes the chemist; the other copy dissolves into a fine mist and dissipates. If one of the copies is destroyed before this happens, the remaining copy immediately becomes the chemist, and you gain 1 permanent negative level. If both copies are destroyed simultaneously (such as from a fireball), both copies collapse into formless goo and you can only be restored to life via resurrection or similarly powerful magic.</p>
+	<div class="panel-footer">Source: Player's Handbook</div>
+		</div>
+  </div>
+</div>	
+		<script>
+		  $(document).ready(function(){
+		    $('[data-toggle="tooltip"]').tooltip();
+		  });
+		  $(document).ready(function(){
+			$('[data-toggle="popover"]').popover();   
+		  });
+		  function roll(x=20) {
+		    // get the ability score
+		    var w = Math.floor(Math.random() * x)+1;
+			//output the desired number
+			document.getElementById("rollout").value = w;
+			}
+		  function search(x="discoveries",y="disInput",z=0) {
+			// Declare variables
+			var input, filter, table, tr, td, i, txtValue;
+			input = document.getElementById(y);
+			filter = input.value.toUpperCase();
+			table = document.getElementById(x);
+			tr = table.getElementsByTagName("tr");
+			// Loop through all table rows, and hide those who don't match the search query
+			for (i = 0; i < tr.length; i++) {
+			td = tr[i].getElementsByTagName("td")[z];
+			if (td) {
+			txtValue = td.textContent || td.innerText;
+			if (txtValue.toUpperCase().indexOf(filter) > -1) {
+			tr[i].style.display = "";
+			} else {
+			tr[i].style.display = "none";
+      }
+    }
+  }
+}
+		</script>
+	</body>
+</html>
